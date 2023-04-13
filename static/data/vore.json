@@ -1,0 +1,46 @@
+{
+  "questions": [
+    {
+      "question": {
+        "fr": "Régime alimentaire A",
+        "en": "A alimentary regime"
+      },
+      "answers": [
+        {
+          "fr": "Choix 1",
+          "en": "A alimentary regime",
+          "good": true
+        },
+        {
+          "fr": "Choix 2",
+          "en": "A alimentary regime"
+        },
+        {
+          "fr": "Choix 3",
+          "en": "A alimentary regime"
+        }
+      ]
+    },
+    {
+      "question": {
+        "fr": "Régime alimentaire B",
+        "en": "A alimentary regime"
+      },
+      "answers": [
+        {
+          "fr": "Choix 1",
+          "en": "A alimentary regime"
+        },
+        {
+          "fr": "Choix 2",
+          "en": "A alimentary regime",
+          "good": true
+        },
+        {
+          "fr": "Choix 3",
+          "en": "A alimentary regime"
+        }
+      ]
+    }
+  ]
+}

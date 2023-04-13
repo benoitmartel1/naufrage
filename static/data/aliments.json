@@ -1,0 +1,32 @@
+{
+  "aliments": [
+    {
+      "type": "fruit",
+      "fr": "ananas",
+      "en": "pineapple",
+      "now": 4,
+      "then": 1.25
+    },
+    {
+      "type": "fruit",
+      "fr": "pomme",
+      "en": "apple",
+      "now": 0.5,
+      "then": 0.05
+    },
+    {
+      "type": "laitier",
+      "fr": "lait",
+      "en": "milk",
+      "now": 0.5,
+      "then": 0.05
+    },
+    {
+      "type": "vege",
+      "fr": "tofu",
+      "en": "tofu",
+      "now": 10,
+      "then": null
+    }
+  ]
+}

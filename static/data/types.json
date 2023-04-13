@@ -1,0 +1,29 @@
+{
+  "types": [
+    {
+      "fr": "Fruits et légumes",
+      "en": "Fruits and vegetables",
+      "type": "fruit"
+    },
+    {
+      "fr": "Produits laitiers",
+      "en": "Dairy products",
+      "type": "laitier"
+    },
+    {
+      "fr": "Viandes",
+      "en": "Dairy products",
+      "type": "viande"
+    },
+    {
+      "fr": "Conserves",
+      "en": "Dairy products",
+      "type": "conserve"
+    },
+    {
+      "fr": "Produits végétariens",
+      "en": "Dairy products",
+      "type": "vege"
+    }
+  ]
+}
