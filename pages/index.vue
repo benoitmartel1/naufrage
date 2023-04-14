@@ -21,11 +21,13 @@
         </NuxtLink>
       </div>
       <div class="btn croire">
-        <div class="title">
-          <span v-if="lang == 'fr'">J'sais pas si tu vas m'croire?</span>
-          <span v-else>EN Dans mon p'tit panier...</span>
-        </div>
-        <div class="icon"></div>
+        <NuxtLink to="/croire">
+          <div class="title">
+            <span v-if="lang == 'fr'">J'sais pas si tu vas m'croire?</span>
+            <span v-else>EN Dans mon p'tit panier...</span>
+          </div>
+          <div class="icon"></div>
+        </NuxtLink>
       </div>
     </div>
   </div>
