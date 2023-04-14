@@ -2,6 +2,7 @@
   <div>
     <Nav />
     <Boucher />
+    YOUYOUYOUY
     <div class="bulle">
       <div class="message">
         <div v-if="isNow">
@@ -84,7 +85,6 @@ export default {
   transform: scaleX(-1);
   left: 500px;
   bottom: -200px;
-  z-index: 150;
 }
 .bulle {
   top: 30px;

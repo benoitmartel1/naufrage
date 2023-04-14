@@ -31,6 +31,7 @@
               @click="addItem(a)"
             >
               {{ a[lang] }}
+              <div class="price">{{ a[era] }}</div>
             </div>
           </div>
         </div>
@@ -84,6 +85,9 @@ export default {
     },
     lang() {
       return this.$store.state.lang
+    },
+    era() {
+      return this.$store.state.panier.now.isFull == false ? 'then' : 'now'
     },
     list() {
       return this.panier[this.isNow ? 'now' : 'then'].list
@@ -180,9 +184,11 @@ export default {
       .aliments {
         background-color: white;
         display: flex;
+
         padding: 120px 250px;
         height: 100%;
         .aliment {
+          flex-direction: column;
           margin-right: 90px;
           width: 200px;
           height: 200px;
@@ -191,6 +197,9 @@ export default {
           display: flex;
           justify-content: center;
           align-items: center;
+          .price {
+            display: block;
+          }
         }
       }
     }

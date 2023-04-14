@@ -4,7 +4,7 @@
       <Boucher />
       <div class="bulle">
         <div class="message">
-          <div class="total">{{ total }}</div>
+          <div class="total">{{ total + '$' }}</div>
           <span v-if="lang == 'fr'"
             >Lorem ipsum occati illum estotas dolupi- et laut que repudandant.
             Cipsam faccatur reperum vollum incidebis dollamus inustias este

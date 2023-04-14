@@ -1,6 +1,6 @@
 module.exports = {
   // Target: https://go.nuxtjs.dev/config-target
-  //   target: 'static',
+  target: 'static',
   loading: false,
   ssr: false,
   // Global page headers: https://go.nuxtjs.dev/config-head

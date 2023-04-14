@@ -184,4 +184,13 @@ a:hover {
   z-index: 5;
   background-color: black;
   opacity: 0.5;
+  animation: fade 200ms;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
 }

@@ -27,11 +27,17 @@ export default {
 
 <style lang="scss">
 .nav {
+  .btn {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: #fff;
+    @include bordered;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   width: 100%;
-  /* margin: 30px; */
-
-  //   background-color: #666;
-  /* height: 107px; */
   display: flex;
   padding: 30px;
   justify-content: space-between;
