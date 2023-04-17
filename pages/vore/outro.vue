@@ -2,7 +2,6 @@
   <div>
     <Nav />
     <Boucher />
-    YOUYOUYOUY
     <div class="bulle">
       <div class="message">
         <div v-if="isNow">

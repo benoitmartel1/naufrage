@@ -34,35 +34,20 @@
 </template>
 
 <script>
-import { Howl, Howler } from 'howler'
-let timer, sound
 export default {
   layout: 'default',
   data() {
     return {}
   },
+
   computed: {
     lang() {
       return this.$store.state.lang
     },
   },
+
   beforeMount() {
     this.$store.commit('resetGameData')
-  },
-  mounted() {
-    if (!sound) {
-      sound = new Howl({
-        src: ['audio/ambient.mp3'],
-        loop: true,
-        volume: 0.5,
-      })
-      //   sound.play()
-    }
-  },
-  methods: {
-    fadeOutAudio() {
-      sound.fade(1, 0, 1000)
-    },
   },
 }
 </script>

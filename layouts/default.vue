@@ -1,25 +1,56 @@
 <template>
   <div :class="[{ appro: approMode }]">
     <div id="app">
-      <MovieComing v-if="movieComing" :timeToMovie="timeToMovie" />
+      <MovieComing v-if="timeToMovie" :timeToMovie="timeToMovie" />
       <Nuxt />
     </div>
+    <TestPanel />
   </div>
 </template>
 
 <script>
+import ws from '@/mixins/ws.js'
+import sound from '@/mixins/sound.js'
+
+let movieInterval
 export default {
   data() {
     return {
       approMode: 1,
-      movieComing: false,
-      timeToMovie: 10,
+      timeToMovie: 0,
     }
   },
-  mounted() {
-    setTimeout(() => {
-      this.movieComing = true
-    }, 2000)
+  mixins: [ws, sound],
+  methods: {
+    onWsMessage(msg) {
+      if (msg.type == 'MOVIE') {
+        if (!this.timeToMovie && !this.$store.state.moviePlaying) {
+          this.timeToMovie = msg.value
+        }
+      }
+      if (msg.type == 'VOLUME') {
+        this.$store.commit('setVolume', msg.value)
+      }
+    },
+  },
+  watch: {
+    timeToMovie(val, old) {
+      if (val && old == 0) {
+        let fadeOutStartTime = val * 0.2
+        this.fadeOutDuration = fadeOutStartTime
+
+        movieInterval = setInterval(() => {
+          this.timeToMovie--
+          if (this.timeToMovie <= fadeOutStartTime && !this.moviePlaying) {
+            this.$store.commit('setMoviePlaying', true)
+          }
+          if (this.timeToMovie <= 0) {
+            clearInterval(movieInterval)
+            this.$router.push('/movie')
+          }
+        }, 1000)
+      }
+    },
   },
 }
 </script>
@@ -41,5 +72,13 @@ body {
   margin: 30px;
   transform: scale(0.5);
   transform-origin: 0 0;
+}
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.2s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
 }
 </style>

@@ -1,5 +1,7 @@
 export const state = () => ({
   lang: 'fr',
+  volume: 1,
+  moviePlaying: false,
   panier: {
     now: { list: [], max: 20, isFull: false },
     then: { list: [], max: 30, isFull: false },
@@ -30,6 +32,12 @@ export const mutations = {
   },
   setPanierFullStatus(state, p) {
     state.panier[p.list].isFull = p.status
+  },
+  setVolume(state, v) {
+    state.volume = v
+  },
+  setMoviePlaying(state, s) {
+    state.moviePlaying = s
   },
 }
 

@@ -114,9 +114,9 @@ export default {
   },
   methods: {
     addItem(a) {
+      a.sold = true
       let payload = { list: this.isNow ? 'now' : 'then', item: a }
       this.$store.commit('addItem', payload)
-      //   console.log(a.now)
     },
     removeItem(index) {
       let payload = { list: this.isNow ? 'now' : 'then', item: index }
