@@ -1,8 +1,6 @@
 <template>
   <div>
     <div v-show="step == 'boucher'" class="black"></div>
-    <Nav />
-
     <BoucherVore v-show="step == 'boucher'" @continue="onContinue()" />
     <div class="animation">
       <div v-if="step == 'then' || step == 'boucher'">
@@ -65,6 +63,7 @@
 
 <script>
 let animationTimer
+
 export default {
   data() {
     return {
@@ -110,12 +109,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.header {
-  position: absolute;
-  top: 30px;
-  width: 100%;
-  text-align: center;
-}
 .animation {
   position: relative;
   height: $height;

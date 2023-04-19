@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Nav />
     <Boucher />
     <div class="bulle">
       <div class="message">
