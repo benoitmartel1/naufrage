@@ -1,37 +1,28 @@
 export const state = () => ({
   lang: 'fr',
   volume: 1,
+  score: 0,
   moviePlaying: false,
   panier: {
-    now: { list: [], max: 20, isFull: false },
-    then: { list: [], max: 30, isFull: false },
+    now: { list: [], max: 100 },
+    then: { list: [], max: 7 },
   },
 })
-
-// export const getters = {
-//   getLang(state) {
-//     return state.lang
-//   },
-// }
 
 export const mutations = {
   resetGameData(state) {
     state.panier.now.list = []
     state.panier.then.list = []
-    state.panier.then.isFull = false
-    state.panier.now.isFull = false
+    state.score = 0
   },
   setLang(state, l) {
     state.lang = l
   },
-  addItem(state, p) {
-    state.panier[p.list].list.push(p.item)
+  setScore(state, s) {
+    state.score = s
   },
-  removeItem(state, p) {
-    state.panier[p.list].list.splice(p.item, 1)
-  },
-  setPanierFullStatus(state, p) {
-    state.panier[p.list].isFull = p.status
+  checkoutList(state, p) {
+    state.panier[p.list].list = p.content
   },
   setVolume(state, v) {
     state.volume = v

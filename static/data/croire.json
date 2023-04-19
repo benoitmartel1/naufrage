@@ -1,0 +1,61 @@
+{
+  "questions": [
+    {
+      "question": {
+        "fr": "Question A Lorem ipsum mossitatur mem simus lorem ipsum voles.",
+        "en": "A alimentary regime"
+      },
+      "mythe": {
+        "fr": "Mythe lorem ipsum sapelene alisinus quiandi",
+        "en": "A alimentary regime",
+        "good": true
+      },
+      "realite": {
+        "fr": "Réalité um facidit molorro blanisciis uta necuptate",
+        "en": "A alimentary regime"
+      },
+      "answer": {
+        "fr": " um facidit molorro blanisciis uta necuptate",
+        "en": "A alimentary regime"
+      }
+    },
+    {
+      "question": {
+        "fr": "Question B Lorem ipsum mossitatur mem simus lorem ipsum voles.",
+        "en": "A alimentary regime"
+      },
+      "mythe": {
+        "fr": "Mythe lorem ipsum sapelene alisinus quiandi",
+        "en": "A alimentary regime",
+        "good": true
+      },
+      "realite": {
+        "fr": "Réalité um facidit molorro blanisciis uta necuptate",
+        "en": "A alimentary regime"
+      },
+      "answer": {
+        "fr": " um facidit molorro blanisciis uta necuptate",
+        "en": "A alimentary regime"
+      }
+    },
+    {
+      "question": {
+        "fr": "Question C Lorem ipsum mossitatur mem simus lorem ipsum voles.",
+        "en": "A alimentary regime"
+      },
+      "mythe": {
+        "fr": "Mythe lorem ipsum sapelene alisinus quiandi",
+        "en": "A alimentary regime",
+        "good": true
+      },
+      "realite": {
+        "fr": "Réalité um facidit molorro blanisciis uta necuptate",
+        "en": "A alimentary regime"
+      },
+      "answer": {
+        "fr": " um facidit molorro blanisciis uta necuptate",
+        "en": "A alimentary regime"
+      }
+    }
+  ]
+}

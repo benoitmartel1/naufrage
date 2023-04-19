@@ -1,7 +1,6 @@
 <template>
   <div>
     <div v-if="panierFull" class="black"></div>
-
     <div class="main">
       <div class="game">
         <PanierFull
@@ -9,6 +8,7 @@
           :total="total"
           @continue="handleContinue()"
         />
+        <NotAvailable v-if="notAvailable" />
         <div class="left">
           <div class="types">
             <div
@@ -25,7 +25,7 @@
           </div>
           <div class="aliments">
             <div
-              class="aliment btn"
+              :class="['aliment btn', { sold: a.sold }]"
               v-for="a in alimentsInType"
               :key="a.fr"
               @click="addItem(a)"
@@ -45,9 +45,14 @@
             </div>
           </div>
           <ul class="list">
-            <li v-for="(i, index) in list" :key="i.fr + index">
+            <li
+              class="btn"
+              v-for="(i, index) in list"
+              :key="i.fr + index"
+              @click="i.sold = false"
+            >
               {{ i[lang] }}
-              <div class="btn remove" @click="removeItem(index)">X</div>
+              <div class="remove">X</div>
             </li>
           </ul>
           <div class="total">
@@ -69,62 +74,69 @@
 <script>
 import { aliments } from '~/static/data/aliments.json'
 import { types } from '~/static/data/types.json'
+
 export default {
   data() {
     return {
-      aliments: aliments,
+      aliments: [],
       types: types,
       type: 'fruit',
-      isNow: this.$store.state.panier.now.isFull == false,
-      panierFull: false,
+      era: this.$store.state.panier.now.list.length ? 'then' : 'now',
+      notAvailable: false,
     }
+  },
+  beforeMount() {
+    this.aliments = JSON.parse(JSON.stringify(aliments))
   },
   computed: {
     panier() {
       return this.$store.state.panier
     },
+    panierFull() {
+      return this.panier[this.era].list.length > 0
+    },
     lang() {
       return this.$store.state.lang
     },
-    era() {
-      return this.$store.state.panier.now.isFull == false ? 'then' : 'now'
-    },
     list() {
-      return this.panier[this.isNow ? 'now' : 'then'].list
+      return this.aliments.filter((a) => a.sold == true && a[this.era] !== null)
+    },
+    alimentsInType() {
+      return this.aliments.filter((a) => a.type == this.type)
     },
     left() {
-      let total = this.panier[this.isNow ? 'now' : 'then'].max
+      let total = this.panier[this.era].max
       let sum = this.list.reduce(
-        (accumulator, currentValue) => accumulator - currentValue.now,
+        (accumulator, currentValue) => accumulator - currentValue[this.era],
         total
       )
-      return sum < 0 ? 0 : sum
+      return sum < 0 ? 0 : sum.toFixed(2)
     },
     total() {
       let total = 0
       let sum = this.list.reduce(
-        (accumulator, currentValue) => accumulator + currentValue.now,
+        (accumulator, currentValue) => accumulator + currentValue[this.era],
         total
       )
-      return sum
-    },
-    alimentsInType() {
-      return aliments.filter((a) => a.type == this.type)
+      return sum.toFixed(2)
     },
   },
   methods: {
     addItem(a) {
-      a.sold = true
-      let payload = { list: this.isNow ? 'now' : 'then', item: a }
-      this.$store.commit('addItem', payload)
+      if (a[this.era]) {
+        a.sold = true
+      } else {
+        // alert('not available!')
+        this.notAvailable = true
+        a.sold = true
+      }
     },
-    removeItem(index) {
-      let payload = { list: this.isNow ? 'now' : 'then', item: index }
-      this.$store.commit('removeItem', payload)
-      //   console.log(a.now)
+    checkout() {
+      let payload = { list: this.era, content: this.list }
+      this.$store.commit('checkoutList', payload)
     },
     handleContinue() {
-      if (this.isNow) {
+      if (this.era == 'now') {
         this.$router.push('/panier/')
       } else {
         this.$router.push('/panier/compare')
@@ -134,11 +146,7 @@ export default {
   watch: {
     left(val) {
       if (val <= 0) {
-        this.panierFull = true
-        this.$store.commit('setPanierFullStatus', {
-          list: this.isNow ? 'now' : 'then',
-          status: true,
-        })
+        this.checkout()
       }
     },
   },
@@ -182,14 +190,22 @@ export default {
         }
       }
       .aliments {
+        @for $i from 1 through 6 {
+          .aliment:nth-child(#{$i}) {
+            animation-delay: calc($i - 1) * 100ms;
+          }
+        }
         background-color: white;
         display: flex;
-
-        padding: 120px 250px;
+        justify-content: space-between;
+        padding: 120px 150px;
         height: 100%;
         .aliment {
+          animation: fadeIn 400ms forwards ease-out;
+          //   animation-delay: 2s;
+          opacity: 0;
           flex-direction: column;
-          margin-right: 90px;
+          //   margin-right: 60px;
           width: 200px;
           height: 200px;
           background-color: cyan;
@@ -199,6 +215,10 @@ export default {
           align-items: center;
           .price {
             display: block;
+          }
+          &.sold {
+            background-color: #ddd;
+            opacity: 0.5;
           }
         }
       }

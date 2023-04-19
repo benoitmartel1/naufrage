@@ -7,7 +7,7 @@ export default {
 
       ws.onmessage = function (e) {
         const data = e.data.split('_')
-        that.onWsMessage({ type: data[0], value: data[1] })
+        that.onWsMessage({ type: data[0].toLowerCase(), value: data[1] })
       }
 
       ws.onclose = function (e) {

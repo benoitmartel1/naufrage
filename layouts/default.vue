@@ -1,6 +1,7 @@
 <template>
   <div :class="[{ appro: approMode }]">
     <div id="app">
+      <Nav v-if="!this.$store.state.moviePlaying" />
       <MovieComing v-if="timeToMovie" :timeToMovie="timeToMovie" />
       <Nuxt />
     </div>
@@ -11,7 +12,7 @@
 <script>
 import ws from '@/mixins/ws.js'
 import sound from '@/mixins/sound.js'
-
+import idle from '~/mixins/idle.js'
 let movieInterval
 export default {
   data() {
@@ -20,16 +21,23 @@ export default {
       timeToMovie: 0,
     }
   },
-  mixins: [ws, sound],
+  mixins: [ws, sound, idle],
   methods: {
     onWsMessage(msg) {
-      if (msg.type == 'MOVIE') {
+      if (msg.type == 'start') {
         if (!this.timeToMovie && !this.$store.state.moviePlaying) {
           this.timeToMovie = msg.value
         }
       }
-      if (msg.type == 'VOLUME') {
+      if (msg.type == 'stop') {
+        this.$router.push('/')
+        this.$store.commit('setMoviePlaying', false)
+      }
+      if (msg.type == 'volume') {
         this.$store.commit('setVolume', msg.value)
+      }
+      if (msg.type == 'shutdown') {
+        window.shutdown()
       }
     },
   },

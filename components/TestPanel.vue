@@ -18,11 +18,11 @@
 export default {
   methods: {
     setVolume(value) {
-      this.$parent.onWsMessage({ type: 'VOLUME', value: value })
+      this.$parent.onWsMessage({ type: 'volume', value: value })
     },
     startVideo() {
       let value = document.querySelector('#videoInput').value
-      this.$parent.onWsMessage({ type: 'MOVIE', value: value })
+      this.$parent.onWsMessage({ type: 'start', value: value })
     },
   },
 }

@@ -18,6 +18,7 @@ config.rootDir = __dirname // for electron-builder
 const nuxt = new Nuxt(config)
 const builder = new Builder(nuxt)
 const server = http.createServer(nuxt.render)
+
 // Build only in dev mode
 if (config.dev) {
   builder.build().catch((err) => {
@@ -46,13 +47,17 @@ const newWin = () => {
     height: 1080,
     frame: true,
     autoHideMenuBar: true,
-    alwaysOnTop: true,
+    // alwaysOnTop: true,
     fullscreen: false,
     kiosk: true,
     webPreferences: {
-      nodeIntegration: true,
+      preload: path.join(__dirname, 'preload.js'),
+      nodeIntegration: false,
+      contextIsolation: false,
+      enableRemoteModule: true,
       devTools: true,
     },
+
     icon: path.join(__dirname, 'favicon.ico'),
   })
   win.webContents.on('before-input-event', (event, input) => {

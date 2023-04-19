@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Nav />
     <div class="main">
       <div class="btn panier">
         <NuxtLink to="/panier">

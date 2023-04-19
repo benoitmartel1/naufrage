@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Nav />
     <Boucher />
     <div class="bulle">
       <div class="message">
@@ -27,13 +26,13 @@
       />
     </div>
     <ul class="list">
-      <div class="title">Mon panier 1920</div>
+      <div class="title">Mon panier aujourd'hui</div>
       <li v-for="(i, index) in panier.now.list" :key="i.fr + index">
         {{ i[lang] }}
       </li>
     </ul>
     <ul class="list">
-      <div class="title">Mon panier aujourd'hui</div>
+      <div class="title">Mon panier 1920</div>
       <li v-for="(i, index) in panier.then.list" :key="i.fr + index">
         {{ i[lang] }}
       </li>

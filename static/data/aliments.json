@@ -5,28 +5,48 @@
       "fr": "ananas",
       "en": "pineapple",
       "now": 4,
-      "then": 1.25
+      "then": 1.25,
+      "sold": false
     },
     {
       "type": "fruit",
       "fr": "pomme",
       "en": "apple",
       "now": 0.5,
-      "then": 0.05
+      "then": 0.05,
+      "sold": false
+    },
+    {
+      "type": "fruit",
+      "fr": "melon d'eau",
+      "en": "watermelon",
+      "now": 5,
+      "then": null,
+      "sold": false
     },
     {
       "type": "laitier",
       "fr": "lait",
       "en": "milk",
       "now": 0.5,
-      "then": 0.05
+      "then": 0.05,
+      "sold": false
     },
     {
       "type": "vege",
       "fr": "tofu",
       "en": "tofu",
       "now": 10,
-      "then": null
+      "then": null,
+      "sold": false
+    },
+    {
+      "type": "viande",
+      "fr": "gigot à 100$",
+      "en": "100$ gigot",
+      "now": 100,
+      "then": 100,
+      "sold": false
     }
   ]
 }

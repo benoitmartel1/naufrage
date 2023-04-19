@@ -186,6 +186,12 @@ a:hover {
   opacity: 0.5;
   animation: fade 200ms;
 }
+.header {
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  text-align: center;
+}
 @keyframes fade {
   from {
     opacity: 0;

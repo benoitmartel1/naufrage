@@ -18,7 +18,7 @@ module.exports = {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     script: [
       {
-        src: '/js/howler.core.min.js',
+        src: '/vj/js/howler.core.min.js',
       },
     ],
   },

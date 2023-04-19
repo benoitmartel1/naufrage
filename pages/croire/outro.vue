@@ -1,57 +1,45 @@
 <template>
   <div>
-    <Nav />
+    <div class="header">
+      <span v-if="fr">J’SAIS PAS SI TU VAS M’CROIRE ?</span
+      ><span v-else>WHAT TYPE OF VORE ARE YA?</span>
+    </div>
+
     <Boucher />
-    YOUYOUYOUY
     <div class="bulle">
+      <Vache :score="score" />
+      <div class="score">{{ score + ' / ' + nbOfQuestions }}</div>
       <div class="message">
-        <div v-if="isNow">
-          <span v-if="lang == 'fr'"
-            >Finito! ipsum occati illum estotas dolupi- et laut que repudandant.
+        <div>
+          <span v-if="fr"
+            >Lorem ipsum occati illum estotas dolupi- et laut que repudandant.
             Cipsam faccatur reperum vollum incidebis dollamus inustias este
             vendell uptasperchil int estiatur ma.</span
           >
-          <span v-else>EN</span>
-        </div>
-        <div v-else>
-          <span v-if="lang == 'fr'"
-            >Finito! ipsum occati illum estotas dolupi- et laut que repudandant.
-            Cipsam
-          </span>
           <span v-else>EN</span>
         </div>
       </div>
 
       <ContinueButton
         @click.native="onContinue()"
-        :text="lang == 'fr' ? 'Retour au menu principal' : 'Back to main menu'"
+        :text="fr ? 'Retour au menu principal' : 'Back to main menu'"
       />
     </div>
-    <ul class="list">
-      <div class="title">Mon panier 1920</div>
-      <li v-for="(i, index) in panier.now.list" :key="i.fr + index">
-        {{ i[lang] }}
-      </li>
-    </ul>
-    <ul class="list">
-      <div class="title">Mon panier aujourd'hui</div>
-      <li v-for="(i, index) in panier.then.list" :key="i.fr + index">
-        {{ i[lang] }}
-      </li>
-    </ul>
   </div>
 </template>
 
 <script>
+import { questions } from '~/static/data/croire.json'
 export default {
-  data() {
-    return {
-      panier: this.$store.state.panier,
-    }
-  },
   computed: {
-    lang() {
-      return this.$store.state.lang
+    nbOfQuestions() {
+      return questions.length
+    },
+    fr() {
+      return this.$store.state.lang == 'fr'
+    },
+    score() {
+      return this.$store.state.score
     },
   },
   methods: {
@@ -63,38 +51,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.list {
-  background-color: white;
-  width: 400px;
-  position: absolute;
-  min-height: 600px;
-  @include bordered;
-  &:nth-of-type(1) {
-    right: 30%;
-    transform: rotate(-3deg);
-  }
-  &:nth-of-type(2) {
-    right: 10%;
-    transform: rotate(5deg);
-  }
-  li {
-    font-size: 0.5em;
-  }
+.vache {
+  position: relative;
 }
 .boucher {
-  transform: scaleX(-1);
-  left: 500px;
-  bottom: -200px;
-}
-.bulle {
-  top: 30px;
-  width: 800px;
-  z-index: 100;
-  left: 30px;
-  &:after {
-    transform: rotate(-90deg) scaleX(-1);
-    top: 100%;
-    left: 5%;
-  }
+  left: 75%;
 }
 </style>

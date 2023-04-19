@@ -27,7 +27,7 @@
   "scripts": {
     "dev": "nuxt",
     "start": "nuxt start",
-    "generate": "nuxt generate",
+    "generate": "nuxt generate && scp -r dist/* benoitma@50.87.233.33:public_html/dev/vj",
     "lint:prettier": "prettier --check .",
     "lint": "yarn lint:prettier",
     "lintfix": "prettier --write --list-different .",

@@ -1,10 +1,11 @@
 <template>
   <div>
-    <Nav />
+    <Vache :score="score" />
     <div v-if="isGood !== null" class="black"></div>
-    <Validate
+    <ValidateCroire
       v-if="isGood !== null"
       :isGood="isGood"
+      :answer="q.answer"
       @continue="onContinue()"
     />
     <div class="main">
@@ -12,13 +13,11 @@
       <div class="game">
         <div class="question">{{ q.question[lang] }}</div>
         <div class="answers">
-          <div
-            class="btn answer"
-            v-for="(a, index) in q.answers"
-            :key="a + index"
-            @click="validate(a.good)"
-          >
-            {{ a[lang] }}
+          <div class="btn answer" @click="validate(q.mythe.good)">
+            {{ q.mythe[lang] }}
+          </div>
+          <div class="btn answer" @click="validate(q.realite.good)">
+            {{ q.realite[lang] }}
           </div>
         </div>
       </div>
@@ -27,7 +26,7 @@
 </template>
 
 <script>
-import { questions } from '~/static/data/vore.json'
+import { questions } from '~/static/data/croire.json'
 
 export default {
   data() {
@@ -48,7 +47,6 @@ export default {
   },
   methods: {
     validate(isGood) {
-      console.log(isGood)
       if (isGood) {
         this.score++
         this.isGood = true
@@ -57,12 +55,14 @@ export default {
       }
     },
     onContinue() {
-      if (this.isGood) {
+      console.log(this.currentQuestionIndex)
+      if (this.questions.length - 1 == this.currentQuestionIndex) {
+        this.$store.commit('setScore', this.score)
+        this.$router.push('/croire/outro')
+      } else {
         this.currentQuestionIndex++
-        if (this.questions.length <= this.currentQuestionIndex) {
-          this.$router.push('/vore/outro')
-        }
       }
+
       this.isGood = null
     },
   },

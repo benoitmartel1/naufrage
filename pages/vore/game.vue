@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Nav />
     <div v-if="isGood !== null" class="black"></div>
     <Validate
       v-if="isGood !== null"
@@ -48,7 +47,6 @@ export default {
   },
   methods: {
     validate(isGood) {
-      console.log(isGood)
       if (isGood) {
         this.score++
         this.isGood = true
@@ -61,6 +59,7 @@ export default {
         this.currentQuestionIndex++
         if (this.questions.length <= this.currentQuestionIndex) {
           this.$router.push('/vore/outro')
+        } else {
         }
       }
       this.isGood = null
