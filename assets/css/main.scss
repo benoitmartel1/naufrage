@@ -30,9 +30,10 @@ body {
   margin: 0;
   font-size: var(--font-size);
   font-family: 'Nunito';
-  font-weight: 400;
+
+  font-weight: 800;
   letter-spacing: 1px;
-  line-height: normal;
+  line-height: 1.2em;
   /* overflow: hidden; */
   background: #444;
   color: #000;
@@ -138,6 +139,11 @@ h4 {
 a {
   text-decoration: none;
 }
+a:active,
+a:visited {
+  color: inherit;
+}
+
 a:link,
 a:visited {
   text-decoration: none;

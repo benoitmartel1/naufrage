@@ -41,7 +41,7 @@ export default {
   display: flex;
   padding: 30px;
   justify-content: space-between;
-  z-index: 100;
+  z-index: 888;
   position: absolute;
   bottom: 0;
   .lang {

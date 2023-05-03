@@ -38,7 +38,25 @@ export default {
   data() {
     return {}
   },
+  async created() {
+    let baseURL =
+      process.env.NODE_ENV == 'development'
+        ? 'http://localhost:8080'
+        : 'file:///opt/par/resources'
+    // this.approMode = process.env.NODE_ENV == 'development';
 
+    //For web export appro
+    baseURL = window.location.origin + '/vj'
+
+    //Load settings in external json file
+    this.settings = await this.$axios
+      .get('extraResources/settings.json', { baseURL: baseURL })
+      .then((res) => {
+        console.log(76)
+        console.log(res.data.settings)
+        return res.data.settings
+      })
+  },
   computed: {
     lang() {
       return this.$store.state.lang
@@ -64,10 +82,19 @@ export default {
     flex: 1;
     display: flex;
     padding: 30px;
-    // margin-right: 30px;
+    text-align: center;
     height: 600px;
     border: 2px solid black;
     background-color: white;
+  }
+  .btn:active {
+    flex: 1;
+    display: flex;
+    padding: 30px;
+    // margin-right: 30px;
+    height: 600px;
+    border: 2px solid black;
+    background-color: #ddd;
   }
 }
 </style>

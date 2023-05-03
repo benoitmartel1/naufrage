@@ -28,6 +28,6 @@ export default {
 }
 .continue {
   text-align: center;
-  animation: fromBottomRight 500ms ease-out;
+  /* animation: fromBottomRight 500ms ease-out; */
 }
 </style>

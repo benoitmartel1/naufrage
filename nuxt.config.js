@@ -30,6 +30,7 @@ module.exports = {
     '~/assets/css/main.scss',
   ],
 
+  modules: ['@nuxtjs/axios'],
   buildModules: ['@nuxtjs/style-resources'],
   router: {
     base: '/vj/',

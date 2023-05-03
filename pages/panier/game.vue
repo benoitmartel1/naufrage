@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="panierFull" class="black"></div>
-    <div class="main">
+    <div :class="['main', { old: era == 'then' }]">
       <div class="game">
         <PanierFull
           v-if="panierFull"
@@ -36,7 +36,7 @@
           </div>
         </div>
         <div class="right">
-          <div class="header">
+          <div class="top">
             <div class="title">
               <span v-if="lang == 'fr'">Mon panier</span><span v-else></span>
             </div>
@@ -231,7 +231,11 @@ export default {
       height: 100%;
       padding: 30px;
       flex: 1;
-      .header {
+      position: relative;
+
+      .top {
+        // background-color: green;
+
         .nb {
           position: relative;
           display: flex;

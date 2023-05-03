@@ -75,7 +75,11 @@ body {
   height: $height;
   background-color: beige;
   overflow: hidden;
+  &:has(.old) {
+    background-color: rgb(222, 195, 157);
+  }
 }
+
 .appro {
   margin: 30px;
   transform: scale(0.5);

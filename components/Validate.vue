@@ -9,7 +9,7 @@
             <span v-else>EN</span>
           </div>
           <div v-else>
-            <span v-if="fr">Essaye à nouveau</span> <span v-else>EN</span>
+            <span v-if="fr">Essaie à nouveau</span> <span v-else>EN</span>
           </div>
         </div>
 

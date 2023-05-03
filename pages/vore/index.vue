@@ -56,7 +56,10 @@
         </div>
       </div>
 
-      <ContinueButton @click.native="onContinue()" />
+      <ContinueButton
+        v-if="animationDone || step == 'then'"
+        @click.native="onContinue()"
+      />
     </div>
   </div>
 </template>
@@ -69,6 +72,7 @@ export default {
     return {
       timer: 0,
       step: 'then',
+      animationDone: false,
     }
   },
   computed: {
@@ -84,8 +88,9 @@ export default {
       if (val == 'now') {
         animationTimer = setInterval(() => {
           this.timer += 1
-          if (this.timer > 30) {
+          if (this.timer > 20) {
             clearInterval(animationTimer)
+            this.animationDone = true
           }
         }, 100)
       }

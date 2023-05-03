@@ -1,4 +1,4 @@
-let timerDuration = 20
+let timerDuration = 200
 let timeLeft
 let timerInterval
 

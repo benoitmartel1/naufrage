@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div :class="['main', { old: era == 'then' }]">
     <Boucher />
     <div class="bulle">
       <div class="message">
-        <div v-if="isNow">
+        <div v-if="era == 'now'">
           <span v-if="lang == 'fr'"
             >Lorem ipsum occati illum estotas dolupi- et laut que repudandant.
             Cipsam faccatur reperum vollum incidebis dollamus inustias este
@@ -27,12 +27,14 @@
 
 <script>
 export default {
+  data() {
+    return {
+      era: this.$store.state.panier.now.list.length ? 'then' : 'now',
+    }
+  },
   computed: {
     lang() {
       return this.$store.state.lang
-    },
-    isNow() {
-      return !this.$store.state.panier.now.isFull
     },
   },
   methods: {
@@ -45,6 +47,6 @@ export default {
 
 <style lang="scss" scoped>
 .boucher {
-  left: 75%;
+  left: 75% !important;
 }
 </style>
