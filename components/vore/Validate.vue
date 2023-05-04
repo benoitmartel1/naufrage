@@ -6,10 +6,12 @@
         <div class="message">
           <div v-if="isGood">
             <span v-if="fr">Bravo!</span>
-            <span v-else>EN</span>
+            <span v-else>Bravo in english</span>
           </div>
           <div v-else>
-            <span v-if="fr">Essaie à nouveau</span> <span v-else>EN</span>
+            <span v-if="fr">La réponse était:</span>
+            <span v-else>The answer is:</span>
+            <br />{{ goodAnswerDescription() }}
           </div>
         </div>
 
@@ -21,10 +23,15 @@
 
 <script>
 export default {
-  props: ['isGood'],
+  props: ['isGood', 'question'],
   computed: {
     fr() {
       return this.$store.state.lang == 'fr'
+    },
+  },
+  methods: {
+    goodAnswerDescription() {
+      return this.question.answers.find((a) => a.good)[this.fr ? 'fr' : 'en']
     },
   },
 }

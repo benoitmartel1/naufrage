@@ -35,7 +35,12 @@ module.exports = {
   router: {
     base: '/vj/',
   },
-  components: true,
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
+  ],
 
   styleResources: {
     scss: ['~/assets/style/variables.scss', '~/assets/style/mixins.scss'],

@@ -4,6 +4,7 @@
     <Validate
       v-if="isGood !== null"
       :isGood="isGood"
+      :question="q"
       @continue="onContinue()"
     />
     <div class="main">
@@ -49,21 +50,19 @@ export default {
     validate(isGood) {
       if (isGood) {
         this.score++
-
         this.isGood = true
       } else {
         this.isGood = false
       }
     },
     onContinue() {
-      if (this.isGood) {
-        this.currentQuestionIndex++
-        if (this.questions.length <= this.currentQuestionIndex) {
-          this.$store.commit('setScore', this.score)
-          this.$router.push('/vore/outro')
-        } else {
-        }
+      this.currentQuestionIndex++
+      if (this.questions.length <= this.currentQuestionIndex) {
+        this.$store.commit('setScore', this.score)
+        this.$router.push('/vore/outro')
+      } else {
       }
+
       this.isGood = null
     },
   },

@@ -27,7 +27,7 @@
   "scripts": {
     "dev": "nuxt",
     "start": "nuxt start",
-    "generate": "nuxt generate && scp -r dist/* benoitma@50.87.233.33:public_html/dev/vj",
+    "generate": "nuxt generate",
     "electron": "cross-env NODE_ENV=dev electron .",
     "e:build": "cross-env NODE_ENV=production nuxt build && electron-builder --win"
   },

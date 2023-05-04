@@ -11,12 +11,20 @@
       <div class="score">{{ score + ' / ' + nbOfQuestions }}</div>
       <div class="message">
         <div>
-          <span v-if="fr"
-            >Lorem ipsum occati illum estotas dolupi- et laut que repudandant.
-            Cipsam faccatur reperum vollum incidebis dollamus inustias este
-            vendell uptasperchil int estiatur ma.</span
-          >
-          <span v-else>EN</span>
+          <div v-if="Math.floor(score / nbOfQuestions)">
+            <span v-if="fr"
+              >100% Lorem ipsum occati illum estotas dolupiet laut que
+              repudandant.</span
+            >
+            <span v-else>EN</span>
+          </div>
+          <div v-else>
+            <span v-if="fr"
+              >Pas 100% Lorem ipsum occati illum estotas dolupiet laut que
+              repudandant.</span
+            >
+            <span v-else>EN</span>
+          </div>
         </div>
       </div>
 

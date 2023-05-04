@@ -8,13 +8,22 @@
     <Boucher />
     <div class="bulle">
       <div class="message">
-        <div class="score">{{ score }} / XX</div>
+        <div class="score">{{ score }} / {{ questions.length }}</div>
         <div>
-          <span v-if="fr"
-            >Lorem ipsum occati illum estotas dolupiet laut que
-            repudandant.</span
-          >
-          <span v-else>EN</span>
+          <div v-if="Math.floor(score / questions.length)">
+            <span v-if="fr"
+              >100% Lorem ipsum occati illum estotas dolupiet laut que
+              repudandant.</span
+            >
+            <span v-else>EN</span>
+          </div>
+          <div v-else>
+            <span v-if="fr"
+              >Pas 100% Lorem ipsum occati illum estotas dolupiet laut que
+              repudandant.</span
+            >
+            <span v-else>EN</span>
+          </div>
         </div>
       </div>
 
@@ -27,10 +36,12 @@
 </template>
 
 <script>
+import { questions } from '~/static/data/vore.json'
 export default {
   data() {
     return {
       panier: this.$store.state.panier,
+      questions: questions,
     }
   },
   computed: {

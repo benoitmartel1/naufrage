@@ -15,16 +15,17 @@ export default {
 
 <style scoped>
 .button {
-  border: 2px #606060 solid;
-  border-radius: 5px;
+  /* border: 2px #606060 solid; */
+  /* border-radius: 5px; */
   padding: 10px 70px;
   display: inline-block;
-  background-color: #005e8f;
+  background-color: black;
   font-weight: black;
   color: white;
   /* text-transform: uppercase; */
   font-size: 53px;
   font-weight: 900;
+  margin-top: 30px;
 }
 .continue {
   text-align: center;
