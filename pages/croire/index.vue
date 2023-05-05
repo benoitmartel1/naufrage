@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main-wrapper">
     <Boucher />
     <div class="bulle">
       <div class="message">
