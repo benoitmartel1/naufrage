@@ -1,5 +1,5 @@
 <template>
-  <div :class="['main', { old: era == 'then' }]">
+  <div :class="[' main-wrapper main', { old: era == 'then' }]">
     <Boucher />
     <div class="bulle">
       <div class="message">

@@ -1,7 +1,7 @@
 <template>
   <div class="nav">
     <div class="btn home"><NuxtLink to="/">HOME</NuxtLink></div>
-    <div class="game">{{ gameName() }}</div>
+    <div class="game" v-if="gameName()">{{ gameName() }}</div>
     <div class="btn lang" @click="changeLang()">
       {{ !fr ? 'fr' : 'en' }}
     </div>
@@ -48,6 +48,8 @@ export default {
   .game {
     font-weight: 400;
     font-size: 36px;
+    animation: fromBottom 600ms cubic-bezier(0.17, 0.67, 0.52, 0.92) both;
+    animation-delay: 200ms;
   }
   .btn {
     color: white;
@@ -70,6 +72,14 @@ export default {
   bottom: 0;
   .lang {
     text-transform: uppercase;
+  }
+}
+@keyframes fromBottom {
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(0px);
   }
 }
 </style>

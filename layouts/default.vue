@@ -85,12 +85,11 @@ body {
   transform: scale(0.5);
   transform-origin: 0 0;
 }
-.page-enter-active,
-.page-leave-active {
-  transition: opacity 0.2s;
+.page-enter-active {
+  transition: all 0.4s;
 }
-.page-enter,
-.page-leave-to {
+.page-enter {
   opacity: 0;
+  transform: translateY(-40px);
 }
 </style>

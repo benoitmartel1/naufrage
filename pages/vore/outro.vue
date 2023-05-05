@@ -1,5 +1,5 @@
 <template>
-  <div :class="['main', { old: era == 'then' }]">
+  <div :class="['main-wrapper main', { old: era == 'then' }]">
     <div class="black"></div>
     <div class="animation">
       <img class="woman" src="@/assets/images/boucher.png" alt="" />

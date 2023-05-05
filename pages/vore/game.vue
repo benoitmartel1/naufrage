@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main-wrapper">
     <div v-if="isGood !== null" class="black"></div>
     <Validate
       v-if="isGood !== null"
@@ -16,7 +16,7 @@
             class="btn answer"
             v-for="(a, index) in q.answers"
             :key="a + index"
-            @click="validate(a.good)"
+            @click.native="validate(a.good)"
           >
             {{ a[lang] }}
           </div>

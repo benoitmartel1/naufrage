@@ -47,7 +47,13 @@ body {
 #main {
   margin: 50px;
 }
+.main-wrapper {
+  width: $width;
+  height: $height;
 
+  position: absolute;
+  z-index: 0;
+}
 .frame {
   // box-sizing: margin-box;
   background-color: var(--red);

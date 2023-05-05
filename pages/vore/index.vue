@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main-wrapper">
     <div v-show="step == 'boucher'" class="black"></div>
     <BoucherVore v-show="step == 'boucher'" @continue="onContinue()" />
     <div class="animation">

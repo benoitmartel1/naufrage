@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main-wrapper">
     <div v-if="panierFull" class="black"></div>
     <div :class="['main', { old: era == 'then' }]">
       <div class="game">
@@ -67,7 +67,6 @@
         </div>
       </div>
     </div>
-    <Nav />
   </div>
 </template>
 
@@ -190,6 +189,7 @@ export default {
           align-items: center;
 
           &.active {
+            animation: typeIn both ease-out 300ms;
             border-radius: 20px 20px 0 0;
             background-color: white;
           }
@@ -286,6 +286,14 @@ export default {
         justify-content: space-between;
       }
     }
+  }
+}
+@keyframes typeIn {
+  from {
+    transform: translateY(30px);
+  }
+  to {
+    transform: translateY(0);
   }
 }
 </style>

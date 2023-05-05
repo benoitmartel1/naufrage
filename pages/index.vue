@@ -1,32 +1,26 @@
 <template>
   <div>
     <div class="main">
-      <div class="btn panier">
-        <NuxtLink to="/panier">
-          <div class="title">
-            <span v-if="lang == 'fr'">Dans mon p'tit panier...</span>
-            <span v-else>EN Dans mon p'tit panier...</span>
-          </div>
-          <div class="icon"></div>
-        </NuxtLink>
+      <div class="btn panier" @click="$router.push('/panier')">
+        <div class="title">
+          <span v-if="lang == 'fr'">Dans mon p'tit panier...</span>
+          <span v-else>EN Dans mon p'tit panier...</span>
+        </div>
+        <div class="icon"></div>
       </div>
-      <div class="btn vore">
-        <NuxtLink to="/vore">
-          <div class="title">
-            <span v-if="lang == 'fr'">Quel <i>vore</i> es-tu ?</span>
-            <span v-else>EN Dans mon p'tit panier...</span>
-          </div>
-          <div class="icon"></div>
-        </NuxtLink>
+      <div class="btn vore" @click="$router.push('/vore')">
+        <div class="title">
+          <span v-if="lang == 'fr'">Quel <i>vore</i> es-tu ?</span>
+          <span v-else>EN Dans mon p'tit panier...</span>
+        </div>
+        <div class="icon"></div>
       </div>
-      <div class="btn croire">
-        <NuxtLink to="/croire">
-          <div class="title">
-            <span v-if="lang == 'fr'">J'sais pas si tu vas m'croire?</span>
-            <span v-else>EN Dans mon p'tit panier...</span>
-          </div>
-          <div class="icon"></div>
-        </NuxtLink>
+      <div class="btn croire" @click="$router.push('/croire')">
+        <div class="title">
+          <span v-if="lang == 'fr'">J'sais pas si tu vas m'croire?</span>
+          <span v-else>EN Dans mon p'tit panier...</span>
+        </div>
+        <div class="icon"></div>
       </div>
     </div>
   </div>
@@ -91,9 +85,31 @@ export default {
     border-radius: 50% 50% 20px 20px;
     border: 5px solid var(--beige);
     background-color: var(--orange);
+    transform: translate(0px, 0px);
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        animation: #{'slideIn' + $i} ease-out both;
+        animation-duration: 300ms + $i * 50ms;
+      }
+    }
   }
   .btn:active {
     background-color: var(--red);
+  }
+}
+@keyframes slideIn1 {
+  from {
+    transform: translate(-60px, -40px) rotate(-8deg);
+  }
+}
+@keyframes slideIn2 {
+  from {
+    transform: translate(30px, -100px) rotate(10deg);
+  }
+}
+@keyframes slideIn3 {
+  from {
+    transform: translate(80px, 80px) rotate(6deg);
   }
 }
 </style>

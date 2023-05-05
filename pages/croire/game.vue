@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main-wrapper">
     <div v-if="isGood !== null" class="black"></div>
     <ValidateCroire
       v-if="isGood !== null"
@@ -111,6 +111,7 @@ export default {
         font-size: 60px;
         border-radius: 30px;
         // margin-bottom: 30px;
+
         background-color: white;
         padding: 30px 40px;
         border: 5px solid var(--brown);
