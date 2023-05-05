@@ -4,7 +4,7 @@
       <Boucher />
       <div class="bulle">
         <div class="message">
-          <div class="total">{{ total + '$' }}</div>
+          <div class="total">{{ total + ' $' }}</div>
           <span v-if="lang == 'fr'"
             >Lorem ipsum occati illum estotas dolupi- et laut que repudandant.
             Cipsam faccatur reperum vollum incidebis dollamus inustias este
@@ -31,6 +31,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.total {
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  font-size: 88px;
+  margin: 30px 0 60px 0;
+}
 .wrapper {
   position: absolute;
   z-index: 100;

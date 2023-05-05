@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Vache :score="score" />
     <div v-if="isGood !== null" class="black"></div>
     <ValidateCroire
       v-if="isGood !== null"
@@ -8,16 +7,17 @@
       :answer="q.answer"
       @continue="onContinue()"
     />
-    <div class="main">
+    <div class="frame">
       <div class="score">{{ score + ' / ' + questions.length }}</div>
       <div class="game">
+        <Vache :score="score" />
         <div class="question">{{ q.question[lang] }}</div>
         <div class="answers">
           <div class="btn answer" @click="validate(q.mythe.good)">
-            {{ q.mythe[lang] }}
+            {{ fr ? 'Mythe' : 'EN Myth' }}
           </div>
           <div class="btn answer" @click="validate(q.realite.good)">
-            {{ q.realite[lang] }}
+            {{ fr ? 'Réalité' : 'EN Reality' }}
           </div>
         </div>
       </div>
@@ -43,6 +43,9 @@ export default {
     },
     lang() {
       return this.$store.state.lang
+    },
+    fr() {
+      return this.$store.state.lang == 'fr'
     },
   },
   methods: {
@@ -71,32 +74,49 @@ export default {
 
 <style lang="scss" scoped>
 .score {
-  float: right;
+  right: 30px;
+  position: absolute;
 }
-.main {
+.frame {
   padding: 30px;
-  width: $width;
-  height: $height;
+
   .game {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-    height: 75%;
+    height: 100%;
+    padding: 0 200px;
+    padding-bottom: 50px;
+    // border: solid yellow 1px;
+    // height: 75%;
     overflow: hidden;
 
     .question {
-      display: block;
+      text-align: center;
+      font-weight: 400;
     }
     .answers {
-      margin: auto;
-      width: 80%;
+      //   margin: auto;
+      //   width: 100%;
+      display: flex;
+
+      justify-content: space-between;
+      gap: 50px;
       .answer {
-        width: 100%;
-        font-size: 0.8em;
+        // width: 100%;
+        font-size: 60px;
         border-radius: 30px;
-        margin-bottom: 30px;
+        // margin-bottom: 30px;
         background-color: white;
-        padding: 20px 80px;
-        @include bordered;
+        padding: 30px 40px;
+        border: 5px solid var(--brown);
+        &:active {
+          background-color: var(--orange);
+        }
       }
     }
   }

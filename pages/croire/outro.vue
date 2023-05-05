@@ -1,14 +1,12 @@
 <template>
   <div>
-    <div class="header">
-      <span v-if="fr">J’SAIS PAS SI TU VAS M’CROIRE ?</span
-      ><span v-else>WHAT TYPE OF VORE ARE YA?</span>
-    </div>
-
     <Boucher />
     <div class="bulle">
-      <Vache :score="score" />
-      <div class="score">{{ score + ' / ' + nbOfQuestions }}</div>
+      <div class="row">
+        <Vache :score="score" />
+        <div class="score">{{ score + '/' + nbOfQuestions }}</div>
+      </div>
+
       <div class="message">
         <div>
           <div v-if="Math.floor(score / nbOfQuestions)">
@@ -30,9 +28,11 @@
 
       <ContinueButton
         @click.native="onContinue()"
-        :text="fr ? 'Retour au menu principal' : 'Back to main menu'"
+        :text="fr ? 'Retour au<br>menu principal' : 'Back to main menu'"
       />
     </div>
+
+    <div class="frame"></div>
   </div>
 </template>
 
@@ -59,8 +59,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.score {
+  font-size: 72px;
+  font-weight: 700;
+  //   width: 100%;
+  text-align: center;
+  //   margin-bottom: 60px;
+}
 .vache {
-  position: relative;
+  //   position: relative;
 }
 .boucher {
   left: 75%;

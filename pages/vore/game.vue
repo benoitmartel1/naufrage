@@ -7,8 +7,8 @@
       :question="q"
       @continue="onContinue()"
     />
-    <div class="main">
-      <div class="score">{{ score + ' / ' + questions.length }}</div>
+    <div class="frame">
+      <div class="score">{{ score + '/' + questions.length }}</div>
       <div class="game">
         <div class="question">{{ q.question[lang] }}</div>
         <div class="answers">
@@ -23,6 +23,7 @@
         </div>
       </div>
     </div>
+    <!-- <div class="frame"></div> -->
   </div>
 </template>
 
@@ -70,33 +71,44 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.score {
-  float: right;
-}
-.main {
-  padding: 30px;
-  width: $width;
-  height: $height;
+.frame {
+  font-weight: 700;
+  padding: 30px 60px;
+  //   display: flex;
+  .score {
+    font-size: 72px;
+
+    float: right;
+  }
+
   .game {
-    text-align: center;
+    // border: 1px solid yellow;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 70px;
     width: 100%;
-    height: 75%;
-    overflow: hidden;
 
     .question {
-      display: block;
+      margin-bottom: 50px;
     }
     .answers {
-      margin: auto;
-      width: 80%;
+      //   margin: auto;
+      width: 100%;
       .answer {
-        width: 100%;
+        // width: 100%;
+        text-align: center;
         font-size: 0.8em;
         border-radius: 30px;
-        margin-bottom: 30px;
+        margin-bottom: 25px;
         background-color: white;
         padding: 20px 80px;
-        @include bordered;
+        border: 5px solid var(--brown);
+        &:active {
+          background-color: var(--orange);
+        }
       }
     }
   }

@@ -1,9 +1,5 @@
 <template>
   <div>
-    <div class="header">
-      <span v-if="fr">J’SAIS PAS SI TU VAS M’CROIRE ?</span
-      ><span v-else>WHAT TYPE OF VORE ARE YA?</span>
-    </div>
     <Boucher />
     <div class="bulle">
       <div class="message">
@@ -19,6 +15,7 @@
 
       <ContinueButton @click.native="onContinue()" />
     </div>
+    <div class="frame"></div>
   </div>
 </template>
 

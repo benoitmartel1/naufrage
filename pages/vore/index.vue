@@ -10,30 +10,27 @@
         <img class="man" src="@/assets/images/boucher.png" alt="" />
       </div>
       <div class="labels">
-        <div v-if="timer >= 0">
+        <div class="label" v-if="timer >= 0">
           <span>{{ fr ? 'Omnivore' : 'Omnivorus' }}</span>
         </div>
-        <div v-if="timer >= 3">
+        <div class="label" v-if="timer >= 3">
           <span>{{ fr ? 'Carnivore' : 'Omnivorus' }}</span>
         </div>
-        <div v-if="timer >= 6">
+        <div class="label" v-if="timer >= 6">
           <span>{{ fr ? 'Ovipare' : 'Omnivorus' }}</span>
         </div>
-        <div v-if="timer >= 8">
+        <div class="label" v-if="timer >= 8">
           <span>{{ fr ? 'Matador' : 'Omnivorus' }}</span>
         </div>
-        <div v-if="timer >= 9">
+        <div class="label" v-if="timer >= 9">
           <span>{{ fr ? 'Météore' : 'Omnivorus' }}</span>
         </div>
-        <div v-if="timer >= 10">
+        <div class="label" v-if="timer >= 10">
           <span>{{ fr ? 'Glouton' : 'Omnivorus' }}</span>
         </div>
       </div>
     </div>
-    <div class="header">
-      <span v-if="fr">QUEL VORE ES-TU?</span
-      ><span v-else>WHAT TYPE OF VORE ARE YA?</span>
-    </div>
+
     <div class="bulle" v-if="step !== 'boucher'">
       <div class="message">
         <div v-if="step == 'then'">
@@ -61,6 +58,7 @@
         @click.native="onContinue()"
       />
     </div>
+    <div class="frame"></div>
   </div>
 </template>
 
@@ -142,7 +140,7 @@ export default {
   }
 }
 .labels {
-  div {
+  .label {
     span {
       display: block;
       animation: scaleDown 500ms ease-out;

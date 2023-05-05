@@ -88,10 +88,10 @@ button {
   font-size: 3em;
 }
 .vache {
-  position: absolute;
-  z-index: 999;
-  width: 300px;
-  left: 0;
+  //   position: absolute;
+  //   z-index: 999;
+  width: 250px;
+  //   left: 0;
 }
 svg {
   g:not(#vache) {

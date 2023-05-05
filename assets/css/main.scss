@@ -6,6 +6,13 @@
   --letters_countdown_time: 2s;
   --badge-in-duration: 1000ms;
   --default-tr-speed: 400ms;
+  --cyan: #d5f2fa;
+  --red: #f48e6c;
+  --orange: #fcc472;
+  --pink: #ed6587;
+  --burgundy: #640019;
+  --beige: #c79f77;
+  --brown: #67390b;
 }
 
 * {
@@ -29,11 +36,10 @@ body {
     auto !important; */
   margin: 0;
   font-size: var(--font-size);
-  font-family: 'Nunito';
+  font-family: 'Neulis';
 
   font-weight: 800;
-  letter-spacing: 1px;
-  line-height: 1.2em;
+  line-height: 1.1em;
   /* overflow: hidden; */
   background: #444;
   color: #000;
@@ -42,7 +48,24 @@ body {
   margin: 50px;
 }
 
+.frame {
+  // box-sizing: margin-box;
+  background-color: var(--red);
+  width: 88%;
+  height: 78%;
+  left: 6%;
+  top: 80px;
+  // height: $height;
+
+  border-radius: 40px;
+  position: absolute;
+  z-index: -1;
+}
+
 .bulle {
+  border-radius: 30px;
+  font-weight: 400;
+  font-size: 0.8em;
   position: absolute;
   left: 10%;
   top: 20%;
@@ -52,7 +75,7 @@ body {
   max-height: 900px;
   @include bordered;
   background: white;
-  padding: 60px;
+  padding: 50px 60px 60px 60px;
   &:after {
     content: '';
     width: 0;
@@ -68,10 +91,6 @@ body {
 
 ul {
   list-style-type: none;
-}
-
-.popup.info > div {
-  padding-top: 10px;
 }
 
 h1,

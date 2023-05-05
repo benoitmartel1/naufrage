@@ -73,7 +73,7 @@ body {
   transition: transform 600ms ease-out;
   width: $width;
   height: $height;
-  background-color: beige;
+  background-color: var(--cyan);
   overflow: hidden;
   &:has(.old) {
     background-color: rgb(222, 195, 157);

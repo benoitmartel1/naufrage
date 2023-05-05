@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <div class="frame">
+    <div class="window">
       <Boucher />
       <div class="bulle">
         <div class="message">
@@ -39,7 +39,7 @@ export default {
   height: 100%;
 
   box-sizing: border-box;
-  .frame {
+  .window {
     position: relative;
     width: 100%;
     height: 100%;

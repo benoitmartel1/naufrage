@@ -1,35 +1,25 @@
 @font-face {
-  font-family: 'Lato';
-  src: url('@/assets/fonts/Lato/Lato-Regular.ttf') format('truetype');
+  font-family: 'Neulis';
+  src: url('@/assets/fonts/Neulis/NeulisAlt-Regular.woff') format('woff');
   font-weight: 400;
 }
 @font-face {
-  font-family: 'Nunito';
-  src: url('@/assets/fonts/Nunito/Nunito-ExtraBold.ttf') format('truetype');
-  font-weight: 900;
-}
-@font-face {
-  font-family: 'Nunito';
-  src: url('@/assets/fonts/Nunito/Nunito-Bold.ttf') format('truetype');
+  font-family: 'Neulis';
+  src: url('@/assets/fonts/Neulis/NeulisAlt-SemiBold.woff') format('woff');
   font-weight: 700;
 }
 @font-face {
-  font-family: 'Nunito';
-  src: url('@/assets/fonts/Nunito/Nunito-Regular.ttf') format('truetype');
-  font-weight: 400;
+  font-family: 'Neulis';
+  src: url('@/assets/fonts/Neulis/NeulisAlt-ExtraBold.woff') format('woff');
+  font-weight: 800;
 }
-/* @font-face {
-  font-family: "Lato";
-  src: url("@/assets/fonts/Lato/Lato-Bold.ttf") format("truetype");
-  font-weight: 700;
-} */
 @font-face {
-  font-family: 'Karma';
-  src: url('@/assets/fonts/Karma/Karma-Regular.ttf') format('truetype');
+  font-family: 'Cookie';
+  src: url('@/assets/fonts/Cookie/Cookie-Regular.ttf') format('truetype');
   font-weight: 400;
 }
 @font-face {
-  font-family: 'Karma';
-  src: url('@/assets/fonts/Karma/Karma-Bold.ttf') format('truetype');
-  font-weight: 700;
+  font-family: 'Spiny';
+  src: url('@/assets/fonts/Spiny/Spiny-Lobster.ttf') format('truetype');
+  font-weight: 400;
 }

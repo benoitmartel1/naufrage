@@ -8,7 +8,7 @@
     <Boucher />
     <div class="bulle">
       <div class="message">
-        <div class="score">{{ score }} / {{ questions.length }}</div>
+        <div class="score">{{ score }}/{{ questions.length }}</div>
         <div>
           <div v-if="Math.floor(score / questions.length)">
             <span v-if="fr"
@@ -29,7 +29,7 @@
 
       <ContinueButton
         @click.native="onContinue()"
-        :text="fr ? 'Retour au menu principal' : 'Back to main menu'"
+        :text="fr ? 'Retour au<br>menu principal' : 'Back to main menu'"
       />
     </div>
   </div>
@@ -61,6 +61,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.score {
+  font-size: 72px;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 60px;
+}
 .animation {
   position: relative;
   height: $height;

@@ -1,6 +1,9 @@
 <template>
-  <div class="button continue">
-    {{ text ? text : lang == 'fr' ? 'Continuer' : 'Next' }}
+  <div class="wrapper-continue">
+    <div
+      class="button continue"
+      v-html="text ? text : lang == 'fr' ? 'Continuer' : 'Next'"
+    ></div>
   </div>
 </template>
 
@@ -13,22 +16,24 @@ export default {
 }
 </script>
 
-<style scoped>
-.button {
-  /* border: 2px #606060 solid; */
-  /* border-radius: 5px; */
-  padding: 10px 70px;
-  display: inline-block;
-  background-color: black;
-  font-weight: black;
-  color: white;
-  /* text-transform: uppercase; */
-  font-size: 53px;
-  font-weight: 900;
-  margin-top: 30px;
-}
-.continue {
-  text-align: center;
-  /* animation: fromBottomRight 500ms ease-out; */
+<style scoped lang="scss">
+.wrapper-continue {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .button {
+    line-height: 1em;
+    display: inline-block;
+    font-size: 0.9em;
+    font-weight: 800;
+    color: white;
+    background-color: var(--pink);
+    border: 2px var(--burgundy) solid;
+    padding: 10px 55px;
+    text-align: center;
+    border-radius: 50px;
+    text-transform: uppercase;
+    margin-top: 30px;
+  }
 }
 </style>

@@ -154,37 +154,43 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.right,
+.left {
+  border: 6px solid var(--red);
+}
+
 .main {
-  padding: 30px;
+  padding: 40px 40px 170px 40px;
   width: $width;
   height: $height;
   .game {
-    @include bordered;
-    width: 100%;
-    height: 75%;
+    height: 100%;
     overflow: hidden;
     position: relative;
     display: flex;
-
     .left {
+      overflow: hidden;
+      border-radius: 30px 0 0 30px;
+      border-right: none;
+      margin-top: 60px;
       width: 70%;
-      @include bordered;
+
       .types {
         font-size: 18px;
+        height: 120px;
+        background-color: var(--red);
         display: flex;
         justify-content: space-between;
-        @include bordered;
         .type {
-          background-color: none;
           flex: 1;
           padding: 20px;
 
-          @include bordered;
           display: flex;
           justify-content: center;
           align-items: center;
-          height: 180px;
+
           &.active {
+            border-radius: 20px 20px 0 0;
             background-color: white;
           }
         }
@@ -198,7 +204,7 @@ export default {
         background-color: white;
         display: flex;
         justify-content: space-between;
-        padding: 120px 150px;
+        padding: 30px 70px;
         height: 100%;
         .aliment {
           animation: fadeIn 400ms forwards ease-out;
@@ -206,9 +212,9 @@ export default {
           opacity: 0;
           flex-direction: column;
           //   margin-right: 60px;
-          width: 200px;
-          height: 200px;
-          background-color: cyan;
+          width: 270px;
+          height: 270px;
+          background-color: var(--orange);
           border-radius: 50%;
           display: flex;
           justify-content: center;
@@ -229,6 +235,7 @@ export default {
       flex-direction: column;
       justify-content: space-between;
       height: 100%;
+      border-radius: 12px;
       padding: 30px;
       flex: 1;
       position: relative;

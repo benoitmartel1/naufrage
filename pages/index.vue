@@ -72,29 +72,28 @@ export default {
 <style lang="scss" scoped>
 .main {
   display: flex;
-  width: 80%;
+  width: 82%;
   margin: auto;
-  gap: 30px;
-  padding: 30px;
+  gap: 80px;
+  margin-top: 220px;
+  //   padding: 20px;
 
   justify-content: space-between;
   .btn {
+    font-weight: 800;
     flex: 1;
     display: flex;
-    padding: 30px;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 40px;
     text-align: center;
-    height: 600px;
-    border: 2px solid black;
-    background-color: white;
+    height: 520px;
+    border-radius: 50% 50% 20px 20px;
+    border: 5px solid var(--beige);
+    background-color: var(--orange);
   }
   .btn:active {
-    flex: 1;
-    display: flex;
-    padding: 30px;
-    // margin-right: 30px;
-    height: 600px;
-    border: 2px solid black;
-    background-color: #ddd;
+    background-color: var(--red);
   }
 }
 </style>

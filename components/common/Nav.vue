@@ -1,8 +1,9 @@
 <template>
   <div class="nav">
     <div class="btn home"><NuxtLink to="/">HOME</NuxtLink></div>
-    <div class="btn lang" @click="changeLang(lang)">
-      {{ lang == 'en' ? 'fr' : 'en' }}
+    <div class="game">{{ gameName() }}</div>
+    <div class="btn lang" @click="changeLang()">
+      {{ !fr ? 'fr' : 'en' }}
     </div>
   </div>
 </template>
@@ -13,13 +14,30 @@ export default {
     return {}
   },
   computed: {
-    lang() {
-      return this.$store.state.lang
+    fr() {
+      return this.$store.state.lang == 'fr'
     },
   },
   methods: {
-    changeLang(l) {
-      this.$store.commit('setLang', l == 'en' ? 'fr' : 'en')
+    changeLang() {
+      this.$store.commit('setLang', !this.fr ? 'fr' : 'en')
+    },
+    gameName() {
+      switch ($nuxt.$route.name.split('-')[0]) {
+        case 'panier':
+          return this.fr ? 'Dans mon p’tit panier…' : 'EN In my little basket'
+          break
+        case 'vore':
+          return this.fr ? 'Quel vore es-tu?' : 'EN In my little basket'
+          break
+        case 'croire':
+          return this.fr
+            ? 'J’sais pas si tu vas m’croire?'
+            : 'EN In my little basket'
+          break
+        default:
+          break
+      }
     },
   },
 }
@@ -27,19 +45,25 @@ export default {
 
 <style lang="scss">
 .nav {
+  .game {
+    font-weight: 400;
+    font-size: 36px;
+  }
   .btn {
-    width: 100px;
-    height: 100px;
+    color: white;
+    width: 80px;
+    height: 80px;
+    font-size: 30px;
     border-radius: 100%;
-    background-color: #fff;
-    @include bordered;
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   width: 100%;
   display: flex;
-  padding: 30px;
+  padding: 40px;
+  align-items: center;
   justify-content: space-between;
   z-index: 888;
   position: absolute;
