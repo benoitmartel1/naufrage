@@ -1,6 +1,7 @@
 <template>
   <div :class="[' main-wrapper main', { old: era == 'then' }]">
     <Boucher />
+    <div class="backdrop"></div>
     <div class="bulle">
       <div class="message">
         <div v-if="era == 'now'">
@@ -47,6 +48,22 @@ export default {
 
 <style lang="scss" scoped>
 .boucher {
-  left: 75% !important;
+  //   left: 75% !important;
+}
+
+.bulle {
+  width: 853px;
+  height: 615px;
+  position: absolute;
+  left: 333px;
+  top: 158px;
+
+  &:after {
+    transform: scaleY(-1);
+    top: 300px;
+    border-bottom-width: 150px;
+    border-right-width: 166px;
+    right: -130px;
+  }
 }
 </style>
