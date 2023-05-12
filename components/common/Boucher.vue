@@ -1,6 +1,8 @@
 <template>
   <div class="boucher">
-    <img src="@/assets/images/boucher.png" alt="" />
+    <div class="flip">
+      <img src="img/common/boucher_v2.png" alt="" />
+    </div>
   </div>
 </template>
 
@@ -10,25 +12,26 @@ export default {}
 
 <style lang="scss" scoped>
 .boucher {
-  animation: slideFromBottom 300ms ease-out;
+  animation: slideFromBottom 400ms var(--cubic) both;
+  //   animation-delay: 2s;
   img {
-    width: 420px;
+    width: 535px;
     position: absolute;
-    bottom: 0;
+    top: 192px;
   }
   position: absolute;
-  bottom: 0;
-  left: 0;
+  //   bottom: -192px;
+  left: 1300px;
   z-index: 3;
 }
 @keyframes slideFromBottom {
   from {
-    margin-bottom: -5%;
-    opacity: 0;
+    filter: brightness(0);
+    transform: scale(1.15);
   }
   to {
-    margin-bottom: 0;
-    opacity: 1;
+    filter: brightness(1);
+    transform: scale(1) translateX(0);
   }
 }
 </style>

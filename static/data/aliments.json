@@ -2,51 +2,426 @@
   "aliments": [
     {
       "type": "fruit",
-      "fr": "ananas",
-      "en": "pineapple",
-      "now": 4,
-      "then": 1.25,
-      "sold": false
+      "fr": "Panier de kiwis",
+      "en": "Basket of kiwis",
+      "notAvailable": {
+        "fr": "Le kiwi, ce n’est pas de chez nous, mais pas du tout! Cultivée principalement en Nouvelle-Zélande, on trouve couramment le kiwi dans nos épiceries à longueur d’année depuis les années 1980.",
+        "en": "The kiwi is not a local fruit, not at all! Cultivated primarily in New Zealand, we have commonly found the kiwi in our grocery stores year-round since the 1980s."
+      },
+      "now": 4.99,
+      "then": 0.36,
+      "sold": false,
+      "img": "VJ_Jeu1_A1_kiwi.png",
+      "order": 1
     },
     {
       "type": "fruit",
-      "fr": "pomme",
-      "en": "apple",
-      "now": 0.5,
-      "then": 0.05,
-      "sold": false
+      "fr": "Avocat",
+      "en": "Avocado",
+      "notAvailable": {
+        "fr": "L’avocat est connu au Québec seulement depuis les années 1950. Auparavant, si une envie de manger du guacamole vous prenait, eh bien, vous deviez vous contenter d’une purée de petits fruits! ",
+        "en": "The avocado has only been known in Quebec since the 1950s. Before that, if the urge to eat guacamole hit you, you had to be satisfied with a fruit purée!"
+      },
+      "now": 1.54,
+      "then": 0.4,
+      "sold": false,
+      "img": "VJ_Jeu1_A2_avocat.png",
+      "order": 2
     },
     {
       "type": "fruit",
-      "fr": "melon d'eau",
-      "en": "watermelon",
-      "now": 5,
-      "then": null,
-      "sold": false
+      "fr": "Olives noires",
+      "en": "Black olives",
+      "notAvailable": {
+        "fr": "Bien que les olives aient une place majeure dans notre histoire culinaire, elles n’ont que récemment été introduites à notre table. Ainsi, l’arrivée des olives noires coïncide avec les voyages de Québécois en Europe au début des années 1960. ",
+        "en": "Although olives have held a major place in our culinary history, they were only recently introduced to our tables. In fact, the arrival of black olives coincided with trips to Europe made by Quebecers in the early 1960s."
+      },
+      "now": 1.99,
+      "then": 0.24,
+      "sold": false,
+      "img": "VJ_Jeu1_A3_olives.png",
+      "order": 3
     },
     {
-      "type": "laitier",
-      "fr": "lait",
-      "en": "milk",
-      "now": 0.5,
-      "then": 0.05,
-      "sold": false
+      "type": "fruit",
+      "fr": "Paquet de carottes",
+      "en": "Bag of carrots",
+      "now": 2.99,
+      "then": 0.18,
+      "sold": false,
+      "img": "VJ_Jeu1_A4_carottes-.png",
+      "order": 4
+    },
+    {
+      "type": "fruit",
+      "fr": "Sac de pommes de terre",
+      "en": "Bag of potatoes",
+      "now": 4.99,
+      "then": 0.16,
+      "sold": false,
+      "img": "VJ_Jeu1_0010_sac-pommes-terre.png",
+      "order": 5
+    },
+    {
+      "type": "fruit",
+      "fr": "Conserve de pêches",
+      "en": "Canned peaches",
+      "now": 4.49,
+      "then": 0.12,
+      "sold": false,
+      "img": "VJ_Jeu1_A6_conserve-pêche.png",
+      "order": 6
+    },
+    {
+      "type": "lait",
+      "fr": "Yogourt",
+      "en": "Yogurt",
+      "notAvailable": {
+        "fr": "Vous avez dit yogourt? Cet aliment à base de lait caillé est assez surprenant! En 1920, pas question d’offrir cette mixture à la clientèle de Val-Jalbert. Au Québec, la consommation de yogourt ne s’amorce réellement que dans les années 1970. ",
+        "en": "Did you say yogurt? This curdled-milk product is rather surprising! In 1920, it was not possible to offer this food to consumers in Val-Jalbert. In Quebec, the consumption of yogurt only became common in the 1970s."
+      },
+      "now": 3.99,
+      "then": 0.33,
+      "sold": false,
+      "img": "VJ_Jeu1_B3_yogourt.png",
+      "order": 1
+    },
+    {
+      "type": "lait",
+      "fr": "Crème glacée",
+      "en": "Ice cream",
+      "notAvailable": {
+        "fr": "Envie d’un rafraîchissement sous un chaud soleil d’été? Vous devrez plutôt opter pour une baignade en nature, car, au Québec, c’est seulement dans les années 1950 que la crème glacée fait son apparition. ",
+        "en": "Need something refreshing under the hot summer sun? Until not so long ago, you would have had to be happy with a dip outside, since in Quebec it was only in the 1950s that ice cream made its appearance. "
+      },
+      "now": 5.99,
+      "then": 0.4,
+      "sold": false,
+      "img": "VJ_Jeu1_0012_creme-glacée.png",
+      "order": 2
+    },
+    {
+      "type": "lait",
+      "fr": "Fromage brie",
+      "en": "Brie cheese",
+      "notAvailable": {
+        "fr": "Le fromage, à Val-Jalbert, dans les années 1920, c’est un luxe! On le conserve pour les grandes occasions… Et soyez bien avertis : il n’y a pas de brie ici, mais plutôt le cheddar de Saint-Prime et le fromage Oka de la communauté trappiste de Deux Montagnes, qui dominent alors le paysage « fromager » québécois. ",
+        "en": "Cheese in Val-Jalbert in the 1920s was a real luxury! It was saved for special occasions... And be advised: we did not have Brie here, but rather cheddar from Saint-Prime, or Oka cheese from the Trappist monks of Deux Montagnes, who dominated the \"cheese landscape\" of Quebec in those days."
+      },
+      "now": 8.99,
+      "then": 0.58,
+      "sold": false,
+      "img": "VJ_Jeu1_0011_brie.png",
+      "order": 3
+    },
+    {
+      "type": "lait",
+      "fr": "Fromage cheddar",
+      "en": "Cheddar cheese",
+      "now": 6.99,
+      "then": 0.4,
+      "sold": false,
+      "img": "VJ_cheddar.png",
+      "order": 4
+    },
+    {
+      "type": "lait",
+      "fr": "Lait frais",
+      "en": "Fresh milk",
+      "now": 5.19,
+      "then": 0.36,
+      "sold": false,
+      "img": "VJ_Jeu1_B2_lait-moderne.png",
+      "img_1920": "VJ_Jeu1_B2_lait.png",
+
+      "order": 5
+    },
+    {
+      "type": "lait",
+      "fr": "Livre de beurre",
+      "en": "Ice cream",
+      "now": 5.99,
+      "then": 0.5,
+      "sold": false,
+      "img": "VJ_Jeu1_0008_beurre-emballé.png",
+      "order": 6
     },
     {
       "type": "vege",
-      "fr": "tofu",
-      "en": "tofu",
-      "now": 10,
-      "then": null,
-      "sold": false
+      "fr": "Bloc de tofu",
+      "en": "Block of tofu",
+      "notAvailable": {
+        "fr": "Ne « t’offusque » pas de ne pas dénicher de tofu à la boucherie! C’est tout à fait normal. Le tofu intègre les pratiques alimentaires québécoises à partir des années 1970. ",
+        "en": "Don't be upset if you can't find tofu at the butcher's. It's quite normal. Tofu only became a part of the Quebec diet in the 1970s. "
+      },
+      "now": 3.99,
+      "then": 0.29,
+      "sold": false,
+      "img": "VJ_Jeu1_0016_tofu.png",
+      "order": 1
+    },
+    {
+      "type": "vege",
+      "fr": "Paquet de tempeh",
+      "en": "Package of tempeh",
+      "notAvailable": {
+        "fr": "Ça ne vous coûtera pas cher de tempeh à la boucherie ou au magasin général! On n’a jamais vu ça sur nos tablettes. Cette pâte de soja fermentée est popularisée au Québec au début des années 2000. ",
+        "en": "It wouldn't cost you very much, tempeh, at the butcher shop or the general store! We never had it on our shelves. This fermented soybean paste was popularized in Quebec only in the early 2000s. "
+      },
+      "now": 6.49,
+      "then": 0.32,
+      "sold": false,
+      "img": "VJ_Jeu1_0018_tempeh.png",
+      "order": 2
+    },
+    {
+      "type": "vege",
+      "fr": "Plat de houmous",
+      "en": "Dish of hummus",
+      "notAvailable": {
+        "fr": "Plus de « houmous…tiques » que de houmous en plein été, au village! Le houmous est une purée de pois chiches servie depuis des millénaires dans la cuisine du Moyen-Orient, mais introuvable à Val-Jalbert en 1920.",
+        "en": "Hummus is a chick pea purée popular for thousands of years in the Middle East, but unattainable in Val-Jalbert in 1920."
+      },
+      "now": 5.29,
+      "then": 0.38,
+      "sold": false,
+      "img": "VJ_Jeu1_0019_hummus.png",
+      "order": 3
+    },
+    {
+      "type": "vege",
+      "fr": "Boîte de beans (haricots)",
+      "en": "Canned beans",
+      "now": 1.49,
+      "then": 0.12,
+      "sold": false,
+      "img": "VJ_Jeu1_0013_conserve-feves.png",
+      "order": 4
+    },
+    {
+      "type": "vege",
+      "fr": "Douzaine d’œufs",
+      "en": "Dozen eggs",
+      "now": 4.29,
+      "then": 0.26,
+      "sold": false,
+      "img": "VJ_Jeu1_0014_oeufs.png",
+      "order": 5
+    },
+    {
+      "type": "vege",
+      "fr": "Sac d’amandes",
+      "en": "Bag of almonds",
+      "now": 6.99,
+      "then": 0.22,
+      "sold": false,
+      "img": "VJ_Jeu1_0017_sac-amandes.png",
+      "order": 6
     },
     {
       "type": "viande",
-      "fr": "gigot à 100$",
-      "en": "100$ gigot",
-      "now": 100,
-      "then": 100,
-      "sold": false
+      "fr": "Rôti d’autruche",
+      "en": "Roast ostrich",
+      "notAvailable": {
+        "fr": "Ne vous mettez pas la tête dans le sable : vous ne trouverez pas de viande d’autruche au village de Val Jalbert! Les premiers élevages de ce très grand oiseau d’Afrique et du Proche-Orient apparaissent au Québec en 1994. ",
+        "en": "Don't put your head in the sand: you won't find ostrich meat in Val Jalbert!  The first farms of this large bird that is native to Africa and the Near East only appeared in Quebec in 1994. "
+      },
+      "now": 16.29,
+      "then": 0.58,
+      "sold": false,
+      "img": "VJ_Jeu1_0024_roti-autruche.png",
+      "order": 1
+    },
+    {
+      "type": "viande",
+      "fr": "Tranches de pepperoni",
+      "en": "Slices of pepperoni",
+      "notAvailable": {
+        "fr": "Si le pepperoni est inventé dans les années 1920 aux États-Unis par un chef immigrant d’origine italienne, sa consommation n’est, à l’époque, pas encore très répandue dans les maisonnées québécoises. Aujourd’hui, cette charcuterie détient le titre de reine de la garniture à pizza nord-américaine.",
+        "en": "Although pepperoni was invented in the United States in the 1920s by an immigrant chef of Italian origin, its consumption had not yet caught on in Quebec households. Today though, this meat holds the title of queen of all the pizza toppings in North America."
+      },
+      "now": 6.49,
+      "then": 0.38,
+      "sold": false,
+      "img": "VJ_Jeu1_0015_pepperoni.png",
+      "order": 2
+    },
+    {
+      "type": "viande",
+      "fr": "Lard salé",
+      "en": "Salt pork",
+      "now": 6.49,
+      "then": 0.38,
+      "sold": false,
+      "img": "VJ_Jeu1_0020_lard.png",
+      "order": 3
+    },
+    {
+      "type": "viande",
+      "fr": "Surlonge de bœuf",
+      "en": "Beef sirloin",
+      "now": 9,
+      "then": 0.56,
+      "sold": false,
+      "img": "VJ_Jeu1_0021_surlonge.png",
+      "order": 4
+    },
+    {
+      "type": "viande",
+      "fr": "Poitrine de poulet",
+      "en": "Chicken breast",
+      "now": 6.29,
+      "then": 0.56,
+      "sold": false,
+      "img": "VJ_Jeu1_0023_poitrine-poulet.png",
+      "order": 5
+    },
+    {
+      "type": "viande",
+      "fr": "Rôti d’épaule de porc",
+      "en": "Pork shoulder",
+      "now": 14.36,
+      "then": 0.48,
+      "sold": false,
+      "img": "VJ_Jeu1_0022_roti-porc.png",
+      "order": 6
+    },
+    {
+      "type": "cereale",
+      "fr": "Sac de couscous de blé dur",
+      "en": "Bag of couscous of durum wheat",
+      "notAvailable": {
+        "fr": "Cous que tu dis? Le couscous fait maintenant partie intégrante de notre paysage culinaire, mais il ne nous est connu que depuis les années 1960. ",
+        "en": "Although couscous is now an integral part of our culinary landscape, it has only been known to us since the 1960s. "
+      },
+      "now": 6.99,
+      "then": 0.53,
+      "sold": false,
+      "img": "VJ_Jeu1_0029_couscous.png",
+      "order": 1
+    },
+    {
+      "type": "cereale",
+      "fr": "Tortilla",
+      "en": "Tortilla",
+      "notAvailable": {
+        "fr": "Pas de wrap sur le pouce ni de taco dans la boîte à lunch des ouvriers du village! Il faut attendre l’arrivée des immigrants d’origine latino-américaine avant de pouvoir déguster à notre tour la fameuse tortilla. ",
+        "en": "No take-out wraps, nor tacos in the village workers' lunch boxes! The tortilla only became popular in Quebec with the arrival of immigrants from Latin America. "
+      },
+      "now": 3.99,
+      "then": 0.42,
+      "sold": false,
+      "img": "VJ_tortillas.png",
+      "order": 2
+    },
+    {
+      "type": "cereale",
+      "fr": "Boîte de gruau",
+      "en": "Box of oatmeal",
+      "now": 3.99,
+      "then": 0.3,
+      "sold": false,
+      "img": "VJ_Jeu1_0025_gruau.png",
+      "order": 3
+    },
+    {
+      "type": "cereale",
+      "fr": "Sac de farine",
+      "en": "Bag of flour",
+      "now": 7.99,
+      "then": 0.55,
+      "sold": false,
+      "img": "VJ_Jeu1_0026_farine.png",
+      "order": 4
+    },
+    {
+      "type": "cereale",
+      "fr": "Boîte de fécule de maïs",
+      "en": "Box of cornstarch",
+      "now": 3.77,
+      "then": 0.15,
+      "sold": false,
+      "img": "VJ_Jeu1_0027_fecule-maïs.png",
+      "order": 5
+    },
+    {
+      "type": "cereale",
+      "fr": "Pain d’avoine",
+      "en": "Oat bread",
+      "now": 4.99,
+      "then": 0.4,
+      "sold": false,
+      "img": "VJ_Jeu1_0028_pain.png",
+      "order": 6
+    },
+
+    {
+      "type": "poisson",
+      "fr": "Filet de mahi-mahi",
+      "en": "Filet of mahi-mahi (dolphin fish)",
+      "notAvailable": {
+        "fr": "Que tu es exotique, mon ami! Le mahi-mahi est un poisson aux couleurs flamboyantes qui vit dans les mers tropicales. Les habitants de Val-Jalbert n’ont jamais pu admirer ses couleurs bleu, vert et jaune lumineux. ",
+        "en": "You are so exotic, my friend! Mahi-mahi, or dolphin fish, is a colourful fish that lives in tropical seas. The inhabitants of Val-Jalbert would never have been able to admire this fish's luminous blue, green and yellow colours. "
+      },
+      "now": 6.99,
+      "then": 0.36,
+      "sold": false,
+      "img": "VJ_Jeu1_0033_mahi-mahi.png",
+      "order": 1
+    },
+    {
+      "type": "poisson",
+      "fr": "Filet de tilapia",
+      "en": "Filet of tilapia",
+      "notAvailable": {
+        "fr": "Puisque le tilapia est un poisson d’eau douce et chaude originaire de l’Afrique tropicale, il n’est pas surprenant que sa chair n’ait pas caressé la dent des habitants de notre village charmant. ",
+        "en": "Since the tilapia is a freshwater fish originally from tropical Africa, it is not surprising that the inhabitants of our charming little village never enjoyed its taste."
+      },
+      "now": 7.97,
+      "then": 0.43,
+      "sold": false,
+      "img": "VJ_Jeu1_0032_tilapia.png",
+      "order": 2
+    },
+    {
+      "type": "poisson",
+      "fr": "Boîte de saumon",
+      "en": "Filet of salmon",
+      "now": 8.49,
+      "then": 0.2,
+      "sold": false,
+      "img": "VJ_Jeu1_0031_boîte-saumon.png",
+      "order": 3
+    },
+    {
+      "type": "poisson",
+      "fr": "Filet de truite mouchetée",
+      "en": "Filet of trout",
+      "now": 7.97,
+      "then": 0.43,
+      "sold": false,
+      "img": "VJ_Jeu1_0034_truite.png",
+      "order": 4
+    },
+    {
+      "type": "poisson",
+      "fr": "Boîte de chair de homard",
+      "en": "Package of lobster meat",
+      "now": 8.99,
+      "then": 0.31,
+      "sold": false,
+      "img": "VJ_Jeu1_0036_boite-homard.png",
+      "order": 5
+    },
+    {
+      "type": "poisson",
+      "fr": "Boîte de sardines",
+      "en": "Canned sardines",
+      "now": 2.19,
+      "then": 0.1,
+      "sold": false,
+      "img": "VJ_Jeu1_0035_sardines.png",
+      "order": 6
     }
   ]
 }

@@ -45,17 +45,21 @@ export default {
     // background-color: green;
     overflow: hidden;
     .boucher {
-      right: unset;
-      left: 500px;
-      bottom: -200px;
-      transform: scaleX(-1);
+      //   right: unset;
+      //   left: 500px;
+      //   bottom: -200px;
+      //   transform: scaleX(-1);
     }
     .bulle {
-      left: 500px;
+      left: 344px;
+      top: 271px;
+      width: 875px;
+      height: 423px;
       &:after {
-        transform: scaleX(-1);
-        left: -100px;
-        top: 20px;
+        transform: scaleY(-1);
+        top: 150px;
+        // left: -100px;
+        // top: 20px;
       }
     }
   }

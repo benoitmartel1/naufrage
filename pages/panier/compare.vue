@@ -1,5 +1,6 @@
 <template>
-  <div class="main-wrapper">
+  <div class="main-wrapper compare">
+    <div class="backdrop"></div>
     <Boucher />
     <div class="bulle">
       <div class="message">
@@ -22,55 +23,43 @@
 
       <ContinueButton
         @click.native="onContinue()"
-        :text="fr ? 'Retour au menu principal' : 'Back to main menu'"
+        :text="fr ? 'Retour au<br>menu principal' : 'Back to main menu'"
       />
     </div>
-
-    <ul class="list">
-      <div class="title">Mon panier 1920</div>
-      <li v-for="(i, index) in panier.then.list" :key="i.fr + index">
-        {{ i[fr ? 'fr' : 'en'] }}
-      </li>
-      <div class="bottom">
-        <div v-if="fr">
-          <span>Coût total:</span>
-          <div class="cost">{{ total.then }} $</div>
-        </div>
-        <div v-else>
-          <span>Total cost:</span>
-          <div class="cost">{{ total.then }}$</div>
-        </div>
-      </div>
-    </ul>
-    <ul class="list">
-      <div class="title">Mon panier aujourd'hui</div>
-      <li v-for="(i, index) in panier.now.list" :key="i.fr + index">
-        {{ i[fr ? 'fr' : 'en'] }}
-      </li>
-      <div class="bottom">
-        <div v-if="fr">
-          <span>Coût total:</span>
-          <div class="cost">{{ total.now }} $</div>
-        </div>
-        <div v-else>
-          <span>Total cost:</span>
-          <div class="cost">{{ total.now }}$</div>
-        </div>
-      </div>
-    </ul>
+    <List
+      :list="panier.then.list"
+      :types="types"
+      :era="'then'"
+      :lang="lang"
+      :left="total.then"
+      :isCompare="true"
+    />
+    <List
+      :list="panier.now.list"
+      :types="types"
+      :era="'now'"
+      :lang="lang"
+      :left="total.now"
+      :isCompare="true"
+    />
   </div>
 </template>
 
 <script>
+import { types } from '~/static/data/types.json'
 export default {
   data() {
     return {
+      types: types,
       panier: this.$store.state.panier,
     }
   },
   computed: {
     fr() {
       return this.$store.state.lang == 'fr'
+    },
+    lang() {
+      return this.$store.state.lang
     },
     total() {
       let total = 0
@@ -100,41 +89,55 @@ export default {
   },
 }
 </script>
-
+<style lang="scss">
+.compare {
+  .remove {
+    opacity: 0 !important;
+  }
+  .btn {
+    cursor: default;
+  }
+  .flip {
+    transform: scaleX(-1);
+  }
+}
+</style>
 <style lang="scss" scoped>
 .list {
   background-color: white;
-  width: 400px;
+  width: 444px;
+  height: 859px;
   position: absolute;
-  min-height: 600px;
   @include bordered;
-  &:nth-of-type(1) {
-    right: 30%;
-    transform: rotate(-3deg);
-  }
-  &:nth-of-type(2) {
-    right: 10%;
-    transform: rotate(5deg);
-  }
-  li {
-    font-size: 0.5em;
-  }
-  .bottom {
-    position: absolute;
-    bottom: 0;
+  border-color: var(--red);
+  border-width: 6px;
+  border-radius: 11px;
+  box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  border-color: var(--brown);
+  left: 855px;
+  top: 103px;
+  z-index: 100;
+  transform: rotate(-2deg);
+
+  &:last-of-type {
+    left: 1310px;
+    top: 54px;
+    transform: rotate(3deg);
   }
 }
 .boucher {
-  transform: scaleX(-1);
-  left: 500px;
-  bottom: -200px;
-  z-index: 150;
+  left: 700px;
+  bottom: 780px;
+  //   z-index: 150;
 }
 .bulle {
-  top: 30px;
-  width: 800px;
+  width: 706px;
+  height: 462px;
+  left: 106px;
+  top: 33px;
   z-index: 100;
-  left: 30px;
+
   &:after {
     transform: rotate(-90deg) scaleX(-1);
     top: 100%;

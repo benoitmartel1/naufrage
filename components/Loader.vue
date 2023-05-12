@@ -2,7 +2,7 @@
   <div>
     <div id="loader">
       <div v-for="(a, index) in assets" :key="a + index">
-        <img :src="require('@/assets/images/' + a.path)" @load="onLoaded(a)" />
+        <img :src="require('@/assets/img/' + a.path)" @load="onLoaded(a)" />
       </div>
     </div>
   </div>
@@ -40,8 +40,8 @@ export default {
     },
   },
   mounted() {
-    this.importAll(require.context('@/assets/images/', true, /\.jpg$/))
-    this.importAll(require.context('@/assets/images/', true, /\.png$/))
+    this.importAll(require.context('@/assets/img/', true, /\.jpg$/))
+    this.importAll(require.context('@/assets/img/', true, /\.png$/))
   },
 }
 </script>

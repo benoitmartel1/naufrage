@@ -1,15 +1,14 @@
 <template>
   <div class="main-wrapper">
-    <div v-if="panierFull" class="black"></div>
+    <div v-if="panierFull" :class="['black', { old: era == 'then' }]"></div>
+    <PanierFull v-if="panierFull" :total="total" @continue="handleContinue()" />
     <div :class="['main', { old: era == 'then' }]">
       <div class="game">
-        <PanierFull
-          v-if="panierFull"
-          :total="total"
-          @continue="handleContinue()"
-        />
-        <NotAvailable v-if="notAvailable" />
         <div class="left">
+          <div class="left-back-mask">
+            <div class="top"></div>
+            <div class="bottom"></div>
+          </div>
           <div class="types">
             <div
               v-for="t in types"
@@ -17,54 +16,43 @@
               :class="['btn type ', type == t.type ? 'active' : '']"
               @click="type = t.type"
             >
-              <div class="icon"></div>
+              <div class="img-wrapper">
+                <img :src="'img/aliments/' + t.img" />
+              </div>
               <div class="title">
                 {{ t[lang] }}
               </div>
             </div>
           </div>
-          <div class="aliments">
-            <div
-              :class="['aliment btn', { sold: a.sold }]"
-              v-for="a in alimentsInType"
-              :key="a.fr"
-              @click="addItem(a)"
-            >
-              {{ a[lang] }}
-              <div class="price">{{ a[era] }}</div>
+          <div class="aliments-wrapper">
+            <div class="aliments">
+              <div
+                :class="['aliment btn', { sold: a.sold }]"
+                v-for="(a, index) in alimentsInType"
+                :key="a.fr"
+                @click="addItem(a, index)"
+              >
+                <NotAvailable
+                  v-if="notAvailable == index && a.notAvailable"
+                  :text="a.notAvailable[lang]"
+                />
+                <div class="circle"></div>
+                <div class="img-wrapper">
+                  <img :src="'img/aliments/' + a.img" />
+                </div>
+                <div class="name">{{ a[lang] }}</div>
+                <div class="price">{{ a[era] + ' $' }}</div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="right">
-          <div class="top">
-            <div class="title">
-              <span v-if="lang == 'fr'">Mon panier</span><span v-else></span>
-            </div>
-            <div class="cart">
-              <div class="nb">{{ list.length }}</div>
-            </div>
-          </div>
-          <ul class="list">
-            <li
-              class="btn"
-              v-for="(i, index) in list"
-              :key="i.fr + index"
-              @click="i.sold = false"
-            >
-              {{ i[lang] }}
-              <div class="remove">X</div>
-            </li>
-          </ul>
-          <div class="total">
-            <div class="title">
-              <span v-if="lang == 'fr'">Budget restant</span
-              ><span v-else></span>
-            </div>
-            <div class="amount">
-              {{ left + '$' }}
-            </div>
-          </div>
-        </div>
+        <List
+          :list="list"
+          :types="types"
+          :era="era"
+          :lang="lang"
+          :left="left"
+        />
       </div>
     </div>
   </div>
@@ -73,7 +61,7 @@
 <script>
 import { aliments } from '~/static/data/aliments.json'
 import { types } from '~/static/data/types.json'
-
+let notAvailableTimeout
 export default {
   data() {
     return {
@@ -81,11 +69,13 @@ export default {
       types: types,
       type: 'fruit',
       era: this.$store.state.panier.now.list.length ? 'then' : 'now',
-      notAvailable: false,
+      notAvailable: undefined,
     }
   },
   beforeMount() {
-    this.aliments = JSON.parse(JSON.stringify(aliments))
+    this.aliments = JSON.parse(
+      JSON.stringify(aliments.sort((a, b) => a.order - b.order))
+    )
   },
   computed: {
     panier() {
@@ -120,16 +110,25 @@ export default {
       return sum.toFixed(2)
     },
   },
+  beforeDestroy() {
+    this.clearNotAvailableTimeout()
+  },
   methods: {
-    addItem(a) {
-      if (a[this.era]) {
-        a.sold = true
+    addItem(a, index) {
+      if (!a.notAvailable) {
+        a.sold = !a.sold
       } else {
-        // alert('not available!')
-        this.notAvailable = true
-        a.sold = true
+        if (!a.sold) {
+          //   this.clearNotAvailableTimeout()
+          this.notAvailable = index
+          //   notAvailableTimeout = setTimeout(() => {
+          //     this.notAvailable = undefined
+          //   }, 2000)
+          a.sold = true
+        }
       }
     },
+
     checkout() {
       let payload = { list: this.era, content: this.list }
       this.$store.commit('checkoutList', payload)
@@ -141,6 +140,10 @@ export default {
         this.$router.push('/panier/compare')
       }
     },
+    clearNotAvailableTimeout() {
+      this.notAvailable = undefined
+      clearTimeout(notAvailableTimeout)
+    },
   },
   watch: {
     left(val) {
@@ -148,13 +151,19 @@ export default {
         this.checkout()
       }
     },
+    type(val) {
+      this.clearNotAvailableTimeout()
+    },
   },
 }
 </script>
 
 <style lang="scss" scoped>
-.right,
-.left {
+.black.old {
+  background-color: #79613e;
+  opacity: 0.7;
+}
+.list {
   border: 6px solid var(--red);
 }
 
@@ -168,129 +177,180 @@ export default {
     position: relative;
     display: flex;
     .left {
-      overflow: hidden;
-      border-radius: 30px 0 0 30px;
-      border-right: none;
+      .left-back-mask {
+        border: 6px solid var(--red);
+        position: absolute;
+
+        z-index: -1;
+        width: 90%;
+        height: calc(100% - 60px);
+        overflow: hidden;
+        border-radius: 30px 0 0 30px;
+        background-color: var(--red);
+        .top {
+          width: 100%;
+          height: calc(131px - 6px);
+          background-color: var(--red);
+        }
+        .bottom {
+          width: 100%;
+          height: 100%;
+          background-color: white;
+        }
+      }
+      //   overflow: hidden;
+      //
+      //   border-right: none;
       margin-top: 60px;
       width: 70%;
 
       .types {
-        font-size: 18px;
-        height: 120px;
-        background-color: var(--red);
+        padding: 6px;
+        padding-bottom: 0;
+        font-size: 22px;
+        line-height: 28px;
+        height: 131px;
+        // background-color: green;
         display: flex;
         justify-content: space-between;
+
         .type {
           flex: 1;
-          padding: 20px;
 
+          //   background-color: var(--red);
+          //   padding-bottom: 20px;
           display: flex;
-          justify-content: center;
+          flex-direction: column;
+          justify-content: flex-end;
           align-items: center;
+          //   overflow: visible;
+          text-align: center;
 
           &.active {
             animation: typeIn both ease-out 300ms;
             border-radius: 20px 20px 0 0;
             background-color: white;
           }
-        }
-      }
-      .aliments {
-        @for $i from 1 through 6 {
-          .aliment:nth-child(#{$i}) {
-            animation-delay: calc($i - 1) * 100ms;
+          .title {
+            margin-top: 4px;
+            min-height: 58px;
           }
-        }
-        background-color: white;
-        display: flex;
-        justify-content: space-between;
-        padding: 30px 70px;
-        height: 100%;
-        .aliment {
-          animation: fadeIn 400ms forwards ease-out;
-          //   animation-delay: 2s;
-          opacity: 0;
-          flex-direction: column;
-          //   margin-right: 60px;
-          width: 270px;
-          height: 270px;
-          background-color: var(--orange);
-          border-radius: 50%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          .price {
-            display: block;
-          }
-          &.sold {
-            background-color: #ddd;
-            opacity: 0.5;
+          .img-wrapper {
+            width: 145px;
+            height: 115px;
+
+            img {
+              height: 100%;
+              width: 100%;
+              object-fit: contain;
+            }
           }
         }
       }
-    }
-    .right {
-      background-color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 100%;
-      border-radius: 12px;
-      padding: 30px;
-      flex: 1;
-      position: relative;
-
-      .top {
-        // background-color: green;
-
-        .nb {
-          position: relative;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 36px;
-          font-weight: 900;
-          width: 50px;
-          height: 50px;
-
-          &:after {
-            content: '';
-            width: 50px;
-            height: 50px;
-            position: absolute;
-
-            border: solid black 2px;
-            border-radius: 50%;
-            left: 0;
-            top: 0;
+      .aliments-wrapper {
+        // overflow: hidden;
+        .aliments {
+          @for $i from 1 through 6 {
+            .aliment:nth-child(#{$i}) {
+              animation-delay: calc(random() * 2) * 100ms;
+            }
           }
-        }
-        display: flex;
-        width: 100%;
-        // background-color: green;
-        justify-content: space-between;
-        border-bottom: 2px solid black;
-      }
-      .list {
-        overflow-y: scroll;
-        flex: 1;
-        li {
+          //   background-color: white;
+          // width: 600px;
           display: flex;
-          width: 100%;
           justify-content: space-between;
+          align-items: flex-start;
+          flex-wrap: wrap;
+          padding: 30px 70px 70px 70px;
+          box-sizing: border-box;
+          width: 100%;
+          gap: 30px;
+          height: 100%;
+          .aliment {
+            transition: all 300ms ease;
+            line-height: 1.2em;
+            // border: solid red 2px;
+            font-size: 22px;
+            animation: fadeIn 300ms forwards ease-out;
+            //   animation-delay: 2s;
+            opacity: 0;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            //   margin-right: 60px;
+            min-width: 270px;
+            height: 270px;
+            //   flex-basis: 33.33333%;
+            //   margin-right: 100px;
+            display: flex;
+            position: relative;
+            .circle {
+              border-radius: 50%;
+              width: 270px;
+              height: 270px;
+              position: absolute;
+              z-index: -1;
+              transition: all 300ms ease;
+              transform: scale(1.2);
+            }
+            //   justify-content: center;
+            //   align-items: center;
+            &:active {
+              .circle {
+                background-color: var(--orange);
+              }
+            }
+            .img-wrapper {
+              max-width: 220px;
+              max-height: 175px;
+              img {
+                object-fit: contain;
+              }
+            }
+            .name {
+              font-weight: 400;
+              margin: 8px 0;
+            }
+            .price {
+              margin-bottom: 30px;
+            }
+            &.sold {
+              transform: scale(0.8);
+              img {
+                filter: saturate(0);
+              }
+              .circle {
+                // transform: scale(1);
+                background-color: #c4b6a8;
+                opacity: 0.55;
+              }
+            }
+          }
         }
       }
-
-      .total {
-        display: flex;
-        justify-content: space-between;
-      }
     }
+  }
+}
+.old {
+  .types {
+    background-color: var(--beige) !important;
+  }
+  .right,
+  .left {
+    border-color: var(--beige);
   }
 }
 @keyframes typeIn {
   from {
     transform: translateY(30px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes moveFromBottom {
+  from {
+    transform: translateY(22px);
   }
   to {
     transform: translateY(0);

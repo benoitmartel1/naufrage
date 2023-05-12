@@ -1,5 +1,3 @@
-# exploramer
-
 ## Build Setup
 
 ```bash
@@ -16,11 +14,3 @@ $ yarn start
 # generate static project
 $ yarn generate
 ```
-
-## Démarrer exploramer-server avant // yarn serve dans bash
-
-## Le serveur est sur localhost:3030
-
-scp -r dist/\* benoitma@50.87.233.33:public_html/dev/vj
-scp -r "app/exploramer Setup 1.0.0.exe" benoitma@50.87.233.33:public_html/dev/exploramer/exploramer-setup.exe
-scp -r "exploramer.bat" benoitma@50.87.233.33:public_html/dev/exploramer/

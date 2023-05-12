@@ -7,7 +7,7 @@
       :answer="q.answer"
       @continue="onContinue()"
     />
-    <div class="frame">
+    <div class="backdrop">
       <div class="score">{{ score + ' / ' + questions.length }}</div>
       <div class="game">
         <Vache :score="score" />
@@ -77,7 +77,7 @@ export default {
   right: 30px;
   position: absolute;
 }
-.frame {
+.backdrop {
   padding: 30px;
 
   .game {

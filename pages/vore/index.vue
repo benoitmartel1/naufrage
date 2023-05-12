@@ -4,10 +4,10 @@
     <BoucherVore v-show="step == 'boucher'" @continue="onContinue()" />
     <div class="animation">
       <div v-if="step == 'then' || step == 'boucher'">
-        <img class="woman" src="@/assets/images/boucher.png" alt="" />
+        <img class="woman" src="img/vore/VJ2_femme-1920.png" alt="" />
       </div>
-      <div v-else>
-        <img class="man" src="@/assets/images/boucher.png" alt="" />
+      <div v-if="step == 'now' || step == 'boucher'">
+        <img class="man" src="img/vore/VJ_homme-aujrd.png" alt="" />
       </div>
       <div class="labels">
         <div class="label" v-if="timer >= 0">
@@ -58,7 +58,7 @@
         @click.native="onContinue()"
       />
     </div>
-    <div class="frame"></div>
+    <div class="backdrop"></div>
   </div>
 </template>
 
@@ -120,20 +120,32 @@ export default {
   justify-content: center;
   align-items: center;
   .man {
-    transform: scaleX(-1);
+    width: 296px;
+    top: 61px;
+    left: 358px;
+    position: absolute;
   }
   .woman {
-    filter: brightness(0);
+    width: 273px;
+    top: 112px;
+    left: 374px;
+    position: absolute;
+    // filter: brightness(0);
   }
 }
 .bulle {
-  text-align: center;
-  left: 50%;
-  width: 45%;
+  //   text-align: center;
+  left: 1005px;
+  top: 158px;
+  width: 735px;
+  height: 615px;
+
   .title {
+    text-align: center;
     font-size: 2em;
     font-weight: bold;
     display: block;
+    margin-bottom: 35px;
   }
   &:after {
     display: none;
@@ -142,36 +154,46 @@ export default {
 .labels {
   .label {
     span {
-      display: block;
+      background: url('~/assets/img/VJ-J2_Étiquette.png');
+      width: 292px;
+      height: 146px;
+      color: #4e2803;
+      font-weight: 400;
+      font-size: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      //   display: block;
       animation: scaleDown 500ms ease-out;
-      padding: 20px 50px;
-      background-color: white;
-      border: 5px solid black;
+      //   padding: 20px 50px;
+      //   background-color: white;
+      //   border: 5px solid black;
     }
     position: absolute;
-    left: 30%;
-    font-weight: 800;
+    left: 344px;
+    top: 482px;
+    // font-weight: 800;
     transform-origin: center center;
 
     // font-size: 3em;
 
     &:nth-child(1) {
-      transform: translate(0px, 0px) rotate(-10deg);
+      transform: translate(0px, 0px) rotate(0deg);
     }
     &:nth-child(2) {
-      transform: translate(-60px, 200px) rotate(-15deg);
+      transform: translate(150px, -80px) rotate(12deg);
     }
     &:nth-child(3) {
-      transform: translate(-100px, -200px) rotate(10deg);
-    }
-    &:nth-child(4) {
-      transform: translate(200px, -350px) rotate(7deg);
-    }
-    &:nth-child(5) {
-      transform: translate(-200px, -300px) rotate(6deg);
+      transform: translate(-110px, -80px) rotate(-18deg);
     }
     &:nth-child(6) {
-      transform: translate(-200px, -300px) rotate(6deg);
+      transform: translate(-120px, 90px) rotate(14deg);
+    }
+    &:nth-child(5) {
+      transform: translate(100px, 100px) rotate(-20deg);
+    }
+    &:nth-child(4) {
+      transform: translate(140px, -190px) rotate(6deg);
     }
   }
 }

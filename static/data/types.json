@@ -3,27 +3,38 @@
     {
       "fr": "Fruits et légumes",
       "en": "Fruits and vegetables",
-      "type": "fruit"
+      "type": "fruit",
+      "img": "VJ_CAT1_Fruits-et-legumes.png"
     },
     {
       "fr": "Produits laitiers",
       "en": "Dairy products",
-      "type": "laitier"
+      "type": "lait",
+      "img": "VJ_CAT2_Lait.png"
+    },
+    {
+      "fr": "Poissons",
+      "en": "Fishes",
+      "type": "poisson",
+      "img": "VJ_CAT3_poisson.png"
     },
     {
       "fr": "Viandes",
-      "en": "Dairy products",
-      "type": "viande"
+      "en": "Meat",
+      "type": "viande",
+      "img": "VJ_CAT4_Viandes.png"
     },
     {
-      "fr": "Conserves",
-      "en": "Dairy products",
-      "type": "conserve"
+      "fr": "Grains et céréales",
+      "en": "Cereals",
+      "type": "cereale",
+      "img": "VJ_CAT5_GrainsEtCereales.png"
     },
     {
-      "fr": "Produits végétariens",
-      "en": "Dairy products",
-      "type": "vege"
+      "fr": "Alternatives protéinées",
+      "en": "Alt",
+      "type": "vege",
+      "img": "VJ_CAT6_vege.png"
     }
   ]
 }

@@ -7,7 +7,7 @@
       :question="q"
       @continue="onContinue()"
     />
-    <div class="frame">
+    <div class="backdrop frame">
       <div class="score">{{ score + '/' + questions.length }}</div>
       <div class="game">
         <div class="question">{{ q.question[lang] }}</div>
@@ -16,7 +16,7 @@
             class="btn answer"
             v-for="(a, index) in q.answers"
             :key="a + index"
-            @click.native="validate(a.good)"
+            @click="validate(a.good)"
           >
             {{ a[lang] }}
           </div>
@@ -49,6 +49,7 @@ export default {
   },
   methods: {
     validate(isGood) {
+      console.log(isGood)
       if (isGood) {
         this.score++
         this.isGood = true
@@ -76,8 +77,9 @@ export default {
   padding: 30px 60px;
   //   display: flex;
   .score {
-    font-size: 72px;
-
+    font-size: 88px;
+    line-height: 65px;
+    font-weight: 400;
     float: right;
   }
 
@@ -92,6 +94,9 @@ export default {
     width: 100%;
 
     .question {
+      font-size: 48px;
+      font-weight: 400;
+      left: 66px;
       margin-bottom: 50px;
     }
     .answers {

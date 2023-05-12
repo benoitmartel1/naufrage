@@ -13,6 +13,9 @@
   --burgundy: #640019;
   --beige: #c79f77;
   --brown: #67390b;
+  --yellow: #fbf28f;
+  --caramel: #b97028;
+  --cubic: cubic-bezier(0.07, 0.64, 0.56, 0.9);
 }
 
 * {
@@ -67,11 +70,24 @@ body {
   position: absolute;
   z-index: -1;
 }
-
+@keyframes bulleIn {
+  from {
+    transform: scaleY(0.9) skew(-3deg);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
 .bulle {
+  transform-origin: 50% 0;
+  animation: bulleIn 400ms both var(--cubic);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border-radius: 30px;
   font-weight: 400;
-  font-size: 0.8em;
+  font-size: 36px;
+  line-height: 48px;
   position: absolute;
   left: 10%;
   top: 20%;
@@ -86,12 +102,16 @@ body {
     content: '';
     width: 0;
     height: 0;
-    right: -120px;
-    top: 60%;
+    // right: -120px;
+    // top: 60%;
     position: absolute;
-    border-bottom: 100px solid white;
-    border-right: 150px solid transparent;
+    border-bottom: 150px solid white;
+    border-right: 166px solid transparent;
     filter: drop-shadow(4px 1px 0 black);
+    transform: scaleY(-1);
+    top: 300px;
+
+    right: -130px;
   }
 }
 
@@ -111,6 +131,23 @@ h1 {
 }
 h4 {
   font-weight: normal;
+}
+img {
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+.old {
+  .nb-wrapper {
+    top: 80px;
+    right: 28px;
+  }
+  .backdrop {
+    background-color: var(--beige);
+  }
 }
 .close,
 .button,
@@ -133,7 +170,16 @@ a:visited {
 a:hover {
   text-decoration: none;
 }
-
+.backdrop {
+  background-color: #f79b74;
+  width: 1684px;
+  height: 839px;
+  position: absolute;
+  left: 118px;
+  top: 79px;
+  border-radius: 37px;
+  z-index: -1;
+}
 .center {
   width: 100%;
   text-align: center;
@@ -151,9 +197,9 @@ a:hover {
   height: 100%;
   position: absolute;
   z-index: 5;
-  background-color: black;
-  opacity: 0.5;
-  animation: fade 200ms;
+  background-color: #393023;
+  opacity: 0.7;
+  //   animation: fade 200ms;
 }
 .header {
   position: absolute;

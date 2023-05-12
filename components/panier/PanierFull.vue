@@ -1,12 +1,12 @@
 <template>
-  <div class="wrapper">
-    <div class="frame">
+  <div class="wrapper panier-full">
+    <div>
       <Boucher />
       <div class="bulle">
         <div class="message">
-          <div class="total">{{ total + ' $' }}</div>
+          <div class="total">{{ total.replace('.', ',') + ' $' }}</div>
           <span v-if="lang == 'fr'"
-            >Lorem ipsum occati illum estotas dolupi- et laut que repudandant.
+            >Lorem! ipsum occati illum estotas dolupi- et laut que repudandant.
             Cipsam faccatur reperum vollum incidebis dollamus inustias este
             vendell uptasperchil int estiatur ma.</span
           >
@@ -29,8 +29,21 @@ export default {
   },
 }
 </script>
-
+<style lang="scss">
+.panier-full .boucher {
+  .flip {
+    transform: scaleX(-1);
+  }
+  left: 583px;
+}
+</style>
 <style lang="scss" scoped>
+.boucher {
+  .flip {
+    transform: scaleX(-1);
+  }
+  left: 583px;
+}
 .total {
   font-weight: 700;
   width: 100%;
@@ -41,29 +54,16 @@ export default {
 .wrapper {
   position: absolute;
   z-index: 100;
-  width: 100%;
-  height: 100%;
+  .bulle {
+    width: 853px;
+    height: 615px;
+    top: 158px;
+    left: 656px;
+    &:after {
+      transform: scale(-1, -1);
 
-  box-sizing: border-box;
-  .frame {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    // background-color: green;
-    overflow: hidden;
-    .boucher {
-      right: unset;
-      left: 500px;
-      bottom: -200px;
-      transform: scaleX(-1);
-    }
-    .bulle {
-      left: 500px;
-      &:after {
-        transform: scaleX(-1);
-        left: -100px;
-        top: 20px;
-      }
+      left: -150px;
+      top: 280px;
     }
   }
 }

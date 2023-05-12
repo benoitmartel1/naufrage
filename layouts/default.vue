@@ -69,14 +69,22 @@ body {
   margin: 0;
   background-color: #333;
 }
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 56px 56px;
+  }
+}
 #app {
+  background: url('~/assets/img/Pattern-1.png');
+  //   animation: bg-scrolling-reverse 6s infinite linear; /* IE 10+ */
+
   transition: transform 600ms ease-out;
   width: $width;
   height: $height;
-  background-color: var(--cyan);
+  //   background-color: var(--cyan);
   overflow: hidden;
   &:has(.old) {
-    background-color: rgb(222, 195, 157);
+    background: url('~/assets/img/Pattern-1920.png');
   }
 }
 
@@ -87,9 +95,27 @@ body {
 }
 .page-enter-active {
   transition: all 0.4s;
+  .backdrop,
+  .woman {
+    transition: all 0.4s var(--cubic);
+  }
 }
 .page-enter {
   opacity: 0;
-  transform: translateY(-40px);
+  //   transform: translateY(-40px);
+}
+.page-enter {
+  .backdrop {
+    // transform: translateY(-300px);
+    transform: scale(0.92) rotate(-3deg);
+  }
+  //   .boucher {
+  //     filter: brightness(0);
+  //     transform: scale(1.2) translateX(200px);
+  //   }
+  .woman {
+    filter: brightness(0);
+    transform: scale(1.2) translateX(-200px);
+  }
 }
 </style>
