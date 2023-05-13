@@ -5,7 +5,7 @@ export const state = () => ({
   moviePlaying: false,
   panier: {
     now: { list: [], max: 100 },
-    then: { list: [], max: 7 },
+    then: { list: [], max: 4 },
   },
 })
 

@@ -13,19 +13,27 @@
       <div class="message">
         <div class="score">{{ score }}/{{ questions.length }}</div>
         <div>
-          <div v-if="Math.floor(score / questions.length)">
+          <div v-if="Math.floor(score / questions.length >= 0.9)">
             <span v-if="fr"
-              >100% Lorem ipsum occati illum estotas dolupiet laut que
-              repudandant.</span
+              >Wow! On voit bien que vous êtes connaissant! Je n’aurais jamais
+              pensé qu’un jour, la viande, on pourrait s’en passer!</span
             >
-            <span v-else>EN</span>
+            <span v-else
+              >Wow! We can see that you know a lot! I would never have thought
+              that one day we could do without meat!</span
+            >
           </div>
           <div v-else>
             <span v-if="fr"
-              >Pas 100% Lorem ipsum occati illum estotas dolupiet laut que
-              repudandant.</span
+              >Je vous félicite! Moi aussi, j’ai appris un tas de nouveaux mots!
+              Qui aurait cru qu’un jour, il y aurait autant de façons de manger
+              que j’ai d’enfants à nourrir!</span
             >
-            <span v-else>EN</span>
+            <span v-else
+              >Congratulations! Me too, I learned a few new words! Who would
+              have believed that one day there would be as many ways of eating
+              as I have kids to feed!
+            </span>
           </div>
         </div>
       </div>
@@ -96,7 +104,7 @@ export default {
 }
 .bulle {
   width: 668px;
-  height: 476px;
+  //   height: 476px;
   left: 578px;
   top: 271px;
   &:after {

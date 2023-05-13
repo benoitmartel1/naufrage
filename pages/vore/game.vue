@@ -90,16 +90,17 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px 70px;
+    // padding: 50px 70px;
     width: 100%;
 
     .question {
       font-size: 48px;
-      font-weight: 400;
+      font-weight: 800;
       left: 66px;
       margin-bottom: 50px;
     }
     .answers {
+      font-weight: 400;
       //   margin: auto;
       width: 100%;
       .answer {

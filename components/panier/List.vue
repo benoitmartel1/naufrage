@@ -91,7 +91,11 @@
       </div>
       <Transition name="kaching" mode="out-in">
         <div v-if="left" :key="left" class="amount">
-          {{ left.replace('.', ',') + ' $' }}
+          {{
+            lang == 'fr'
+              ? padded(left).replace('.', ',') + ' $'
+              : '$' + padded(left)
+          }}
         </div>
       </Transition>
     </div>
@@ -102,6 +106,9 @@
 export default {
   props: ['list', 'types', 'era', 'lang', 'left', 'isCompare'],
   methods: {
+    padded(n) {
+      return n.toString().split('.')[1].length < 2 ? n.toString() + '0' : n
+    },
     alimentsInListByType(type) {
       return this.list.filter((a) => a.type == type)
     },

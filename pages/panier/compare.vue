@@ -4,21 +4,16 @@
     <Boucher />
     <div class="bulle">
       <div class="message">
-        <div v-if="isNow">
-          <span v-if="fr"
-            >Finito! ipsum occati illum estotas dolupi- et laut que repudandant.
-            Cipsam faccatur reperum vollum incidebis dollamus inustias este
-            vendell uptasperchil int estiatur ma.</span
-          >
-          <span v-else>EN</span>
-        </div>
-        <div v-else>
-          <span v-if="fr"
-            >Finito! ipsum occati illum estotas dolupi- et laut que repudandant.
-            Cipsam
-          </span>
-          <span v-else>EN</span>
-        </div>
+        <span v-if="fr"
+          >Avez-vous trouvé tout ce qu’il vous faut pour le souper? Vos aliments
+          préférés sont dans quel panier? La liste d’épicerie s’est transformée
+          avec les années, avez-vous remarqué?</span
+        >
+        <span v-else
+          >Have you found everything you need for supper? Are your favourite
+          foods in the basket? Have you noticed how the grocery list has changed
+          over the years?</span
+        >
       </div>
 
       <ContinueButton
@@ -133,10 +128,10 @@ export default {
 }
 .bulle {
   width: 706px;
-  height: 462px;
+  //   height: 462px;
   left: 106px;
   top: 33px;
-  z-index: 100;
+  z-index: 0;
 
   &:after {
     transform: rotate(-90deg) scaleX(-1);

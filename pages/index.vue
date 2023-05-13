@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div class="wrapper">
     <div class="main">
       <div class="btn panier" @click="$router.push('/panier')">
         <img src="img/common/jeu_1.png" alt="" />
         <div class="title">
           <span v-if="lang == 'fr'">Dans mon<br />p'tit panier...</span>
-          <span v-else>EN Dans mon p'tit panier...</span>
+          <span v-else>In my little basket</span>
         </div>
         <div class="icon"></div>
       </div>
@@ -13,18 +13,34 @@
         <img src="img/common/jeu_3.png" alt="" />
         <div class="title">
           <span v-if="lang == 'fr'">J'sais pas si<br />tu vas m'croire?</span>
-          <span v-else>EN Dans mon p'tit panier...</span>
+          <span v-else>I don’t know if you’ll believe me</span>
         </div>
         <div class="icon"></div>
       </div>
       <div class="btn vore" @click="$router.push('/vore')">
         <img src="img/common/jeu_2.png" alt="" />
         <div class="title">
-          <span v-if="lang == 'fr'">Quel <i>vore</i><br />es-tu ?</span>
-          <span v-else>EN Dans mon p'tit panier...</span>
+          <span v-if="lang == 'fr'">Quel type de mangeur<br />êtes-vous?</span>
+          <span v-else>What kind of eater are you?</span>
         </div>
         <div class="icon"></div>
       </div>
+    </div>
+    <div class="credits">
+      <span v-if="lang == 'fr'"
+        >*Les informations présentées dans ces jeux sont partiellement tirées
+        des ouvrages « Histoire de la cuisine familiale au Québec. Le monde à
+        notre table » (2013) et « Histoire de la cuisine familiale au Québec. La
+        forêt, ses régions et ses produits, des origines à aujourd’hui » (2009)
+        de Michel Lambert.</span
+      >
+      <span v-else
+        >*Les informations présentées dans ces jeux sont partiellement tirées
+        des ouvrages « Histoire de la cuisine familiale au Québec. Le monde à
+        notre table » (2013) et « Histoire de la cuisine familiale au Québec. La
+        forêt, ses régions et ses produits, des origines à aujourd’hui » (2009)
+        de Michel Lambert.</span
+      >
     </div>
   </div>
 </template>
@@ -62,10 +78,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.main {
-  display: flex;
+.credits {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: normal;
+}
+.wrapper {
   width: 82%;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 95%;
+}
+.main {
+  display: flex;
+
   justify-content: space-between;
   margin-top: 220px;
   //   padding: 20px;

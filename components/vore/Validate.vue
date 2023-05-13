@@ -2,18 +2,26 @@
   <div class="wrapper">
     <div class="window">
       <Boucher />
-      <div class="bulle">
+      <div :class="['bulle', { bad: !isGood }]">
         <div v-if="isGood" class="message">
           <img src="/img/vore/VJ-J2_GOOD.png" alt="" />
-          <span v-if="fr">Bravo!</span>
-          <span v-else>Bravo in english</span>
+          <span v-if="fr"
+            >Bravo!<br />Je suis impressionné par vos connaissances!</span
+          >
+          <span v-else>Bravo!<br />I'm impressed with your knowledge! </span>
           <ContinueButton @click.native="$emit('continue')" />
         </div>
         <div v-else class="message">
           <img src="/img/vore/VJ-J2_BAD.png" alt="" />
-          <span v-if="fr">La réponse était:</span>
-          <span v-else>The answer is:</span>
-          {{ goodAnswerDescription() }}
+          <span v-if="fr"
+            >Meilleure chance la prochaine fois!<br />La bonne réponse est :
+          </span>
+          <span v-else
+            >Better luck next time!<br />The correct answer is:
+          </span>
+          <div class="correctAnswer">
+            {{ goodAnswerDescription() }}
+          </div>
           <ContinueButton @click.native="$emit('continue')" />
         </div>
       </div>
@@ -58,6 +66,9 @@ export default {
       //   transform: scaleX(-1);
     }
     .bulle {
+      .correctAnswer {
+        margin: 30px 0;
+      }
       .message {
         flex-direction: column;
         // text-align: center;
@@ -76,6 +87,10 @@ export default {
       //   height: 313px;
       left: 613px;
       top: 335px;
+      &.bad {
+        width: 1500px;
+        left: 100px;
+      }
       &:after {
         transform: scale(0.7, -0.7);
         // left: -100px;

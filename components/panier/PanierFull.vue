@@ -4,13 +4,36 @@
       <Boucher />
       <div class="bulle">
         <div class="message">
-          <div class="total">{{ total.replace('.', ',') + ' $' }}</div>
-          <span v-if="lang == 'fr'"
-            >Lorem! ipsum occati illum estotas dolupi- et laut que repudandant.
-            Cipsam faccatur reperum vollum incidebis dollamus inustias este
-            vendell uptasperchil int estiatur ma.</span
-          >
-          <span v-else>EN</span>
+          <div class="total">
+            {{
+              lang == 'fr'
+                ? padded(total).replace('.', ',') + ' $'
+                : '$' + padded(total)
+            }}
+          </div>
+          <div v-if="era == 'now'">
+            <span v-if="lang == 'fr'"
+              >Wôôô!!! Vous avez beaucoup dépensé! D’après moi, vous avez des
+              réserves pour le mois au complet! Il y a des aliments que je n’ai
+              jamais vus au village… C’est étonnant!</span
+            >
+            <span v-else
+              >Whoa!!! You have spent a lot! I think you'll have enough for the
+              whole month! There are foods I've never seen in the village, it's
+              surprising!</span
+            >
+          </div>
+          <div v-else>
+            <span v-if="lang == 'fr'"
+              >Merci de votre aide! C’est un 7 $ bien investi! Juste à regarder
+              les aliments que vous avez choisis, je sens mon ventre
+              gargouiller!</span
+            >
+            <span v-else
+              >Thanks for your help! That's $7 well invested! Just look at the
+              food you've picked out. I can feel my stomach growling already!
+            </span>
+          </div>
         </div>
 
         <ContinueButton @click.native="$emit('continue')" />
@@ -21,10 +44,18 @@
 
 <script>
 export default {
+  data() {
+    return { era: this.$store.state.panier.then.list.length ? 'then' : 'now' }
+  },
   props: ['total'],
   computed: {
     lang() {
       return this.$store.state.lang
+    },
+  },
+  methods: {
+    padded(n) {
+      return n.toString().split('.')[1].length < 2 ? n.toString() + '0' : n
     },
   },
 }

@@ -6,11 +6,17 @@
         <div class="message">
           <div class="total">{{ total }}</div>
           <span v-if="lang == 'fr'"
-            >Lorem ipsum occati illum estotas dolupi- et laut que repudandant.
-            Cipsam faccatur reperum vollum incidebis dollamus inustias este
-            vendell uptasperchil int estiatur ma.</span
+            >Pour décrire tous ces régimes nouveaux, il a bien fallu inventer
+            des mots. Légumivore? Poissonivore? Fruitivore? Vous connaissez les
+            définitions de ces mots en -ore? Aidez-moi à me démêler en reliant
+            correctement les régimes alimentaires à leur définition.</span
           >
-          <span v-else>EN</span>
+          <span v-else
+            >To describe all those new types of diet, new words certainly had to
+            be invented. Vegevore? Fishivore? Fruitivore? Do you know the
+            definition of all the words ending in -vore? Help me tomatch the
+            type of diet with its definition.</span
+          >
         </div>
 
         <ContinueButton @click.native="$emit('continue')" />
@@ -54,7 +60,7 @@ export default {
       left: 344px;
       top: 271px;
       width: 875px;
-      height: 423px;
+      //   height: 423px;
       &:after {
         transform: scaleY(-1);
         top: 150px;

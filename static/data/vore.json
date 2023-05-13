@@ -2,43 +2,127 @@
   "questions": [
     {
       "question": {
-        "fr": "Régime alimentaire A",
-        "en": "A alimentary regime"
+        "fr": "Végétarien",
+        "en": "Vegetarian"
       },
       "answers": [
         {
-          "fr": "Choix 1",
-          "en": "A alimentary regime",
+          "fr": "Avoir le même régime alimentaire que les plantes carnivores. On se régale d’insectes, d’araignées, d’acariens et d’autres petits invertébrés. ",
+          "en": "To have the same diet as carnivorous plants. They love to eat insects, spiders, mites and other small invertebrates."
+        },
+        {
+          "fr": "Exclure de son alimentation tout type de viande, de volaille, de gibier, de poisson ou de fruit de mer. Ils consomment cependant des aliments d’origine animale tels que les œufs et les produits laitiers.",
+          "en": "To avoid all types of meat, poultry, game, fish and seafood. They do, however, consume foods with animal origins such as eggs or dairy products.",
           "good": true
         },
         {
-          "fr": "Choix 2",
-          "en": "A alimentary regime"
-        },
-        {
-          "fr": "Choix 3",
-          "en": "A alimentary regime"
+          "fr": "Écarter totalement de son assiette les aliments d’origine animale.",
+          "en": "To totally exclude all foods with animal origins from one's diet."
         }
       ]
     },
     {
       "question": {
-        "fr": "Régime alimentaire B",
-        "en": "A alimentary regime"
+        "fr": "Omnivore",
+        "en": "Omnivore"
       },
       "answers": [
         {
-          "fr": "Choix 1",
-          "en": "A alimentary regime"
+          "fr": "Ne pas manger la même nourriture que les poissons qui s’alimentent dans les cours d’eau du Saguenay–Lac-Saint-Jean et ainsi contribuer à leur pérennité, en excluant de sa consommation tout insecte et ver de terre sauvage.",
+          "en": "To avoid eating the same food as fish that feed in the waterways of Saguenay–Lac-Saint-Jean, therefore contributing to their conservation, by excluding from its consumption all insects and wild earthworms."
         },
         {
-          "fr": "Choix 2",
-          "en": "A alimentary regime",
+          "fr": "Manger des matières d’origine végétale ou animale déjà transformées ou en voie de décomposition. ",
+          "en": "To eat vegetal or animal matter that is already transformed or in the process of decomposition."
+        },
+        {
+          "fr": "Se nourrir indifféremment d’aliments très divers (herbes, fruits et légumes, chair animale, poissons, insectes, etc.). ",
+          "en": "To eat a wide variety of different foods (plants, fruits and vegetables, meat from animals, fish, insects, and so on).",
+          "good": true
+        }
+      ]
+    },
+    {
+      "question": {
+        "fr": "Végan (végétalien intégral)",
+        "en": "Vegan"
+      },
+      "answers": [
+        {
+          "fr": "Bannir la viande de son assiette et se nourrir généralement de mélanges d’herbes et de cultures locales. L’alimentation végane est parfois complétée par des vitamines, des minéraux et des foins secs. ",
+          "en": "To ban meat from one's plate and feeding oneself generally on a variety of plants and local crops. A \"vegan\" diet is sometimes supplemented with vitamins, minerals and dry grasses. "
+        },
+        {
+          "fr": "Adopter un mode de vie fondé sur le refus global de l’exploitation des animaux. Il exclut tout usage de produits d’origine animale et de leurs dérivés à des fins alimentaires, vestimentaires, sanitaires, récréatives ou autres. ",
+          "en": "To adopt a lifestyle founded on the total rejection of the exploitation of animals. It excludes the use of all products with animal origins and their derivatives for purposes of food, clothing, health, recreation or otherwise.",
           "good": true
         },
         {
-          "fr": "Choix 3",
-          "en": "A alimentary regime"
+          "fr": "Se nourrir des produits de la nature au gré des saisons. L’hiver, le végan mange des plantes ligneuses. En été, le végan préfère les herbes, les fruits et les plantes aquatiques. ",
+          "en": "To feed oneself with the products of nature in accordance with the seasons. In winter, the vegan eats ligneous (woody) plants.. In summer, he prefers grasses, fruits and aquatic plants.  "
+        }
+      ]
+    },
+    {
+      "question": {
+        "fr": "asd",
+        "en": "asd"
+      },
+      "answers": [
+        {
+          "fr": "asd",
+          "en": "asd"
+        },
+        {
+          "fr": "asd",
+          "en": "asd",
+          "good": true
+        },
+        {
+          "fr": "asd",
+          "en": "asd"
+        }
+      ]
+    },
+    {
+      "question": {
+        "fr": "asd",
+        "en": "asd"
+      },
+      "answers": [
+        {
+          "fr": "asd",
+          "en": "asd"
+        },
+        {
+          "fr": "asd",
+          "en": "asd",
+          "good": true
+        },
+        {
+          "fr": "asd",
+          "en": "asd"
+        }
+      ]
+    },
+    {
+      "question": {
+        "fr": "asd",
+        "en": "asd"
+      },
+      "answers": [
+        {
+          "fr": "asd",
+          "en": "asd"
+        },
+        {
+          "fr": "asd",
+          "en": "asd",
+          "good": true
+        },
+        {
+          "fr": "asd",
+          "en": "asd"
         }
       ]
     }

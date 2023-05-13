@@ -13,8 +13,8 @@
       "img": "VJ_CAT2_Lait.png"
     },
     {
-      "fr": "Poissons",
-      "en": "Fishes",
+      "fr": "Poissons et fruits de mer",
+      "en": "Fish and seafood",
       "type": "poisson",
       "img": "VJ_CAT3_poisson.png"
     },
@@ -26,13 +26,13 @@
     },
     {
       "fr": "Grains et céréales",
-      "en": "Cereals",
+      "en": "Grains and cereals",
       "type": "cereale",
       "img": "VJ_CAT5_GrainsEtCereales.png"
     },
     {
       "fr": "Alternatives protéinées",
-      "en": "Alt",
+      "en": "Protein foods",
       "type": "vege",
       "img": "VJ_CAT6_vege.png"
     }

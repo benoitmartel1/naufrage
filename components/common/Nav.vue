@@ -39,15 +39,17 @@ export default {
     gameName() {
       switch ($nuxt.$route.name.split('-')[0]) {
         case 'panier':
-          return this.fr ? 'Dans mon p’tit panier…' : 'EN In my little basket'
+          return this.fr ? 'Dans mon p’tit panier…' : 'In my little basket'
           break
         case 'vore':
-          return this.fr ? 'Quel vore es-tu?' : 'EN In my little basket'
+          return this.fr
+            ? 'Quel type de mangeur êtes-vous?'
+            : 'What kind of eater are you?'
           break
         case 'croire':
           return this.fr
             ? 'J’sais pas si tu vas m’croire?'
-            : 'EN In my little basket'
+            : 'I don’t know if you’ll believe me'
           break
         default:
           break
@@ -60,6 +62,7 @@ export default {
 <style lang="scss">
 .nav {
   .game {
+    // pointer-events: none;
     font-weight: 400;
     font-size: 36px;
     animation: fromBottom 400ms cubic-bezier(0.17, 0.67, 0.52, 0.92) both;

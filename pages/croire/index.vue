@@ -5,11 +5,16 @@
       <div class="message">
         <div>
           <span v-if="fr"
-            >Lorem ipsum occati illum estotas dolupi- et laut que repudandant.
-            Cipsam faccatur reperum vollum incidebis dollamus inustias este
-            vendell uptasperchil int estiatur ma.</span
+            >La viande est associée à des croyances qui sont partiellement
+            vraies ou totalement inventées. Saurez-vous faire la distinction
+            entre mythe et réalité? Je gage 10 cennes que vous réussirez les
+            mains dans les poches!</span
           >
-          <span v-else>EN</span>
+          <span v-else
+            >Meat is associated with beliefs that are partly true or totally
+            invented. Will you be able to distinguish myth from reality? I'll
+            bet you 10 cents you won't!</span
+          >
         </div>
       </div>
 

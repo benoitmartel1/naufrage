@@ -41,7 +41,9 @@
                   <img :src="'img/aliments/' + a.img" />
                 </div>
                 <div class="name">{{ a[lang] }}</div>
-                <div class="price">{{ a[era] + ' $' }}</div>
+                <div class="price">
+                  {{ formatPrice(a) }}
+                </div>
               </div>
             </div>
           </div>
@@ -88,7 +90,11 @@ export default {
       return this.$store.state.lang
     },
     list() {
-      return this.aliments.filter((a) => a.sold == true && a[this.era] !== null)
+      if (this.era == 'now') {
+        return this.aliments.filter((a) => a.sold == true)
+      } else {
+        return this.aliments.filter((a) => a.sold == true && !a.notAvailable)
+      }
     },
     alimentsInType() {
       return this.aliments.filter((a) => a.type == this.type)
@@ -114,16 +120,20 @@ export default {
     this.clearNotAvailableTimeout()
   },
   methods: {
+    formatPrice(a) {
+      let number =
+        this.lang == 'fr'
+          ? a[this.era].toString().replace('.', ',')
+          : a[this.era]
+      number = number.length <= 3 ? number + '0' : number
+      return this.lang == 'fr' ? number + ' $' : '$' + number
+    },
     addItem(a, index) {
-      if (!a.notAvailable) {
+      if (this.era == 'now' || !a.notAvailable) {
         a.sold = !a.sold
       } else {
         if (!a.sold) {
-          //   this.clearNotAvailableTimeout()
           this.notAvailable = index
-          //   notAvailableTimeout = setTimeout(() => {
-          //     this.notAvailable = undefined
-          //   }, 2000)
           a.sold = true
         }
       }

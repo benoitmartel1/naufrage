@@ -6,18 +6,31 @@
       <div class="message">
         <div v-if="era == 'now'">
           <span v-if="lang == 'fr'"
-            >Lorem ipsum occati illum estotas dolupi- et laut que repudandant.
-            Cipsam faccatur reperum vollum incidebis dollamus inustias este
-            vendell uptasperchil int estiatur ma.</span
+            ><div class="title">L’épicerie dans les années 2020</div>
+            Aujourd’hui, c’est jour d’épicerie! Ajoutez tout ce qui vous tente
+            dans le p’tit panier. On verra bien ce que vous trouverez à manger!
+            Vous avez 100 $ à dépenser.
+          </span>
+          <span v-else
+            ><div class="title">The grocery in the 2020s</div>
+            Today is grocery day! Add everything you'd like to the little
+            basket. Then we'll see what you find to eat! You have $100 to
+            spend.</span
           >
-          <span v-else>EN</span>
         </div>
         <div v-else>
           <span v-if="lang == 'fr'"
-            >1920 Lorem ipsum occati illum estotas dolupi- et laut que
-            repudandant. Cipsam
+            ><div class="title">L’épicerie dans les années 1920</div>
+            C’est à mon tour de faire la commande de la semaine. Qu’est-ce qu’on
+            mange? Histoire de me donner des idées, vous mettriez quoi, dans mon
+            p’tit panier? Vous avez un gros 7 $ à dépenser.
           </span>
-          <span v-else>EN</span>
+          <span v-else
+            ><div class="title">The grocery in the 1920s</div>
+            Now it's my turn to make the order for the week. What shall we eat?
+            Give me some ideas, what would you put in my little basket? You have
+            a whole $7 to spend.
+          </span>
         </div>
       </div>
 
@@ -50,7 +63,10 @@ export default {
 .boucher {
   //   left: 75% !important;
 }
-
+.title {
+  font-weight: 800;
+  margin-bottom: 30px;
+}
 .bulle {
   width: 853px;
   height: 615px;
