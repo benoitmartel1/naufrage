@@ -39,11 +39,12 @@ export default {
 
 <style lang="scss" scoped>
 .bulle {
+  top: unset;
   position: absolute;
   color: black;
   background-color: #f48e6c;
-  top: -280px;
-  left: -60px;
+  //   top: -280px;
+  //   left: -60px;
   min-width: 800px;
   //   width: 390px;
   //   height: 280px;
@@ -59,6 +60,7 @@ export default {
     border-radius: 100%;
     font-weight: 800;
     font-size: 70px;
+    margin-bottom: 30px;
     span {
       margin-top: -6px;
     }
@@ -68,7 +70,7 @@ export default {
   }
   .pointe {
     position: absolute;
-    bottom: -80px;
+    // bottom: -80px;
   }
   &:after {
     display: none;

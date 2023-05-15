@@ -84,7 +84,7 @@
       "then": 0.33,
       "sold": false,
       "img": "VJ_Jeu1_B3_yogourt.png",
-      "order": 1
+      "order": 3
     },
     {
       "type": "lait",
@@ -98,7 +98,7 @@
       "then": 0.4,
       "sold": false,
       "img": "VJ_Jeu1_0012_creme-glacée.png",
-      "order": 2
+      "order": 5
     },
     {
       "type": "lait",
@@ -112,7 +112,7 @@
       "then": 0.58,
       "sold": false,
       "img": "VJ_Jeu1_0011_brie.png",
-      "order": 3
+      "order": 6
     },
     {
       "type": "lait",
@@ -122,7 +122,7 @@
       "then": 0.4,
       "sold": false,
       "img": "VJ_cheddar.png",
-      "order": 4
+      "order": 1
     },
     {
       "type": "lait",
@@ -134,7 +134,7 @@
       "img": "VJ_Jeu1_B2_lait-moderne.png",
       "img_1920": "VJ_Jeu1_B2_lait.png",
 
-      "order": 5
+      "order": 2
     },
     {
       "type": "lait",
@@ -144,7 +144,7 @@
       "then": 0.5,
       "sold": false,
       "img": "VJ_Jeu1_0008_beurre-emballé.png",
-      "order": 6
+      "order": 4
     },
     {
       "type": "vege",
@@ -158,7 +158,7 @@
       "then": 0.29,
       "sold": false,
       "img": "VJ_Jeu1_0016_tofu.png",
-      "order": 1
+      "order": 4
     },
     {
       "type": "vege",
@@ -172,7 +172,7 @@
       "then": 0.32,
       "sold": false,
       "img": "VJ_Jeu1_0018_tempeh.png",
-      "order": 2
+      "order": 5
     },
     {
       "type": "vege",
@@ -186,7 +186,7 @@
       "then": 0.38,
       "sold": false,
       "img": "VJ_Jeu1_0019_hummus.png",
-      "order": 3
+      "order": 6
     },
     {
       "type": "vege",
@@ -196,7 +196,7 @@
       "then": 0.12,
       "sold": false,
       "img": "VJ_Jeu1_0013_conserve-feves.png",
-      "order": 4
+      "order": 1
     },
     {
       "type": "vege",
@@ -206,7 +206,7 @@
       "then": 0.26,
       "sold": false,
       "img": "VJ_Jeu1_0014_oeufs.png",
-      "order": 5
+      "order": 2
     },
     {
       "type": "vege",
@@ -216,7 +216,7 @@
       "then": 0.22,
       "sold": false,
       "img": "VJ_Jeu1_0017_sac-amandes.png",
-      "order": 6
+      "order": 3
     },
     {
       "type": "viande",
@@ -230,7 +230,7 @@
       "then": 0.58,
       "sold": false,
       "img": "VJ_Jeu1_0024_roti-autruche.png",
-      "order": 1
+      "order": 3
     },
     {
       "type": "viande",
@@ -244,7 +244,7 @@
       "then": 0.38,
       "sold": false,
       "img": "VJ_Jeu1_0015_pepperoni.png",
-      "order": 2
+      "order": 4
     },
     {
       "type": "viande",
@@ -254,7 +254,7 @@
       "then": 0.38,
       "sold": false,
       "img": "VJ_Jeu1_0020_lard.png",
-      "order": 3
+      "order": 1
     },
     {
       "type": "viande",
@@ -264,7 +264,7 @@
       "then": 0.56,
       "sold": false,
       "img": "VJ_Jeu1_0021_surlonge.png",
-      "order": 4
+      "order": 2
     },
     {
       "type": "viande",
@@ -274,7 +274,7 @@
       "then": 0.56,
       "sold": false,
       "img": "VJ_Jeu1_0023_poitrine-poulet.png",
-      "order": 5
+      "order": 6
     },
     {
       "type": "viande",
@@ -284,7 +284,7 @@
       "then": 0.48,
       "sold": false,
       "img": "VJ_Jeu1_0022_roti-porc.png",
-      "order": 6
+      "order": 5
     },
     {
       "type": "cereale",
@@ -298,7 +298,7 @@
       "then": 0.53,
       "sold": false,
       "img": "VJ_Jeu1_0029_couscous.png",
-      "order": 1
+      "order": 5
     },
     {
       "type": "cereale",
@@ -312,7 +312,7 @@
       "then": 0.42,
       "sold": false,
       "img": "VJ_tortillas.png",
-      "order": 2
+      "order": 6
     },
     {
       "type": "cereale",
@@ -322,7 +322,7 @@
       "then": 0.3,
       "sold": false,
       "img": "VJ_Jeu1_0025_gruau.png",
-      "order": 3
+      "order": 1
     },
     {
       "type": "cereale",
@@ -332,7 +332,7 @@
       "then": 0.55,
       "sold": false,
       "img": "VJ_Jeu1_0026_farine.png",
-      "order": 4
+      "order": 2
     },
     {
       "type": "cereale",
@@ -342,7 +342,7 @@
       "then": 0.15,
       "sold": false,
       "img": "VJ_Jeu1_0027_fecule-maïs.png",
-      "order": 5
+      "order": 3
     },
     {
       "type": "cereale",
@@ -352,7 +352,7 @@
       "then": 0.4,
       "sold": false,
       "img": "VJ_Jeu1_0028_pain.png",
-      "order": 6
+      "order": 4
     },
 
     {
@@ -367,7 +367,7 @@
       "then": 0.36,
       "sold": false,
       "img": "VJ_Jeu1_0033_mahi-mahi.png",
-      "order": 1
+      "order": 3
     },
     {
       "type": "poisson",
@@ -381,7 +381,7 @@
       "then": 0.43,
       "sold": false,
       "img": "VJ_Jeu1_0032_tilapia.png",
-      "order": 2
+      "order": 1
     },
     {
       "type": "poisson",
@@ -391,7 +391,7 @@
       "then": 0.2,
       "sold": false,
       "img": "VJ_Jeu1_0031_boîte-saumon.png",
-      "order": 3
+      "order": 4
     },
     {
       "type": "poisson",
@@ -401,7 +401,7 @@
       "then": 0.43,
       "sold": false,
       "img": "VJ_Jeu1_0034_truite.png",
-      "order": 4
+      "order": 5
     },
     {
       "type": "poisson",
@@ -411,7 +411,7 @@
       "then": 0.31,
       "sold": false,
       "img": "VJ_Jeu1_0036_boite-homard.png",
-      "order": 5
+      "order": 2
     },
     {
       "type": "poisson",

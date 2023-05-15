@@ -2,10 +2,17 @@
   <div :class="['list', { old: era == 'then' }]">
     <div class="top">
       <div v-if="isCompare">
-        <span v-if="lang == 'fr'">Mon panier 1920</span><span v-else></span>
+        <div v-if="era == 'then'">
+          <span v-if="lang == 'fr'">Mon panier 1920</span
+          ><span v-else>EN??</span>
+        </div>
+        <div v-else>
+          <span v-if="lang == 'fr'">Mon panier aujourd'hui</span
+          ><span v-else>EN??</span>
+        </div>
       </div>
       <div v-else>
-        <span v-if="lang == 'fr'">Mon panier</span><span v-else></span>
+        <span v-if="lang == 'fr'">Mon panier</span><span v-else>EN??</span>
       </div>
       <div :class="['cart', era]">
         <img v-if="era == 'then'" src="img/aliments/VJ_panier1920.png" alt="" />
@@ -26,7 +33,7 @@
         <div>
           <Transition name="typeHeader">
             <div v-if="alimentsInListByType(t.type).length" class="type-header">
-              {{ t[lang] }}
+              {{ t[lang].replace(/<\/?[^>]+(>|$)/g, ' ') }}
             </div>
           </Transition>
           <TransitionGroup name="list" tag="ul">
@@ -196,6 +203,9 @@ export default {
       //   border: 1px solid brown;
 
       .name-wrapper {
+        span {
+          line-height: 24px;
+        }
         // border: 1px solid yellow;
         display: flex;
         align-items: center;

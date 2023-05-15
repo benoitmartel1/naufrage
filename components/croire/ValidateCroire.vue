@@ -5,13 +5,17 @@
       <div class="bulle">
         <div class="message">
           <div v-if="isGood">
-            <span v-if="fr">Bravo!</span>
-            <span v-else>EN</span>
+            <span v-if="fr">Bonne réponse!</span>
+            <span v-else>Good answer!</span>
           </div>
-          <div v-else><span v-if="fr">Bouhou</span> <span v-else>EN</span></div>
+          <div v-else>
+            <span v-if="fr">Mauvaise réponse…</span>
+            <span v-else>Wrong answer</span>
+          </div>
         </div>
+
         <div class="answer">
-          {{ answer[fr ? 'fr' : 'en'] }}
+          {{ resolve[fr ? 'fr' : 'en'] }}
         </div>
 
         <ContinueButton @click.native="$emit('continue')" />
@@ -22,7 +26,7 @@
 
 <script>
 export default {
-  props: ['isGood', 'answer'],
+  props: ['isGood', 'resolve'],
   computed: {
     fr() {
       return this.$store.state.lang == 'fr'
@@ -45,6 +49,9 @@ export default {
     height: 100%;
     // background-color: green;
     overflow: hidden;
+    .answer {
+      margin-top: 30px;
+    }
     .boucher {
       //   right: unset;
       //   left: 500px;
@@ -52,11 +59,15 @@ export default {
       //   transform: scaleX(-1);
     }
     .bulle {
-      left: 500px;
+      width: 875px;
+      min-height: 423px;
+      left: 344px;
+      top: 271px;
+      //   left: 500px;
       &:after {
-        transform: scaleX(-1);
-        left: -100px;
-        top: 20px;
+        // transform: scaleX(-1);
+        // right: -100px;
+        top: 200px;
       }
     }
   }

@@ -1,27 +1,34 @@
 <template>
   <div class="main-wrapper">
+    <div class="black"></div>
     <Boucher />
     <div class="bulle">
       <div class="row">
         <Vache :score="score" />
-        <div class="score">{{ score + '/' + nbOfQuestions }}</div>
+        <div class="score">{{ score + '/' + 6 }}</div>
       </div>
 
       <div class="message">
         <div>
-          <div v-if="Math.floor(score / nbOfQuestions)">
+          <div v-if="Math.floor(score / 6) >= 0.8">
             <span v-if="fr"
-              >100% Lorem ipsum occati illum estotas dolupiet laut que
-              repudandant.</span
+              >Félicitations! Démêler les « accroires » de la réalité, c’est
+              votre spécialité. Je vous lève mon chapeau de boucher!</span
             >
-            <span v-else>EN</span>
+            <span v-else
+              >Congratulations! Separating belief from reality is your
+              specialty! I tip my butcher's hat to you!</span
+            >
           </div>
           <div v-else>
             <span v-if="fr"
-              >Pas 100% Lorem ipsum occati illum estotas dolupiet laut que
-              repudandant.</span
+              >Bien joué! Vous savez maintenant mieux démêler les « accroires »
+              de la réalité. Je vous lève mon chapeau de boucher!</span
             >
-            <span v-else>EN</span>
+            <span v-else
+              >Good game! You now know how to better separate belief from
+              reality. I tip my butcher's hat to you!</span
+            >
           </div>
         </div>
       </div>
@@ -59,23 +66,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.black {
+  z-index: 0;
+}
 .row {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 100px;
 }
+.bulle {
+  width: 875px;
+  min-height: 681px;
+  left: 344px;
+  top: 107px;
+}
 .score {
-  font-size: 72px;
-  font-weight: 700;
-  //   width: 100%;
-  text-align: center;
-  //   margin-bottom: 60px;
+  font-size: 88px;
+  line-height: 65px;
+  font-weight: 400;
+  float: right;
 }
 .vache {
   //   position: relative;
-}
-.boucher {
-  left: 75%;
 }
 </style>

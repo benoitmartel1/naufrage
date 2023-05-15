@@ -41,6 +41,12 @@ export default {
 
 <style lang="scss" scoped>
 .boucher {
-  left: 75%;
+  //   left: 75%;
+}
+.bulle {
+  width: 853px;
+  left: 333px;
+  top: 158px;
+  min-height: 615px;
 }
 </style>

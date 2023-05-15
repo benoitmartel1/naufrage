@@ -11,22 +11,22 @@
       </div>
       <div class="labels">
         <div class="label" v-if="timer >= 0">
-          <span>{{ fr ? 'Omnivore' : 'Omnivorus' }}</span>
+          <span>{{ fr ? 'Omnivore' : 'Omnivore' }}</span>
         </div>
         <div class="label" v-if="timer >= 3">
-          <span>{{ fr ? 'Carnivore' : 'Omnivorus' }}</span>
+          <span>{{ fr ? 'Végétarien' : 'Vegetarian' }}</span>
         </div>
         <div class="label" v-if="timer >= 6">
-          <span>{{ fr ? 'Ovipare' : 'Omnivorus' }}</span>
+          <span>{{ fr ? 'Végan' : 'Vegan' }}</span>
         </div>
         <div class="label" v-if="timer >= 8">
-          <span>{{ fr ? 'Matador' : 'Omnivorus' }}</span>
+          <span>{{ fr ? 'Flexitarien' : 'Flexitarian' }}</span>
         </div>
         <div class="label" v-if="timer >= 9">
-          <span>{{ fr ? 'Météore' : 'Omnivorus' }}</span>
+          <span>{{ fr ? 'Méditerranéen' : 'Mediterranean' }}</span>
         </div>
         <div class="label" v-if="timer >= 10">
-          <span>{{ fr ? 'Glouton' : 'Omnivorus' }}</span>
+          <span>{{ fr ? 'Crudivore' : 'Crudivore' }}</span>
         </div>
       </div>
     </div>

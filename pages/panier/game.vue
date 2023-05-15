@@ -19,12 +19,14 @@
               <div class="img-wrapper">
                 <img :src="'img/aliments/' + t.img" />
               </div>
-              <div class="title">
-                {{ t[lang] }}
-              </div>
+              <div class="title" v-html="t[lang]"></div>
             </div>
           </div>
           <div class="aliments-wrapper">
+            <NotAvailable
+              v-if="notAvailable"
+              :text="notAvailable.notAvailable[lang]"
+            />
             <div class="aliments">
               <div
                 :class="['aliment btn', { sold: a.sold }]"
@@ -32,13 +34,14 @@
                 :key="a.fr"
                 @click="addItem(a, index)"
               >
-                <NotAvailable
-                  v-if="notAvailable == index && a.notAvailable"
-                  :text="a.notAvailable[lang]"
-                />
                 <div class="circle"></div>
                 <div class="img-wrapper">
-                  <img :src="'img/aliments/' + a.img" />
+                  <div v-if="era == 'then' && a.img_1920">
+                    <img :src="'img/aliments/' + a.img_1920" />
+                  </div>
+                  <div v-else>
+                    <img :src="'img/aliments/' + a.img" />
+                  </div>
                 </div>
                 <div class="name">{{ a[lang] }}</div>
                 <div class="price">
@@ -116,6 +119,7 @@ export default {
       return sum.toFixed(2)
     },
   },
+
   beforeDestroy() {
     this.clearNotAvailableTimeout()
   },
@@ -133,12 +137,52 @@ export default {
         a.sold = !a.sold
       } else {
         if (!a.sold) {
-          this.notAvailable = index
+          this.notAvailable = a
+          this.styleBulle(index)
           a.sold = true
         }
       }
     },
-
+    styleBulle(i) {
+      let bullePos, afterPos
+      switch (i) {
+        case 0:
+          bullePos = [20, 440] //left top
+          afterPos = [135, -80]
+          break
+        case 1:
+          bullePos = [50, 440]
+          afterPos = [546, -80]
+          break
+        case 2:
+          bullePos = [80, 440]
+          afterPos = [956, -80]
+          break
+        case 3:
+          bullePos = [20, 290]
+          afterPos = [135, -80]
+          break
+        case 4:
+          bullePos = [50, 290]
+          afterPos = [546, -80]
+          break
+        case 5:
+          bullePos = [80, 290]
+          afterPos = [950, -80]
+          break
+      }
+      let isInverted = i < 3 ? 'transform:scaleY(-1)' : ''
+      this.$nextTick(() => {
+        document.querySelector('.bulle').style.cssText = `left: ${
+          bullePos[0]
+        }px; ${i > 2 ? 'bottom' : 'top'}: ${bullePos[1]}px;`
+        document.querySelector(
+          '.pointe'
+        ).style.cssText = `${isInverted};left: ${afterPos[0]}px; ${
+          i > 2 ? 'bottom' : 'top'
+        }: ${afterPos[1]}px;`
+      })
+    },
     checkout() {
       let payload = { list: this.era, content: this.list }
       this.$store.commit('checkoutList', payload)
@@ -156,6 +200,12 @@ export default {
     },
   },
   watch: {
+    list(val) {
+      this.$nextTick(() => {
+        let elem = document.querySelector('.list .bottom')
+        elem.scrollTop = elem.scrollHeight + 100
+      })
+    },
     left(val) {
       if (val <= 0) {
         this.checkout()

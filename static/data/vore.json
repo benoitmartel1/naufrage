@@ -65,64 +65,64 @@
     },
     {
       "question": {
-        "fr": "asd",
-        "en": "asd"
+        "fr": "Flexitarien",
+        "en": "Flexitarian"
       },
       "answers": [
         {
-          "fr": "asd",
-          "en": "asd"
+          "fr": "Consommer exclusivement de la nourriture qui améliore la circulation sanguine, la souplesse du corps et les performances sportives.",
+          "en": "To eat exclusively foods that improve blood circulation, the suppleness of the body, and athletic performance. "
         },
         {
-          "fr": "asd",
-          "en": "asd",
+          "fr": "Avoir un mode d’alimentation principalement d’origine végétale, en incluant occasionnellement de la viande ou du poisson à leur assiette. ",
+          "en": "To have primarily plant-based eating habits, that sometimes include meat or fish. ",
           "good": true
         },
         {
-          "fr": "asd",
-          "en": "asd"
+          "fr": "Manger énormément de gras pour… perdre du gras! Il s’agit d’un régime très en mode au cours des dernières années.",
+          "en": "To consume large amounts of fat in order to... lose weight! It has been a very trendy dietary regime in recent years."
         }
       ]
     },
     {
       "question": {
-        "fr": "asd",
-        "en": "asd"
+        "fr": "Méditerranéen",
+        "en": "Mediterranean"
       },
       "answers": [
         {
-          "fr": "asd",
-          "en": "asd"
+          "fr": "Se nourrir exclusivement du poisson et des algues issus de la mer Méditerranée.  Les habitants des pays côtiers confèrent aux ressources nourricières de cette mer des vertus nutritives inégalées. ",
+          "en": "To eat fish and seaweed from the Mediterranean Sea. The inhabitants of coastal countries attribute unsurpassed nutritional virtues to the nourishing resources of this particular sea. "
         },
         {
-          "fr": "asd",
-          "en": "asd",
+          "fr": "Se nourrir de certains aliments inspirés de l’alimentation traditionnelle des habitants des pays bordant la mer Méditerranée tels les fruits et légumes colorés, les légumineuses dont le soja et ses dérivés, l’huile d’olive, les poissons et les noix.sd",
+          "en": "To eat foods inspired by the traditional diet of the inhabitants of countries bordering the Mediterranean Sea, such as colourful fruits and vegetables, soybeans, olive oil, fish and nuts grains.",
           "good": true
         },
         {
-          "fr": "asd",
-          "en": "asd"
+          "fr": "Opter pour un équilibre entre la consommation de viande et de produits végétariens.",
+          "en": "To opt for an equilibrium between the consumption of meat and vegetarian foods."
         }
       ]
     },
     {
       "question": {
-        "fr": "asd",
-        "en": "asd"
+        "fr": "Crudivore",
+        "en": "Crudivore"
       },
       "answers": [
         {
-          "fr": "asd",
-          "en": "asd"
+          "fr": "Manger des mets uniquement constitués de légumes crus. Amateurs de trempettes de crudités, vous vous régalerez! ",
+          "en": "To eat meals composed entirely of raw vegetables.  If you are a fan of crudités and dip, you’re going to enjoy yourself! "
         },
         {
-          "fr": "asd",
-          "en": "asd",
+          "fr": "Manger tout cru, en tout temps : qu’il s’agisse de viande, de poisson ou de légumes. Rangez vos casseroles et éteignez le four!",
+          "en": "To eat everything raw, all the time: whether it's meat, fish or vegetables. Put away those cooking pots and turn the oven off.",
           "good": true
         },
         {
-          "fr": "asd",
-          "en": "asd"
+          "fr": "Éradiquer de son assiette tout aliment dont la consommation humaine cause préjudice à un être vivant.",
+          "en": "To eliminate from one's plate all foods the human consumption of which prejudice a living being."
         }
       ]
     }
