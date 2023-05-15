@@ -151,7 +151,7 @@
       "fr": "Bloc de tofu",
       "en": "Block of tofu",
       "notAvailable": {
-        "fr": "Ne « t’offusque » pas de ne pas dénicher de tofu à la boucherie! C’est tout à fait normal. Le tofu intègre les pratiques alimentaires québécoises à partir des années 1970. ",
+        "fr": "Ne <i>« t’offusque »</i> pas de ne pas dénicher de tofu à la boucherie! C’est tout à fait normal. Le tofu intègre les pratiques alimentaires québécoises à partir des années 1970. ",
         "en": "Don't be upset if you can't find tofu at the butcher's. It's quite normal. Tofu only became a part of the Quebec diet in the 1970s. "
       },
       "now": 3.99,
@@ -190,7 +190,7 @@
     },
     {
       "type": "vege",
-      "fr": "Boîte de beans (haricots)",
+      "fr": "Boîte de <i>beans</i> (haricots)",
       "en": "Canned beans",
       "now": 1.49,
       "then": 0.12,

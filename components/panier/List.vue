@@ -1,13 +1,17 @@
 <template>
   <div :class="['list', { old: era == 'then' }]">
     <div class="top">
-      <div v-if="isCompare">
+      <div v-if="isCompare" class="title">
         <div v-if="era == 'then'">
-          <span v-if="lang == 'fr'">Mon panier 1920</span
+          <span v-if="lang == 'fr'"
+            >Mon panier
+            <div class="annee">1920</div></span
           ><span v-else>EN??</span>
         </div>
         <div v-else>
-          <span v-if="lang == 'fr'">Mon panier aujourd'hui</span
+          <span v-if="lang == 'fr'">
+            Mon panier
+            <div class="annee">aujourd'hui</div></span
           ><span v-else>EN??</span>
         </div>
       </div>
@@ -44,9 +48,7 @@
               @click="onClick(i)"
             >
               <div class="name-wrapper">
-                <span>
-                  {{ i[lang] }}
-                </span>
+                <span v-html="i[lang]"> </span>
                 <div class="remove">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -139,11 +141,21 @@ export default {
   padding: 30px;
   flex: 1;
   position: relative;
+
   .top {
     font-size: 32px;
     font-weight: 700;
     display: flex;
     align-items: flex-end;
+    .title {
+      padding-bottom: 10px;
+      font-size: 37px;
+      margin-bottom: 10px;
+      .annee {
+        margin-top: 0px;
+        font-size: 45px;
+      }
+    }
     // background-color: green;
     .cart {
       .nb-wrapper {
@@ -229,6 +241,34 @@ export default {
     font-weight: 400;
     display: flex;
     justify-content: space-between;
+  }
+}
+.old {
+  .title {
+    font-size: 38px !important;
+    .annee {
+      font-size: 71px !important;
+    }
+  }
+  font-family: 'Caveat';
+  .nb {
+    font-family: 'Neulis';
+  }
+  .bottom {
+    font-size: 26px;
+
+    .type-header {
+      font-size: 28px;
+    }
+  }
+  .top {
+    font-size: 46px;
+  }
+  .total {
+    font-size: 40px;
+  }
+  .amount {
+    font-size: 46px;
   }
 }
 .list-enter-active {

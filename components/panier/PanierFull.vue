@@ -25,13 +25,14 @@
           </div>
           <div v-else>
             <span v-if="lang == 'fr'"
-              >Merci de votre aide! C’est un 7 $ bien investi! Juste à regarder
-              les aliments que vous avez choisis, je sens mon ventre
+              >Merci de votre aide! C’est un {{ max }} $ bien investi! Juste à
+              regarder les aliments que vous avez choisis, je sens mon ventre
               gargouiller!</span
             >
             <span v-else
-              >Thanks for your help! That's $7 well invested! Just look at the
-              food you've picked out. I can feel my stomach growling already!
+              >Thanks for your help! That's ${{ max }} well invested! Just look
+              at the food you've picked out. I can feel my stomach growling
+              already!
             </span>
           </div>
         </div>
@@ -51,6 +52,9 @@ export default {
   computed: {
     lang() {
       return this.$store.state.lang
+    },
+    max() {
+      return this.$store.state.panier[this.era].max
     },
   },
   methods: {

@@ -5,7 +5,7 @@
       <MovieComing v-if="timeToMovie" :timeToMovie="timeToMovie" />
       <Nuxt />
     </div>
-    <TestPanel />
+    <TestPanel v-if="approMode" />
   </div>
 </template>
 

@@ -1,5 +1,6 @@
 <template>
   <div class="bulle" @click.stop="$parent.notAvailable = undefined">
+    <div class="close">X</div>
     <div class="pointe">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -47,12 +48,21 @@ export default {
   //   left: -60px;
   min-width: 800px;
   //   width: 390px;
-  //   height: 280px;
+  min-height: 340px;
   border-color: white;
   display: flex;
   // justify-content: center;
   align-items: center;
   z-index: 800;
+  .close {
+    font-weight: 400;
+    transform: scaleX(1.2);
+    right: 30px;
+    top: 20px;
+    font-size: 48px;
+    position: absolute;
+    font-family: arial;
+  }
   .exclamation {
     width: 82px;
     height: 82px;

@@ -49,7 +49,7 @@
       },
       "answers": [
         {
-          "fr": "Bannir la viande de son assiette et se nourrir généralement de mélanges d’herbes et de cultures locales. L’alimentation végane est parfois complétée par des vitamines, des minéraux et des foins secs. ",
+          "fr": "Bannir la viande de son assiette et se nourrir généralement de mélanges d’herbes et de cultures locales. L’alimentation <i>végane</i> est parfois complétée par des vitamines, des minéraux et des foins secs. ",
           "en": "To ban meat from one's plate and feeding oneself generally on a variety of plants and local crops. A \"vegan\" diet is sometimes supplemented with vitamins, minerals and dry grasses. "
         },
         {
@@ -58,7 +58,7 @@
           "good": true
         },
         {
-          "fr": "Se nourrir des produits de la nature au gré des saisons. L’hiver, le végan mange des plantes ligneuses. En été, le végan préfère les herbes, les fruits et les plantes aquatiques. ",
+          "fr": "Se nourrir des produits de la nature au gré des saisons. L’hiver, le <i>végan</i> mange des plantes ligneuses. En été, le <i>végan</i> préfère les herbes, les fruits et les plantes aquatiques. ",
           "en": "To feed oneself with the products of nature in accordance with the seasons. In winter, the vegan eats ligneous (woody) plants.. In summer, he prefers grasses, fruits and aquatic plants.  "
         }
       ]
@@ -95,7 +95,7 @@
           "en": "To eat fish and seaweed from the Mediterranean Sea. The inhabitants of coastal countries attribute unsurpassed nutritional virtues to the nourishing resources of this particular sea. "
         },
         {
-          "fr": "Se nourrir de certains aliments inspirés de l’alimentation traditionnelle des habitants des pays bordant la mer Méditerranée tels les fruits et légumes colorés, les légumineuses dont le soja et ses dérivés, l’huile d’olive, les poissons et les noix.sd",
+          "fr": "Se nourrir de certains aliments inspirés de l’alimentation traditionnelle des habitants des pays bordant la mer Méditerranée tels les fruits et légumes colorés, les légumineuses dont le soja et ses dérivés, l’huile d’olive, les poissons et les noix.",
           "en": "To eat foods inspired by the traditional diet of the inhabitants of countries bordering the Mediterranean Sea, such as colourful fruits and vegetables, soybeans, olive oil, fish and nuts grains.",
           "good": true
         },

@@ -47,8 +47,8 @@ const newWin = () => {
     height: 1080,
     frame: true,
     autoHideMenuBar: true,
-    // alwaysOnTop: true,
-    fullscreen: false,
+    alwaysOnTop: true,
+    fullscreen: true,
     kiosk: true,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),

@@ -86,15 +86,15 @@ export default {
       width: 658px;
       //   height: 313px;
       left: 613px;
-      top: 335px;
+      top: 100px;
       &.bad {
         width: 1500px;
         left: 100px;
       }
       &:after {
-        transform: scale(0.7, -0.7);
+        transform: scale(0.7, 0.7);
         // left: -100px;
-        top: 60px;
+        top: 130px;
       }
     }
   }

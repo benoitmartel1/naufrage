@@ -3,7 +3,7 @@
     <div v-if="panierFull" :class="['black', { old: era == 'then' }]"></div>
     <PanierFull v-if="panierFull" :total="total" @continue="handleContinue()" />
     <div :class="['main', { old: era == 'then' }]">
-      <div class="game">
+      <div :class="['game', { old: era == 'then' }]">
         <div class="left">
           <div class="left-back-mask">
             <div class="top"></div>
@@ -22,7 +22,7 @@
               <div class="title" v-html="t[lang]"></div>
             </div>
           </div>
-          <div class="aliments-wrapper">
+          <div class="aliments-wrapper" @click="notAvailable = undefined">
             <NotAvailable
               v-if="notAvailable"
               :text="notAvailable.notAvailable[lang]"
@@ -32,7 +32,7 @@
                 :class="['aliment btn', { sold: a.sold }]"
                 v-for="(a, index) in alimentsInType"
                 :key="a.fr"
-                @click="addItem(a, index)"
+                @click.stop="addItem(a, index)"
               >
                 <div class="circle"></div>
                 <div class="img-wrapper">
@@ -43,7 +43,7 @@
                     <img :src="'img/aliments/' + a.img" />
                   </div>
                 </div>
-                <div class="name">{{ a[lang] }}</div>
+                <div class="name" v-html="a[lang]"></div>
                 <div class="price">
                   {{ formatPrice(a) }}
                 </div>
@@ -121,18 +121,26 @@ export default {
   },
 
   beforeDestroy() {
-    this.clearNotAvailableTimeout()
+    // this.clearNotAvailableTimeout()
+    this.notAvailable = undefined
   },
   methods: {
     formatPrice(a) {
-      let number =
-        this.lang == 'fr'
-          ? a[this.era].toString().replace('.', ',')
-          : a[this.era]
-      number = number.length <= 3 ? number + '0' : number
-      return this.lang == 'fr' ? number + ' $' : '$' + number
+      let number = a[this.era] * 100
+      if (this.era == 'now') {
+        let decimals = number.toString().slice(-2, number.length)
+        let units = number.toString().slice(0, -2)
+
+        number = units + (this.lang == 'fr' ? ',' : '.') + decimals
+        return this.lang == 'fr' ? number + ' $' : '$' + number
+      } else {
+        return this.lang == 'fr'
+          ? Math.round(number) + ' ¢'
+          : '¢' + Math.round(number)
+      }
     },
     addItem(a, index) {
+      this.notAvailable = undefined
       if (this.era == 'now' || !a.notAvailable) {
         a.sold = !a.sold
       } else {
@@ -389,6 +397,16 @@ export default {
         }
       }
     }
+  }
+}
+.old .aliments,
+.old .types {
+  font-family: 'Caveat';
+  .type {
+    font-size: 32px;
+  }
+  .name {
+    font-size: 36px;
   }
 }
 .old {

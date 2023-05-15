@@ -89,7 +89,7 @@ export default {
   .bottom {
     margin: 0 !important;
     margin-top: -15px !important;
-    overflow: hidden !important;
+    // overflow: hidden !important;
   }
   .remove {
     opacity: 0 !important;

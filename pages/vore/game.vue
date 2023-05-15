@@ -17,9 +17,8 @@
             v-for="(a, index) in q.answers"
             :key="a + index"
             @click="validate(a.good)"
-          >
-            {{ a[lang] }}
-          </div>
+            v-html="a[lang]"
+          ></div>
         </div>
       </div>
     </div>
@@ -94,6 +93,7 @@ export default {
     width: 100%;
 
     .question {
+      margin-top: -30px;
       font-size: 48px;
       font-weight: 800;
       left: 66px;
@@ -106,7 +106,8 @@ export default {
       .answer {
         // width: 100%;
         text-align: center;
-        font-size: 0.8em;
+        font-size: 36px;
+        line-height: 48px;
         border-radius: 30px;
         margin-bottom: 25px;
         background-color: white;

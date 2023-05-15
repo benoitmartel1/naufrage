@@ -2,7 +2,7 @@
   <div class="main-wrapper">
     <div v-show="step == 'boucher'" class="black"></div>
     <BoucherVore v-show="step == 'boucher'" @continue="onContinue()" />
-    <div class="animation">
+    <div :class="['animation', { boucher: step == 'boucher' }]">
       <div v-if="step == 'then' || step == 'boucher'">
         <img class="woman" src="img/vore/VJ2_femme-1920.png" alt="" />
       </div>
@@ -30,49 +30,52 @@
         </div>
       </div>
     </div>
+    <div class="bulle-wrapper">
+      <div class="bulle" v-if="step !== 'boucher'">
+        <div class="message">
+          <div v-if="step == 'then'">
+            <span v-if="fr"
+              ><span class="title">1920</span>En 1920, lorsqu’on invite famille
+              et amis à partager un bon repas chez soi, il n’y a pas trop de
+              questions à se poser afin que tous soient heureux du menu de la
+              soirée! À Val-Jalbert, les habitants aiment manger de la viande.
+              Pas de chicane dans la cabane : tout le monde est omnivore.</span
+            >
+            <span v-else
+              ><span class="title">1920</span>When family and friends were
+              invited over to share a good meal, there weren't many questions to
+              ask before everyone was perfectly happy with the menu! In
+              Val-Jalbert, people really enjoyed eating meat. There was no
+              argument: everyone was an omnivore.</span
+            >
+          </div>
+          <div v-else>
+            <span v-if="fr"
+              ><span class="title">Aujourd'hui</span>Aujourd’hui, avant
+              d’inviter des proches à partager un repas, il est maintenant
+              habituel de se poser des questions telles que : « Est-ce que Gaby
+              mange de la viande? » ou encore « Est-ce que Maude mange du pain
+              au blé entier? » Intolérances, préférences et régimes alimentaires
+              spécifiques sont dorénavant des facteurs déterminants dans le
+              choix du menu.
+            </span>
+            <span v-else
+              ><span class="title">Today</span>Today, before inviting loved ones
+              to share a meal, it is now common to ask oneself questions like:
+              "Does Gaby eat meat?" or "Does Maude eat whole wheat bread?". Food
+              intolerances, preferences, and particular diets are now important
+              factors in the choice of a shared meal.
+            </span>
+          </div>
+        </div>
 
-    <div class="bulle" v-if="step !== 'boucher'">
-      <div class="message">
-        <div v-if="step == 'then'">
-          <span v-if="fr"
-            ><span class="title">1920</span>En 1920, lorsqu’on invite famille et
-            amis à partager un bon repas chez soi, il n’y a pas trop de
-            questions à se poser afin que tous soient heureux du menu de la
-            soirée! À Val-Jalbert, les habitants aiment manger de la viande. Pas
-            de chicane dans la cabane : tout le monde est omnivore.</span
-          >
-          <span v-else
-            ><span class="title">1920</span>When family and friends were invited
-            over to share a good meal, there weren't many questions to ask
-            before everyone was perfectly happy with the menu! In Val-Jalbert,
-            people really enjoyed eating meat. There was no argument: everyone
-            was an omnivore.</span
-          >
-        </div>
-        <div v-else>
-          <span v-if="fr"
-            ><span class="title">Aujourd'hui</span>Aujourd’hui, avant d’inviter
-            des proches à partager un repas, il est maintenant habituel de se
-            poser des questions telles que : « Est-ce que Gaby mange de la
-            viande? » ou encore « Est-ce que Maude mange du pain au blé entier?
-            » Intolérances, préférences et régimes alimentaires spécifiques sont
-            dorénavant des facteurs déterminants dans le choix du menu.
-          </span>
-          <span v-else
-            ><span class="title">Today</span>Today, before inviting loved ones
-            to share a meal, it is now common to ask oneself questions like:
-            "Does Gaby eat meat?" or "Does Maude eat whole wheat bread?". Food
-            intolerances, preferences, and particular diets are now important
-            factors in the choice of a shared meal.
-          </span>
-        </div>
+        <ContinueButton
+          v-if="animationDone || step == 'then'"
+          @click.native="onContinue()"
+        />
       </div>
-
-      <ContinueButton
-        v-if="animationDone || step == 'then'"
-        @click.native="onContinue()"
-      />
     </div>
+
     <div class="backdrop"></div>
   </div>
 </template>
@@ -148,10 +151,29 @@ export default {
     // filter: brightness(0);
   }
 }
+.boucher {
+  .man {
+    left: 241px;
+  }
+  .woman {
+    left: 469px;
+  }
+}
+.bulle-wrapper {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 93%;
+  width: 92%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 .bulle {
+  position: unset;
   //   text-align: center;
-  left: 1005px;
-  top: 158px;
+  //   left: 1005px;
+  //   top: 158px;
   width: 735px;
   font-size: 32px;
   line-height: 44px;
