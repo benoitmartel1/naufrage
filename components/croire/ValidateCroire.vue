@@ -2,23 +2,25 @@
   <div class="wrapper">
     <div class="window">
       <Boucher />
-      <div class="bulle">
-        <div class="message">
-          <div v-if="isGood">
-            <span v-if="fr">Bonne réponse!</span>
-            <span v-else>Good answer!</span>
+      <div class="bulle-wrapper">
+        <div class="bulle">
+          <div class="message">
+            <div v-if="isGood">
+              <span v-if="fr">Bonne réponse!</span>
+              <span v-else>Good answer!</span>
+            </div>
+            <div v-else>
+              <span v-if="fr">Mauvaise réponse…</span>
+              <span v-else>Wrong answer</span>
+            </div>
           </div>
-          <div v-else>
-            <span v-if="fr">Mauvaise réponse…</span>
-            <span v-else>Wrong answer</span>
+
+          <div class="answer">
+            {{ resolve[fr ? 'fr' : 'en'] }}
           </div>
-        </div>
 
-        <div class="answer">
-          {{ resolve[fr ? 'fr' : 'en'] }}
+          <ContinueButton @click.native="$emit('continue')" />
         </div>
-
-        <ContinueButton @click.native="$emit('continue')" />
       </div>
     </div>
   </div>
@@ -58,11 +60,21 @@ export default {
       //   bottom: -200px;
       //   transform: scaleX(-1);
     }
+    .bulle-wrapper {
+      //   border: 1px solid yellow;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
     .bulle {
+      position: unset;
       width: 875px;
       min-height: 423px;
-      left: 344px;
-      top: 271px;
+      margin-left: 344px;
+      margin-bottom: 50px;
+      //   top: 271px
       //   left: 500px;
       &:after {
         // transform: scaleX(-1);

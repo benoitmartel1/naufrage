@@ -7,6 +7,9 @@ export const state = () => ({
     now: { list: [], max: 100 },
     then: { list: [], max: 4 },
   },
+  croire: {
+    max: 6,
+  },
 })
 
 export const mutations = {
@@ -26,6 +29,9 @@ export const mutations = {
   },
   setVolume(state, v) {
     state.volume = v
+  },
+  setCroireMax(state, v) {
+    state.croire.max = v
   },
   setMoviePlaying(state, s) {
     state.moviePlaying = s

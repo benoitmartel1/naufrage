@@ -1,109 +1,8 @@
 <template>
-  <div id="pdf" style="overflow: auto" :key="count">
-    <div class="controls">
-      <button
-        class="approMode"
-        @click="updateSettings('langue', lang == 'fr' ? 'en' : 'fr')"
-      >
-        {{ lang == 'fr' ? 'en' : 'fr' }}
-      </button>
-      <button
-        class="approMode"
-        @click="updateSettings('experience', experience == 0 ? 1 : 0)"
-      >
-        {{ experience == 1 ? 'Béluga' : 'Rorqual à bosse' }}
-      </button>
-    </div>
-    <div v-for="(theme, tindex) in content.themes" :key="theme + tindex">
-      <div
-        v-for="(subtheme, sindex) in theme.subthemes"
-        :key="subtheme + sindex"
-      >
-        <div
-          v-for="(step, index) in createDuplicates(subtheme.steps)"
-          :key="step + index"
-        >
-          <div class="casier">
-            <div class="appro">
-              <!-- {{ theme.fr }}
-            {{ subtheme.fr }}
-            {{ step }} -->
-              <Info v-if="step.hasInfo" :info="subtheme.info" />
-              <div
-                v-if="
-                  blurred ||
-                  step.hasInfo ||
-                  step.preStatus == 'validate' ||
-                  step.preStatus == 'wrong'
-                "
-                class="blurZone"
-              ></div>
-              <div
-                :class="[
-                  subtheme.isLast || step.type == 'intro' ? 'last-theme' : '',
-                  'main-wrapper',
-                  step.lastSlide == true && !showRapport ? 'last-slide' : '',
-                ]"
-              >
-                <Nav
-                  v-if="!step.noNav"
-                  :isRapport="step.type == 'rapport'"
-                  :unlocks="step.unlocks"
-                  :themeIndex="tindex"
-                  :isLast="step.lastSlide"
-                />
-
-                <div id="main">
-                  <div>
-                    <Title
-                      v-if="step.type == 'title'"
-                      :status="status(tindex, sindex, index)"
-                      :content="stepContent(theme[lang], subtheme, step)"
-                    />
-
-                    <Intro v-if="step.type == 'intro'" :content="step" />
-                    <Outro v-if="step.type == 'outro'" :content="step" />
-                    <Rapport
-                      v-if="step.type == 'rapport'"
-                      :content="step"
-                      :allContent="content"
-                      :status="status(tindex, sindex, index)"
-                      :showInfo="step.hasInfo == true"
-                      :blurred="false"
-                    />
-
-                    <Scan
-                      v-if="step.type == 'scan'"
-                      :content="step"
-                      :status="status(tindex, sindex, index)"
-                      :preStatus="step.preStatus"
-                    />
-
-                    <Question
-                      v-if="step.type == 'question'"
-                      :content="step"
-                      :isLastTheme="subtheme.isLast"
-                      :preStatus="step.preStatus"
-                      :status="status(tindex, sindex, index)"
-                    />
-
-                    <Action
-                      v-if="step.type == 'action'"
-                      :content="step"
-                      :showInfo="step.hasInfo"
-                      :preStatus="step.preStatus"
-                      :status="status(tindex, sindex, index)"
-                    />
-
-                    <!-- <Admin v-if="showAdmin" :props="stepContent.step.type" /> -->
-                  </div>
-                  <Back :type="step.type" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div>
+    <NuxtLink to="/panier/">Child</NuxtLink>
+    <div class="tile">
+      <NuxtChild />
     </div>
   </div>
 </template>
@@ -112,106 +11,13 @@
 //Load local JSON content
 
 export default {
-  layout: 'print',
+  //   layout: 'print',
   data() {
-    return {
-      count: 0,
-      settings: null,
-    }
+    return {}
   },
-  computed: {
-    themes() {
-      console.log(this.$store.getters.getThemes)
-      return this.$store.getters.getThemes.filter((t) => !null && !t.isLast)
-    },
-    lang() {
-      return this.$store.state.settings.langue
-    },
-    experience() {
-      return this.$store.state.settings.experience
-    },
-    content() {
-      return this.$store.state.content // Uncomment for production
-    },
-  },
-  watch: {
-    //If settings change, store the appropriate JSON content in the store
-    experience(val) {
-      console.log(val)
-      const newContent = val == 0 ? beluga : rorqual
-      //   console.log(newContent)
-      this.$store.commit('setContent', newContent)
-    },
-    themes(val) {
-      console.log('new content')
-      console.log(val)
-    },
-  },
-  methods: {
-    status(tindex, sindex, index) {
-      return {
-        theme: tindex,
-        subtheme: sindex,
-        step: index,
-      }
-    },
-    updateSettings(setting, value) {
-      //   const tempSettings = JSON.parse(JSON.stringify(this.settings))
-      //   tempSettings[setting] = value
-      //   this.settings = tempSettings
-      console.log(value)
-      this.$store.commit('updateSetting', { setting: setting, value: value })
-
-      this.count++
-    },
-    createDuplicates(steps) {
-      let arr = []
-      steps.forEach((s) => {
-        let skip = false
-        console.log(s)
-        if (s.hasInfo) {
-          s.preStatus = 'hasInfo'
-          let temp = JSON.parse(JSON.stringify(s))
-          //   temp.preStatus
-          delete s.hasInfo
-          //   console.log(s)
-          arr.push(s)
-          arr.push(temp)
-          skip = true
-        }
-
-        if (s.type == 'question') {
-          arr.push(s)
-          let states = ['validate', 'wrong', 'right']
-          states.forEach((state) => {
-            if (state == 'right' && !s.resolve.right) {
-            } else {
-              let temp = JSON.parse(JSON.stringify(s))
-              temp.preStatus = state
-              arr.push(temp)
-            }
-          })
-        } else if (s.type == 'scan') {
-          if (!skip) arr.push(s)
-          let states = ['scanned']
-          states.forEach((state) => {
-            {
-              let temp = JSON.parse(JSON.stringify(s))
-              temp.preStatus = state
-              arr.push(temp)
-            }
-          })
-        } else if (!skip) {
-          arr.push(s)
-        }
-      })
-      return arr
-    },
-
-    stepContent(t, s, st) {
-      return { theme: t, subtheme: s, step: st }
-    },
-  },
+  computed: {},
+  watch: {},
+  methods: {},
 }
 </script>
 

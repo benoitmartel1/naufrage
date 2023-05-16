@@ -5,7 +5,32 @@
       <input id="videoInput" type="text" value="10" />
       <button @click="startVideo()">Lancer vidéo</button>
     </div>
-
+    <div class="croire">
+      <fieldset>
+        <legend>J'sais pas si...</legend>
+        <div>
+          <input
+            type="radio"
+            id="huey"
+            name="drone"
+            value=""
+            checked
+            @input="onInput(6)"
+          />
+          <label for="huey">6 questions au hasard</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="dewey"
+            name="drone"
+            value="dewey"
+            @input="onInput(null)"
+          />
+          <label for="dewey">Toutes les questions</label>
+        </div>
+      </fieldset>
+    </div>
     <div class="volume">
       <button @click="setVolume(0)">Volume 0</button>
       <button @click="setVolume(0.5)">Volume 0.5</button>
@@ -24,11 +49,20 @@ export default {
       let value = document.querySelector('#videoInput').value
       this.$parent.onWsMessage({ type: 'start', value: value })
     },
+    onInput(e) {
+      this.$store.commit('setCroireMax', e)
+    },
   },
 }
 </script>
 
 <style lang="scss" scoped>
+input[type='radio'] {
+  border: 0px;
+  //   width: 100%;
+  height: 1em;
+}
+
 .testPanel {
   color: white;
   //   position: absolute;

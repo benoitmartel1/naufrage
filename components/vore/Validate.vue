@@ -2,27 +2,29 @@
   <div class="wrapper">
     <div class="window">
       <Boucher />
-      <div :class="['bulle', { bad: !isGood }]">
-        <div v-if="isGood" class="message">
-          <img src="/img/vore/VJ-J2_GOOD.png" alt="" />
-          <span v-if="fr"
-            >Bravo!<br />Je suis impressionné par vos connaissances!</span
-          >
-          <span v-else>Bravo!<br />I'm impressed with your knowledge! </span>
-          <ContinueButton @click.native="$emit('continue')" />
-        </div>
-        <div v-else class="message">
-          <img src="/img/vore/VJ-J2_BAD.png" alt="" />
-          <span v-if="fr"
-            >Meilleure chance la prochaine fois!<br />La bonne réponse est :
-          </span>
-          <span v-else
-            >Better luck next time!<br />The correct answer is:
-          </span>
-          <div class="correctAnswer">
-            {{ goodAnswerDescription() }}
+      <div class="bulle-wrapper">
+        <div :class="['bulle', { bad: !isGood }]">
+          <div v-if="isGood" class="message">
+            <img src="/img/vore/VJ-J2_GOOD.png" alt="" />
+            <span v-if="fr"
+              >Bravo!<br />Je suis impressionné par vos connaissances!</span
+            >
+            <span v-else>Bravo!<br />I'm impressed with your knowledge! </span>
+            <ContinueButton @click.native="$emit('continue')" />
           </div>
-          <ContinueButton @click.native="$emit('continue')" />
+          <div v-else class="message">
+            <img src="/img/vore/VJ-J2_BAD.png" alt="" />
+            <span v-if="fr"
+              >Meilleure chance la prochaine fois!<br />La bonne réponse est :
+            </span>
+            <span v-else
+              >Better luck next time!<br />The correct answer is:
+            </span>
+            <div class="correctAnswer">
+              {{ goodAnswerDescription() }}
+            </div>
+            <ContinueButton @click.native="$emit('continue')" />
+          </div>
         </div>
       </div>
     </div>
@@ -65,7 +67,15 @@ export default {
       //   bottom: -200px;
       //   transform: scaleX(-1);
     }
+    .bulle-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 75%;
+      height: 100%;
+    }
     .bulle {
+      position: unset;
       .correctAnswer {
         margin: 30px 0;
       }
@@ -83,18 +93,18 @@ export default {
         margin-bottom: 10px;
       }
 
-      width: 658px;
+      width: 653px;
       //   height: 313px;
-      left: 613px;
-      top: 100px;
+      //   margin-left: 413px;
+      margin-bottom: 60px;
       &.bad {
-        width: 1500px;
-        left: 100px;
+        width: 1000px;
+        // left: 100px;
       }
       &:after {
-        transform: scale(0.7, 0.7);
+        transform: scale(0.7, -0.7);
         // left: -100px;
-        top: 130px;
+        top: 40%;
       }
     }
   }

@@ -39,8 +39,15 @@ export default {
     }
   },
   computed: {
+    max() {
+      return this.$store.state.croire.max
+    },
     questions() {
-      return this.shuffleArray(questions).slice(0, 6)
+      if (this.max == null) {
+        return questions
+      } else {
+        return this.shuffleArray(questions).slice(0, this.max)
+      }
     },
     q() {
       return this.questions[this.currentQuestionIndex]
@@ -55,21 +62,21 @@ export default {
   methods: {
     validate(isGood) {
       if (isGood) {
-        this.score++
         this.isGood = true
       } else {
         this.isGood = false
       }
     },
     onContinue() {
-      console.log(this.currentQuestionIndex)
+      if (this.isGood) this.score++
+
+      //   console.log(this.currentQuestionIndex)
       if (this.questions.length - 1 == this.currentQuestionIndex) {
         this.$store.commit('setScore', this.score)
         this.$router.push('/croire/outro')
       } else {
         this.currentQuestionIndex++
       }
-
       this.isGood = null
     },
     shuffleArray(array) {
@@ -110,8 +117,8 @@ export default {
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    padding: 0 100px;
-    padding-bottom: 50px;
+    padding: 50px 100px;
+    // padding-bottom: 50px;
     // border: solid yellow 1px;
     // height: 75%;
     overflow: hidden;
