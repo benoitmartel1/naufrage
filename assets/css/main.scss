@@ -72,15 +72,19 @@ body {
 }
 @keyframes bulleIn {
   from {
-    transform: scaleY(0.9) skew(-3deg);
+    // transform: scaleY(0.9) skew(-3deg);
+    transform: scale(0.95);
+    opacity: 0;
   }
   to {
-    transform: scaleY(1);
+    // transform: scaleY(1);
+    transform: scale(1);
+    opacity: 1;
   }
 }
 .bulle {
   transform-origin: 50% 0;
-  animation: bulleIn 400ms both var(--cubic);
+  animation: bulleIn 200ms both var(--cubic);
   display: flex;
   flex-direction: column;
   justify-content: space-between;

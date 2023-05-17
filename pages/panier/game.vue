@@ -405,11 +405,17 @@ export default {
   .type {
     font-size: 32px;
   }
-  .name {
+  .name,
+  .price {
     font-size: 36px;
   }
 }
+
 .old {
+  .list,
+  .game .left .left-back-mask {
+    border-color: var(--beige) !important;
+  }
   .types {
     background-color: var(--beige) !important;
   }

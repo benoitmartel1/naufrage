@@ -28,18 +28,18 @@
     </div>
     <div class="credits">
       <span v-if="lang == 'fr'"
-        >*Les informations présentées dans ces jeux sont partiellement tirées
+        >* Les informations présentées dans ces jeux sont partiellement tirées
         des ouvrages « Histoire de la cuisine familiale au Québec. Le monde à
         notre table » (2013) et « Histoire de la cuisine familiale au Québec. La
         forêt, ses régions et ses produits, des origines à aujourd’hui » (2009)
         de Michel Lambert.</span
       >
       <span v-else
-        >*Les informations présentées dans ces jeux sont partiellement tirées
-        des ouvrages « Histoire de la cuisine familiale au Québec. Le monde à
-        notre table » (2013) et « Histoire de la cuisine familiale au Québec. La
+        >* The information presented in these games is partly taken from the
+        books « Histoire de la cuisine familiale au Québec. Le monde à notre
+        table » (2013) and « Histoire de la cuisine familiale au Québec. La
         forêt, ses régions et ses produits, des origines à aujourd’hui » (2009)
-        de Michel Lambert.</span
+        by Michel Lambert.</span
       >
     </div>
   </div>
