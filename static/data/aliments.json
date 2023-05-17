@@ -139,7 +139,7 @@
     {
       "type": "lait",
       "fr": "Livre de beurre",
-      "en": "Ice cream",
+      "en": "Pound of butter",
       "now": 5.99,
       "then": 0.5,
       "sold": false,

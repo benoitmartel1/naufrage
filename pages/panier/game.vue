@@ -64,7 +64,7 @@
 </template>
 
 <script>
-import { aliments } from '~/static/data/aliments.json'
+import { aliments } from '~/static/data/aliments.json?nocache=123'
 import { types } from '~/static/data/types.json'
 let notAvailableTimeout
 export default {
