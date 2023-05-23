@@ -1,3 +1,3 @@
 !macro customInstall
-  CopyFiles $INSTDIR\exploramer.bat "$AppData\Micosoft\Windows\Start Menu\Programs\Startup"
+  CopyFiles $INSTDIR\vj-boucherie.bat "$AppData\Micosoft\Windows\Start Menu\Programs\Startup"
 !macroend

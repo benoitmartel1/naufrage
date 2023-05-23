@@ -15,14 +15,30 @@ export default {
 
 <style lang="scss" scoped>
 .movie-coming {
+  font-weight: 400;
   position: absolute;
   bottom: 0;
-  width: 80%;
+  width: 50%;
   background-color: black;
   color: white;
-  border-radius: 80px 80px 0 0;
-  left: 10%;
-  padding: 30px 100px;
+  border-radius: 60px 60px 0 0;
+  left: 25%;
+  padding: 30px 80px;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: moveIn 300ms ease-out;
+}
+.countdown {
+  font-weight: 800;
+  margin-left: 20px;
+}
+@keyframes moveIn {
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 </style>

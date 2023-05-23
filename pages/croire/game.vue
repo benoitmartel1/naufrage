@@ -8,7 +8,11 @@
       @continue="onContinue()"
     />
     <div class="backdrop">
-      <div class="score">{{ score + '/' + questions.length }}</div>
+      <div class="score">
+        <Transition name="kaching" mode="out-in"
+          ><div :key="score">{{ score }}</div></Transition
+        >{{ '/' + questions.length }}
+      </div>
       <div class="game">
         <Vache :score="score" />
         <div class="question">{{ q.question[lang] }}</div>
@@ -43,11 +47,13 @@ export default {
       return this.$store.state.croire.max
     },
     questions() {
-      if (this.max == null) {
-        return questions
-      } else {
-        return this.shuffleArray(questions).slice(0, this.max)
-      }
+      return this.shuffleArray(questions)
+
+      //   if (this.max == null) {
+      //     return questions
+      //   } else {
+      //     return this.shuffleArray(questions).slice(0, this.max)
+      //   }
     },
     q() {
       return this.questions[this.currentQuestionIndex]
@@ -107,6 +113,9 @@ export default {
     line-height: 65px;
     font-weight: 400;
     float: right;
+    div {
+      display: inline-block;
+    }
   }
   .game {
     display: flex;

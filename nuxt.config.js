@@ -18,7 +18,8 @@ module.exports = {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     script: [
       {
-        src: '/vj/js/howler.core.min.js',
+        src:
+          (process.env.NODE_ENV === 'dev' ? '' : '') + '/js/howler.core.min.js',
       },
     ],
   },
@@ -33,7 +34,7 @@ module.exports = {
   modules: ['@nuxtjs/axios'],
   buildModules: ['@nuxtjs/style-resources'],
   router: {
-    base: '/vj/',
+    base: process.env.NODE_ENV === 'dev' ? '' : '',
   },
   components: [
     {
@@ -55,7 +56,7 @@ module.exports = {
   },
 
   server: {
-    host: '0.0.0.0',
+    host: 'localhost',
     port: 3000,
   },
   dev: process.env.NODE_ENV === 'dev',

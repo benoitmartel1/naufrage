@@ -26,7 +26,7 @@
           <span>{{ fr ? 'Méditerranéen' : 'Mediterranean' }}</span>
         </div>
         <div class="label" v-if="timer >= 10">
-          <span>{{ fr ? 'Crudivore' : 'Crudivore' }}</span>
+          <span>{{ fr ? 'Crudivore' : 'Raw food' }}</span>
         </div>
       </div>
     </div>
@@ -70,7 +70,7 @@
         </div>
 
         <ContinueButton
-          v-if="animationDone || step == 'then'"
+          :class="{ visible: animationDone || step == 'then' }"
           @click.native="onContinue()"
         />
       </div>
@@ -104,7 +104,7 @@ export default {
       if (val == 'now') {
         animationTimer = setInterval(() => {
           this.timer += 1
-          if (this.timer > 20) {
+          if (this.timer > 15) {
             clearInterval(animationTimer)
             this.animationDone = true
           }
@@ -117,7 +117,7 @@ export default {
       if (this.step == 'then') {
         this.step = 'now'
       } else if (this.step == 'now') {
-        this.step = 'boucher'
+        if (this.animationDone == true) this.step = 'boucher'
       } else {
         this.$router.push('/vore/game')
       }
@@ -130,6 +130,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.wrapper-continue {
+  opacity: 0;
+
+  &.visible {
+    transition: all 400ms ease-out;
+    opacity: 1;
+  }
+}
 .animation {
   position: relative;
   height: $height;

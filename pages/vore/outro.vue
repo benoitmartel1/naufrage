@@ -23,7 +23,7 @@
           <span>{{ fr ? 'Méditerranéen' : 'Mediterranean' }}</span>
         </div>
         <div class="label">
-          <span>{{ fr ? 'Crudivore' : 'Crudivore' }}</span>
+          <span>{{ fr ? 'Crudivore' : 'Raw food' }}</span>
         </div>
       </div>
     </div>

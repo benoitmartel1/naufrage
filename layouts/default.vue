@@ -17,9 +17,21 @@ let movieInterval
 export default {
   data() {
     return {
-      approMode: 1,
       timeToMovie: 0,
     }
+  },
+  computed: {
+    approMode() {
+      return process.env.NODE_ENV == 'development' ? 1 : 0
+    },
+  },
+  mounted() {
+    document.addEventListener('keydown', (e) => {
+      if (e.key == 'v') {
+        // alert('v')
+        this.timeToMovie = 3
+      }
+    })
   },
   mixins: [ws, sound, idle],
   methods: {
@@ -76,12 +88,9 @@ body {
 }
 #app {
   background: url('~/assets/img/Pattern-1.png');
-  //   animation: bg-scrolling-reverse 6s infinite linear; /* IE 10+ */
-
   transition: transform 600ms ease-out;
   width: $width;
   height: $height;
-  //   background-color: var(--cyan);
   overflow: hidden;
   &:has(.old) {
     background: url('~/assets/img/Pattern-1920.png');
@@ -102,17 +111,11 @@ body {
 }
 .page-enter {
   opacity: 0;
-  //   transform: translateY(-40px);
 }
 .page-enter {
   .backdrop {
-    // transform: translateY(-300px);
     transform: scale(0.92) rotate(-3deg);
   }
-  //   .boucher {
-  //     filter: brightness(0);
-  //     transform: scale(1.2) translateX(200px);
-  //   }
   .woman {
     filter: brightness(0);
     transform: scale(1.2) translateX(-200px);

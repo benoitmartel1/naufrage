@@ -2,7 +2,7 @@
   <div>
     <div class="main">
       <video
-        src="@/assets/movies/sample.mp4"
+        :src="this.$store.state.settings.videoPath"
         autoplay
         @ended="onMovieEnd()"
       ></video>

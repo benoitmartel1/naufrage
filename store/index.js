@@ -1,10 +1,12 @@
 export const state = () => ({
   lang: 'fr',
   volume: 1,
+  idleTime: 60,
   score: 0,
   moviePlaying: false,
+  settings: {},
   panier: {
-    now: { list: [], max: 100 },
+    now: { list: [], max: 60 },
     then: { list: [], max: 4 },
   },
   croire: {
@@ -23,6 +25,19 @@ export const mutations = {
   },
   setScore(state, s) {
     state.score = s
+  },
+  setSettings(state, s) {
+    state.settings = s
+
+    if (Number.isInteger(s.idletime)) {
+      state.idleTime = s.idletime
+    }
+    if (Number.isInteger(s.panier_1920_max)) {
+      state.panier.then.max = s.panier_1920_max
+    }
+    if (Number.isInteger(s.panier_2020_max)) {
+      state.panier.now.max = s.panier_2020_max
+    }
   },
   checkoutList(state, p) {
     state.panier[p.list].list = p.content

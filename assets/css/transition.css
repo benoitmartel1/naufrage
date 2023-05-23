@@ -17,6 +17,14 @@
 .blink {
   animation: blinker 1s linear infinite;
 }
+.kaching-enter-active {
+  transition: all 400ms cubic-bezier(0.63, 1.8, 0.6, 0.88);
+}
+
+.kaching-enter {
+  transform: translateY(22px);
+  opacity: 0;
+}
 
 @keyframes blinker {
   50% {

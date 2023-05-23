@@ -5,7 +5,7 @@
       "fr": "Panier de kiwis",
       "en": "Basket of kiwis",
       "notAvailable": {
-        "fr": "Le kiwi, ce n’est pas de chez nous, mais pas du tout! Cultivée principalement en Nouvelle-Zélande, on trouve couramment le kiwi dans nos épiceries à longueur d’année depuis les années 1980.",
+        "fr": "Le kiwi, ce n’est pas de chez nous, mais pas du tout! Cultivé principalement en Nouvelle-Zélande, on trouve couramment le kiwi dans nos épiceries à longueur d’année depuis les années 1980.",
         "en": "The kiwi is not a local fruit, not at all! Cultivated primarily in New Zealand, we have commonly found the kiwi in our grocery stores year-round since the 1980s."
       },
       "now": 4.99,
@@ -105,8 +105,8 @@
       "fr": "Fromage brie",
       "en": "Brie cheese",
       "notAvailable": {
-        "fr": "Le fromage, à Val-Jalbert, dans les années 1920, c’est un luxe! On le conserve pour les grandes occasions… Et soyez bien avertis : il n’y a pas de brie ici, mais plutôt le cheddar de Saint-Prime et le fromage Oka de la communauté trappiste de Deux Montagnes, qui dominent alors le paysage « fromager » québécois. ",
-        "en": "Cheese in Val-Jalbert in the 1920s was a real luxury! It was saved for special occasions... And be advised: we did not have Brie here, but rather cheddar from Saint-Prime, or Oka cheese from the Trappist monks of Deux Montagnes, who dominated the \"cheese landscape\" of Quebec in those days."
+        "fr": "Le fromage, à Val-Jalbert, dans les années 1920, c’est un luxe! On le conserve pour les grandes occasions… Et soyez bien avertis : il n’y a pas de brie ici, mais plutôt le Cheddar Perron de Saint-Prime et le fromage Oka de la communauté trappiste de Deux Montagnes, qui dominent alors le paysage « fromager » québécois. ",
+        "en": "Cheese in Val-Jalbert in the 1920s was a real luxury! It was saved for special occasions... And be advised: we did not have Brie here, but rather Cheddar Perron from Saint-Prime, or Oka cheese from the Trappist monks of Deux Montagnes, who dominated the \"cheese landscape\" of Quebec in those days."
       },
       "now": 8.99,
       "then": 0.58,
@@ -358,7 +358,7 @@
     {
       "type": "poisson",
       "fr": "Filet de mahi-mahi",
-      "en": "Filet of mahi-mahi (dolphin fish)",
+      "en": "Filet of mahi-mahi<br>(dolphin fish)",
       "notAvailable": {
         "fr": "Que tu es exotique, mon ami! Le mahi-mahi est un poisson aux couleurs flamboyantes qui vit dans les mers tropicales. Les habitants de Val-Jalbert n’ont jamais pu admirer ses couleurs bleu, vert et jaune lumineux. ",
         "en": "You are so exotic, my friend! Mahi-mahi, or dolphin fish, is a colourful fish that lives in tropical seas. The inhabitants of Val-Jalbert would never have been able to admire this fish's luminous blue, green and yellow colours. "
@@ -385,8 +385,8 @@
     },
     {
       "type": "poisson",
-      "fr": "Boîte de saumon",
-      "en": "Filet of salmon",
+      "fr": "Conserve de saumon",
+      "en": "Canned salmon",
       "now": 8.49,
       "then": 0.2,
       "sold": false,
@@ -405,8 +405,8 @@
     },
     {
       "type": "poisson",
-      "fr": "Boîte de chair de homard",
-      "en": "Package of lobster meat",
+      "fr": "Conserve de chair de homard",
+      "en": "Canned lobster meat",
       "now": 8.99,
       "then": 0.31,
       "sold": false,

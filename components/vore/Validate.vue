@@ -5,20 +5,26 @@
       <div class="bulle-wrapper">
         <div :class="['bulle', { bad: !isGood }]">
           <div v-if="isGood" class="message">
-            <img src="/img/vore/VJ-J2_GOOD.png" alt="" />
+            <img src="img/vore/VJ-J2_GOOD.png" alt="" />
             <span v-if="fr"
-              >Bravo!<br />Je suis impressionné par vos connaissances!</span
+              ><b>Bravo!</b><br />Je suis impressionné par vos
+              connaissances!</span
             >
-            <span v-else>Bravo!<br />I'm impressed with your knowledge! </span>
+            <span v-else
+              ><b>Bravo!</b><br />I'm impressed with your knowledge!
+            </span>
             <ContinueButton @click.native="$emit('continue')" />
           </div>
           <div v-else class="message">
-            <img src="/img/vore/VJ-J2_BAD.png" alt="" />
+            <img src="img/vore/VJ-J2_BAD.png" alt="" />
             <span v-if="fr"
-              >Meilleure chance la prochaine fois!<br />La bonne réponse est :
+              ><b
+                >Meilleure chance la prochaine fois!<br />La bonne réponse est
+                :</b
+              >
             </span>
             <span v-else
-              >Better luck next time!<br />The correct answer is:
+              ><b>Better luck next time!<br />The correct answer is:</b>
             </span>
             <div class="correctAnswer">
               {{ goodAnswerDescription() }}

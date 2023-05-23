@@ -1,1 +1,7 @@
-{ "settings": { "bichon": "maltais" } }
+{
+  "settings": {
+    "idletime": 60,
+    "panier_2020_max": 60,
+    "panier_1920_max": 4
+  }
+}

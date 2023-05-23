@@ -5,12 +5,12 @@
     <div class="bulle">
       <div class="row">
         <Vache :score="score" />
-        <div class="score">{{ score + '/' + 6 }}</div>
+        <div class="score">{{ score + '/' + nbOfQuestions }}</div>
       </div>
 
       <div class="message">
         <div>
-          <div v-if="Math.floor(score / 6) >= 0.8">
+          <div v-if="Math.floor(score / nbOfQuestions) >= 0.8">
             <span v-if="fr"
               >Félicitations! Démêler les « accroires » de la réalité, c’est
               votre spécialité. Je vous lève mon chapeau de boucher!</span

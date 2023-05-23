@@ -8,9 +8,13 @@
       @continue="onContinue()"
     />
     <div class="backdrop frame">
-      <div class="score">{{ score + '/' + questions.length }}</div>
+      <div class="score">
+        <Transition name="kaching" mode="out-in"
+          ><div :key="score">{{ score }}</div></Transition
+        >{{ '/' + questions.length }}
+      </div>
       <div class="game">
-        <div class="question">{{ q.question[lang] }}</div>
+        <div class="question" v-html="q.question[lang]"></div>
         <div class="answers">
           <div
             class="btn answer"
@@ -48,22 +52,20 @@ export default {
   },
   methods: {
     validate(isGood) {
-      console.log(isGood)
       if (isGood) {
-        this.score++
         this.isGood = true
       } else {
         this.isGood = false
       }
     },
     onContinue() {
+      if (this.isGood) this.score++
       this.currentQuestionIndex++
       if (this.questions.length <= this.currentQuestionIndex) {
         this.$store.commit('setScore', this.score)
         this.$router.push('/vore/outro')
       } else {
       }
-
       this.isGood = null
     },
   },
@@ -79,7 +81,12 @@ export default {
     font-size: 88px;
     line-height: 65px;
     font-weight: 400;
-    float: right;
+    // float: right;
+    position: absolute;
+    right: 60px;
+    div {
+      display: inline-block;
+    }
   }
 
   .game {
@@ -93,11 +100,12 @@ export default {
     width: 100%;
 
     .question {
-      margin-top: -30px;
+      margin-top: 25px;
       font-size: 48px;
       font-weight: 800;
       left: 66px;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
+      text-align: center;
     }
     .answers {
       font-weight: 400;
@@ -107,7 +115,7 @@ export default {
         // width: 100%;
         text-align: center;
         font-size: 36px;
-        line-height: 48px;
+        line-height: 46px;
         border-radius: 30px;
         margin-bottom: 25px;
         background-color: white;

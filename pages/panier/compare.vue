@@ -87,8 +87,10 @@ export default {
 <style lang="scss">
 .compare {
   .bottom {
-    margin: 0 !important;
-    margin-top: -15px !important;
+    will-change: transform;
+    // -webkit-perspective: 1000;
+    // margin: 0 !important;
+    // margin-top: -15px !important;
     // overflow: hidden !important;
   }
   .remove {

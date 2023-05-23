@@ -22,7 +22,7 @@
               <div class="title" v-html="t[lang]"></div>
             </div>
           </div>
-          <div class="aliments-wrapper" @click="notAvailable = undefined">
+          <div class="aliments-wrapper" @click.self="notAvailable = undefined">
             <NotAvailable
               v-if="notAvailable"
               :text="notAvailable.notAvailable[lang]"
@@ -32,7 +32,7 @@
                 :class="['aliment btn', { sold: a.sold }]"
                 v-for="(a, index) in alimentsInType"
                 :key="a.fr"
-                @click.stop="addItem(a, index)"
+                @click="addItem(a, index)"
               >
                 <div class="circle"></div>
                 <div class="img-wrapper">
@@ -202,10 +202,10 @@ export default {
         this.$router.push('/panier/compare')
       }
     },
-    clearNotAvailableTimeout() {
-      this.notAvailable = undefined
-      clearTimeout(notAvailableTimeout)
-    },
+    // clearNotAvailableTimeout() {
+    //   this.notAvailable = undefined
+    //   clearTimeout(notAvailableTimeout)
+    // },
   },
   watch: {
     list(val) {
@@ -219,9 +219,9 @@ export default {
         this.checkout()
       }
     },
-    type(val) {
-      this.clearNotAvailableTimeout()
-    },
+    // type(val) {
+    //   this.clearNotAvailableTimeout()
+    // },
   },
 }
 </script>
@@ -376,6 +376,7 @@ export default {
               }
             }
             .name {
+              text-align: center;
               font-weight: 400;
               margin: 8px 0;
             }

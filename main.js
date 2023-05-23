@@ -1,7 +1,7 @@
-// const { exec } = require('child_process')
-// const child = exec(
-//   'IF NOT EXIST "%userprofile%\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\exploramer.bat" copy static\\extraResources\\exploramer.bat "%userprofile%\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\exploramer.bat"'
-// )
+const { exec } = require('child_process')
+const child = exec(
+  'IF NOT EXIST "%userprofile%\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\vj-boucherie.bat" copy static\\extraResources\\exploramer.bat "%userprofile%\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\vj-boucherie.bat"'
+)
 // child.stdout.on('data', (data) => {
 //   console.log(`child stdout:\n${data}`)
 // })
@@ -34,23 +34,38 @@ server.listen(3000)
  */
 let win = null // Current window
 const electron = require('electron')
-
 const path = require('path')
+const fs = require('fs')
+const app = electron.app
+
+const SETTINGS_PATH = path.join(
+  process.resourcesPath,
+  'extraResources',
+  'settings.json'
+)
+console.log * process.resourcesPath
+//Load external settings
+const data = fs.readFileSync(SETTINGS_PATH)
+const { settings } = JSON.parse(data)
+const settingsStringified = JSON.stringify(JSON.parse(data))
+console.log(settings)
 
 //Define entry point with settings as args
-const _NUXT_URL_ = `http://localhost:${server.address().port}/vj/`
+const _NUXT_URL_ = `http://localhost:${
+  server.address().port
+}?data=${settingsStringified}&path=${process.resourcesPath}`
 
-const app = electron.app
 const newWin = () => {
   win = new electron.BrowserWindow({
     width: 1920,
     height: 1080,
-    frame: true,
+    frame: false,
     autoHideMenuBar: true,
     alwaysOnTop: true,
     fullscreen: true,
     kiosk: true,
     webPreferences: {
+      webSecurity: false,
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: false,
       contextIsolation: false,

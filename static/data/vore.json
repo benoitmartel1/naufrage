@@ -2,29 +2,30 @@
   "questions": [
     {
       "question": {
-        "fr": "Végétarien",
-        "en": "Vegetarian"
+        "fr": "Qu'est-ce que le régime végétarien?",
+        "en": "What is the vegetarian diet?"
       },
       "answers": [
         {
           "fr": "Avoir le même régime alimentaire que les plantes carnivores. On se régale d’insectes, d’araignées, d’acariens et d’autres petits invertébrés. ",
           "en": "To have the same diet as carnivorous plants. They love to eat insects, spiders, mites and other small invertebrates."
         },
+
+        {
+          "fr": "Écarter totalement de son assiette les aliments d’origine animale.",
+          "en": "To totally exclude all foods with animal origins from one's diet."
+        },
         {
           "fr": "Exclure de son alimentation tout type de viande, de volaille, de gibier, de poisson ou de fruit de mer. Ils consomment cependant des aliments d’origine animale tels que les œufs et les produits laitiers.",
           "en": "To avoid all types of meat, poultry, game, fish and seafood. They do, however, consume foods with animal origins such as eggs or dairy products.",
           "good": true
-        },
-        {
-          "fr": "Écarter totalement de son assiette les aliments d’origine animale.",
-          "en": "To totally exclude all foods with animal origins from one's diet."
         }
       ]
     },
     {
       "question": {
-        "fr": "Omnivore",
-        "en": "Omnivore"
+        "fr": "Qu'est-ce que le régime omnivore?",
+        "en": "What is the omnivore diet?"
       },
       "answers": [
         {
@@ -44,19 +45,20 @@
     },
     {
       "question": {
-        "fr": "Végan (végétalien intégral)",
-        "en": "Vegan"
+        "fr": "Qu'est-ce que le régime végan<br>(végétarien intégral)?",
+        "en": "What is the vegan diet?"
       },
       "answers": [
-        {
-          "fr": "Bannir la viande de son assiette et se nourrir généralement de mélanges d’herbes et de cultures locales. L’alimentation <i>végane</i> est parfois complétée par des vitamines, des minéraux et des foins secs. ",
-          "en": "To ban meat from one's plate and feeding oneself generally on a variety of plants and local crops. A \"vegan\" diet is sometimes supplemented with vitamins, minerals and dry grasses. "
-        },
         {
           "fr": "Adopter un mode de vie fondé sur le refus global de l’exploitation des animaux. Il exclut tout usage de produits d’origine animale et de leurs dérivés à des fins alimentaires, vestimentaires, sanitaires, récréatives ou autres. ",
           "en": "To adopt a lifestyle founded on the total rejection of the exploitation of animals. It excludes the use of all products with animal origins and their derivatives for purposes of food, clothing, health, recreation or otherwise.",
           "good": true
         },
+        {
+          "fr": "Bannir la viande de son assiette et se nourrir généralement de mélanges d’herbes et de cultures locales. L’alimentation <i>végane</i> est parfois complétée par des vitamines, des minéraux et des foins secs. ",
+          "en": "To ban meat from one's plate and feeding oneself generally on a variety of plants and local crops. A \"vegan\" diet is sometimes supplemented with vitamins, minerals and dry grasses. "
+        },
+
         {
           "fr": "Se nourrir des produits de la nature au gré des saisons. L’hiver, le <i>végan</i> mange des plantes ligneuses. En été, le <i>végan</i> préfère les herbes, les fruits et les plantes aquatiques. ",
           "en": "To feed oneself with the products of nature in accordance with the seasons. In winter, the vegan eats ligneous (woody) plants.. In summer, he prefers grasses, fruits and aquatic plants.  "
@@ -65,8 +67,8 @@
     },
     {
       "question": {
-        "fr": "Flexitarien",
-        "en": "Flexitarian"
+        "fr": "Qu'est-ce que le régime flexitarien?",
+        "en": "What is the flexitarian diet?"
       },
       "answers": [
         {
@@ -79,26 +81,28 @@
           "good": true
         },
         {
-          "fr": "Manger énormément de gras pour… perdre du gras! Il s’agit d’un régime très en mode au cours des dernières années.",
+          "fr": "Manger énormément de gras pour… perdre du gras! Il s’agit d’un régime très populaire au cours des dernières années.",
           "en": "To consume large amounts of fat in order to... lose weight! It has been a very trendy dietary regime in recent years."
         }
       ]
     },
     {
       "question": {
-        "fr": "Méditerranéen",
-        "en": "Mediterranean"
+        "fr": "Qu'est-ce que le régime Méditerranéen?",
+        "en": "What is the Mediterranean diet?"
       },
       "answers": [
-        {
-          "fr": "Se nourrir exclusivement du poisson et des algues issus de la mer Méditerranée.  Les habitants des pays côtiers confèrent aux ressources nourricières de cette mer des vertus nutritives inégalées. ",
-          "en": "To eat fish and seaweed from the Mediterranean Sea. The inhabitants of coastal countries attribute unsurpassed nutritional virtues to the nourishing resources of this particular sea. "
-        },
         {
           "fr": "Se nourrir de certains aliments inspirés de l’alimentation traditionnelle des habitants des pays bordant la mer Méditerranée tels les fruits et légumes colorés, les légumineuses dont le soja et ses dérivés, l’huile d’olive, les poissons et les noix.",
           "en": "To eat foods inspired by the traditional diet of the inhabitants of countries bordering the Mediterranean Sea, such as colourful fruits and vegetables, soybeans, olive oil, fish and nuts grains.",
           "good": true
         },
+
+        {
+          "fr": "Se nourrir exclusivement du poisson et des algues issus de la mer Méditerranée.  Les habitants des pays côtiers confèrent aux ressources nourricières de cette mer des vertus nutritives inégalées. ",
+          "en": "To eat fish and seaweed from the Mediterranean Sea. The inhabitants of coastal countries attribute unsurpassed nutritional virtues to the nourishing resources of this particular sea. "
+        },
+
         {
           "fr": "Opter pour un équilibre entre la consommation de viande et de produits végétariens.",
           "en": "To opt for an equilibrium between the consumption of meat and vegetarian foods."
@@ -107,8 +111,8 @@
     },
     {
       "question": {
-        "fr": "Crudivore",
-        "en": "Crudivore"
+        "fr": "Qu'est-ce que le régime crudivore?",
+        "en": "What is the raw food diet?"
       },
       "answers": [
         {

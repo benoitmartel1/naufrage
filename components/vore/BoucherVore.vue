@@ -7,16 +7,13 @@
           <div class="total">{{ total }}</div>
           <span v-if="lang == 'fr'"
             >Pour décrire tous ces régimes nouveaux, il a bien fallu inventer
-            des mots. Légumivore? Poissonivore? Fruitivore? Vous connaissez les
-            définitions de ces mots
-            <span style="white-space: nowrap">en -ore?</span> Aidez-moi à me
+            des mots. Légumivore? Poissonivore? Fruitivore? Aidez-moi à me
             démêler en reliant correctement les régimes alimentaires à leur
             définition.</span
           >
           <span v-else
             >To describe all those new types of diet, new words certainly had to
-            be invented. Vegevore? Fishivore? Fruitivore? Do you know the
-            definition of all the words ending in -vore? Help me tomatch the
+            be invented. Vegevore? Fishivore? Fruitivore? Help me to match the
             type of diet with its definition.</span
           >
         </div>

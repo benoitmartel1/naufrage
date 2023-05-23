@@ -46,24 +46,38 @@
 </template>
 
 <script>
+const qs = require('qs')
 export default {
+  data() {
+    return { videoSrc: '' }
+  },
   layout: 'default',
   async created() {
-    let baseURL =
-      process.env.NODE_ENV == 'development'
-        ? 'http://localhost:8080'
-        : 'file:///opt/par/resources'
-    // this.approMode = process.env.NODE_ENV == 'development';
+    try {
+      const { data } = qs.parse(location.search.slice(1))
+      const { path } = qs.parse(location.search.slice(1))
+      const { settings } = JSON.parse(data)
+      settings.videoPath = path + '\\extraResources\\video.mp4'
+      this.$store.commit('setSettings', settings)
+    } catch (error) {
+      let baseURL =
+        process.env.NODE_ENV == 'development'
+          ? 'http://localhost:3000'
+          : 'file:///opt/par/resources'
+      //   window.location.origin + process.env.NODE_ENV == 'development'
+      //     ? '/vj'
+      //     : ''
+      await this.$axios
+        .get('extraResources/settings.json', { baseURL: baseURL })
+        .then((res) => {
+          res.data.settings.videoPath = 'extraResources/video.mp4'
+          this.$store.commit('setSettings', res.data.settings)
+        })
+    }
 
     //For web export appro
-    baseURL = window.location.origin + '/vj'
 
     //Load settings in external json file
-    this.settings = await this.$axios
-      .get('extraResources/settings.json', { baseURL: baseURL })
-      .then((res) => {
-        return res.data.settings
-      })
   },
   computed: {
     lang() {
@@ -135,7 +149,7 @@ export default {
     img {
       animation-delay: 1s;
       width: 415px;
-      margin-bottom: 90px;
+      //   margin-bottom: 50px;
     }
   }
   .btn:nth-child(3) {

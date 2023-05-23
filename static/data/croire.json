@@ -44,20 +44,6 @@
     },
     {
       "question": {
-        "fr": "Traditionnellement, la fameuse tourtière du Saguenay–Lac-Saint-Jean était cuisinée avec de la viande de gibier.",
-        "en": "Traditionally, the famous Saguenay–Lac-Saint-Jean tourtière was cooked with game meat."
-      },
-      "answers": [
-        { "fr": "La vérité!", "en": "True!", "good": true },
-        { "fr": "Un mensonge!", "en": "That's a lie!" }
-      ],
-      "resolve": {
-        "fr": "Les habitants du Saguenay–Lac-Saint-Jean étaient particulièrement friands de la viande d’orignal, de perdrix ou encore de lièvre pour cuisiner la tourtière. Ils la mélangeaient à la viande de porc afin d’augmenter la teneur en bon gras du repas.",
-        "en": "The inhabitants of Saguenay–Lac-Saint-Jean were especially fond of moose meat, partridge, and rabbit for cooking their tourtières. They mixed it with pork so as to increase the amount of good fat in the meal."
-      }
-    },
-    {
-      "question": {
         "fr": "Les oreilles de crisse, grillade populaire de la cuisine traditionnelle québécoise, sont apprêtées à partir d’oreilles de porc.",
         "en": "Pork rinds, a traditional Québécois grilled treat, are prepared with pig's ears."
       },
@@ -95,7 +81,7 @@
     {
       "question": {
         "fr": "En 1920, « chauffer une truie » signifie atteler un cochon à un traîneau pour aider à remiser le bois de poêle dans la maison ou la remise.",
-        "en": "In 1920, chauffer une truie (\"to heat up a sow\") signified harnessing a pig to a sled to bring in the firewood to the house or shed."
+        "en": "In 1920, \"chauffer une truie\" (\"to heat up a sow\") signified harnessing a pig to a sled to bring in the firewood to the house or shed."
       },
       "answers": [
         { "fr": "Surprenant, mais vrai!", "en": "Surprising but true!" },
@@ -107,13 +93,13 @@
       ],
       "resolve": {
         "fr": "Dans le langage populaire, une truie est un poêle à bois. Ainsi, « chauffer une truie » signifie ajouter du bois dans le poêle afin d’augmenter la chaleur dégagée.",
-        "en": "In popular slang, a truie (sow) was a wood stove. So, chauffer une truie (\"to heat up a sow\") meant to add wood to the stove to increase the heat given off."
+        "en": "In popular slang, a \"truie\" (sow) was a wood stove. So, \"chauffer une truie\" (\"to heat up a sow\") meant to add wood to the stove to increase the heat given off."
       }
     },
     {
       "question": {
         "fr": "La « sauce à la poche », fort populaire dans les chantiers, était ainsi désignée parce qu’elle pouvait être facilement transportée dans de grands sacs de toile.",
-        "en": "Sauce à la poche (\"sauce in a bag\"), very popular in the logging camps, was called this because it could easily be transported in large canvas bags."
+        "en": "\"Sauce à la poche\" (\"sauce in a bag\"), very popular in the logging camps, was called this because it could easily be transported in large canvas bags."
       },
       "answers": [
         { "fr": "Sans aucun doute!", "en": "Without a doubt!", "good": true },
@@ -121,7 +107,7 @@
       ],
       "resolve": {
         "fr": "La sauce, constituée de farine, de pain et de lard salé, était gelée, puis placée dans des sacs (des poches), pour ensuite être transportée dans les chantiers.",
-        "en": "The sauce, made with flour, bread and salt pork, was frozen, and then placed in bags (poches) after which it was transported to the camps."
+        "en": "The sauce, made with flour, bread and salt pork, was frozen, and then placed in bags (\"poches\") after which it was transported to the camps."
       }
     },
     {
@@ -145,7 +131,7 @@
     {
       "question": {
         "fr": "Les grands vents peuvent faire tomber les cornes des bœufs, d’où l’expression « venter à écorner les bœufs ».",
-        "en": "Strong winds can blow down an ox's horns, which is where the expression venter à écorner les bœufs (\"to blow down the horns of an ox\") comes from."
+        "en": "Strong winds can blow down an ox's horns, which is where the expression \"venter à écorner les bœufs\" (\"to blow down the horns of an ox\") comes from."
       },
       "answers": [
         { "fr": "Assurément!", "en": "Right, sure!" },
@@ -167,7 +153,7 @@
       ],
       "resolve": {
         "fr": "La couleur de cette teinture était obtenue à partir de l’ocre rouge, matière minérale retrouvée au Québec.",
-        "en": "The colour of this dye was obtained in part from red ochre, a mineral found in Quebec."
+        "en": "The colour of this dye was obtained in part from red ochre, a mineral found in Québec."
       }
     }
   ]

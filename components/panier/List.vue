@@ -6,17 +6,23 @@
           <span v-if="lang == 'fr'"
             >Mon panier
             <div class="annee">1920</div></span
-          ><span v-else>EN??</span>
+          ><span v-else
+            >My basket
+            <div class="annee">1920</div></span
+          >
         </div>
         <div v-else>
           <span v-if="lang == 'fr'">
             Mon panier
             <div class="annee">aujourd'hui</div></span
-          ><span v-else>EN??</span>
+          ><span v-else
+            >My basket
+            <div class="annee">today</div></span
+          >
         </div>
       </div>
       <div v-else>
-        <span v-if="lang == 'fr'">Mon panier</span><span v-else>EN??</span>
+        <span v-if="lang == 'fr'">Mon panier</span><span v-else>My basket</span>
       </div>
       <div :class="['cart', era]">
         <img v-if="era == 'then'" src="img/aliments/VJ_panier1920.png" alt="" />
@@ -29,11 +35,7 @@
       </div>
     </div>
     <div class="bottom">
-      <div
-        v-for="t in types"
-        :key="t.type"
-        :class="['list-type ', type == t.type ? 'active' : '']"
-      >
+      <div v-for="t in types" :key="t.type" :class="['list-type ']">
         <div>
           <Transition name="typeHeader">
             <div v-if="alimentsInListByType(t.type).length" class="type-header">
@@ -94,8 +96,9 @@
         <div v-if="isCompare">
           <span v-if="lang == 'fr'">Coût total</span><span v-else></span>
         </div>
-        <div v-else>
-          <span v-if="lang == 'fr'">Budget restant</span><span v-else></span>
+        <div v-else class="budget">
+          <span v-if="lang == 'fr'">Budget restant</span
+          ><span v-else>Remaining budget</span>
         </div>
       </div>
       <Transition name="kaching" mode="out-in">
@@ -141,7 +144,9 @@ export default {
   padding: 30px;
   flex: 1;
   position: relative;
-
+  .budget {
+    font-weight: 800;
+  }
   .top {
     font-size: 32px;
     font-weight: 700;
@@ -191,6 +196,7 @@ export default {
   }
   .bottom {
     margin: 30px 0;
+    // margin-top: 0;
     overflow-y: auto;
     overflow-x: hidden;
     flex: 1;
@@ -200,9 +206,13 @@ export default {
       list-style-type: none;
       margin: 0px;
     }
+
     .type-header {
       margin-top: 20px;
       font-weight: 700;
+      &:first-of-type {
+        margin-top: 0;
+      }
     }
     li {
       font-weight: 400;
@@ -241,6 +251,9 @@ export default {
     font-weight: 400;
     display: flex;
     justify-content: space-between;
+  }
+  .amount {
+    font-weight: 800;
   }
 }
 .old {
