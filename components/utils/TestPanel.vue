@@ -5,7 +5,7 @@
       <input id="videoInput" type="text" value="10" />
       <button @click="startVideo()">Lancer vidéo</button>
     </div>
-    <div class="full btn" @click="setFullscreen()">
+    <!-- <div class="full btn" @click="setFullscreen()">
       <svg
         height="140px"
         version="1.1"
@@ -39,7 +39,7 @@
           </g>
         </g>
       </svg>
-    </div>
+    </div> -->
     <!-- <div class="croire">
       <fieldset>
         <legend>J'sais pas si...</legend>
@@ -110,7 +110,8 @@ input[type='radio'] {
   align-items: center;
   justify-content: space-between;
   opacity: 0.4;
-  margin-top: 50px;
+  margin-top: 10px;
+  transform: scale(0.8);
 }
 button,
 input {

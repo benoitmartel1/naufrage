@@ -1,6 +1,12 @@
 const { exec } = require('child_process')
 const child = exec(
-  'IF NOT EXIST "%userprofile%\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\vj-boucherie.bat" copy static\\extraResources\\exploramer.bat "%userprofile%\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\vj-boucherie.bat"'
+  'IF NOT EXIST "%userprofile%\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\vj-boucherie.bat" copy static\\extraResources\\vj-boucherie.bat "%userprofile%\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\vj-boucherie.bat"'
+)
+exec(
+  "powershell $s=(New-Object -COM WScript.Shell).CreateShortcut('%USERPROFILE%\\Desktop\\vj-settings.lnk');$s.TargetPath='%localappdata%\\Programs\\vj-boucherie\\resources\\extraResources\\settings.json';$s.Save()"
+)
+exec(
+  "powershell $s=(New-Object -COM WScript.Shell).CreateShortcut('%USERPROFILE%\\Desktop\\vj-folder.lnk');$s.TargetPath='%localappdata%\\Programs\\vj-boucherie\\resources\\extraResources';$s.Save()"
 )
 // child.stdout.on('data', (data) => {
 //   console.log(`child stdout:\n${data}`)

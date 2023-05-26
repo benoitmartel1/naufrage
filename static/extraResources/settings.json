@@ -1,7 +1,9 @@
 {
   "settings": {
     "idletime": 60,
+    "websocket_address": "ws://127.0.0.1:1880/boucherie/",
     "panier_2020_max": 60,
-    "panier_1920_max": 4
+    "panier_1920_max": 4,
+    "videoPath": "video.mp4"
   }
 }

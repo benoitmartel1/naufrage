@@ -219,9 +219,9 @@ export default {
         this.checkout()
       }
     },
-    // type(val) {
-    //   this.clearNotAvailableTimeout()
-    // },
+    type(val) {
+      this.notAvailable = undefined
+    },
   },
 }
 </script>

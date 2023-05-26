@@ -5,14 +5,16 @@
       <div class="bulle-wrapper">
         <div class="bulle">
           <div class="message">
-            <div v-if="isGood">
-              <span v-if="fr">Bonne réponse!</span>
-              <span v-else>Good answer!</span>
-            </div>
-            <div v-else>
-              <span v-if="fr">Mauvaise réponse…</span>
-              <span v-else>Wrong answer</span>
-            </div>
+            <b>
+              <div v-if="isGood">
+                <span v-if="fr">Bonne réponse!</span>
+                <span v-else>Good answer!</span>
+              </div>
+              <div v-else>
+                <span v-if="fr">Mauvaise réponse…</span>
+                <span v-else>Wrong answer</span>
+              </div>
+            </b>
           </div>
 
           <div class="answer">

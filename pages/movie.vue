@@ -2,7 +2,9 @@
   <div>
     <div class="main">
       <video
-        :src="this.$store.state.settings.videoPath"
+        :src="
+          this.$store.state.settings.videoPath || '/extraResources/video.mp4'
+        "
         autoplay
         @ended="onMovieEnd()"
       ></video>
@@ -19,6 +21,7 @@ export default {
     },
   },
   mounted() {
+    console.log('playing movie ' + this.$store.state.settings.videoPath)
     vid = document.querySelector('video')
     vid.volume = this.videoVolume
   },
@@ -45,9 +48,9 @@ export default {
   background-color: #000;
 }
 video {
-  position: fixed;
-  right: 0;
-  bottom: 0;
+  //   position: fixed;
+  //   right: 0;
+  //   bottom: 0;
   min-width: 100%;
   min-height: 100%;
 }

@@ -20,7 +20,7 @@
       "en": "Avocado",
       "notAvailable": {
         "fr": "L’avocat est connu au Québec seulement depuis les années 1950. Auparavant, si une envie de manger du guacamole vous prenait, eh bien, vous deviez vous contenter d’une purée de petits fruits! ",
-        "en": "The avocado has only been known in Quebec since the 1950s. Before that, if the urge to eat guacamole hit you, you had to be satisfied with a fruit purée!"
+        "en": "The avocado has only been known in Québec since the 1950s. Before that, if the urge to eat guacamole hit you, you had to be satisfied with a fruit purée!"
       },
       "now": 1.54,
       "then": 0.4,
@@ -33,8 +33,8 @@
       "fr": "Olives noires",
       "en": "Black olives",
       "notAvailable": {
-        "fr": "Bien que les olives aient une place majeure dans notre histoire culinaire, elles n’ont que récemment été introduites à notre table. Ainsi, l’arrivée des olives noires coïncide avec les voyages de Québécois en Europe au début des années 1960. ",
-        "en": "Although olives have held a major place in our culinary history, they were only recently introduced to our tables. In fact, the arrival of black olives coincided with trips to Europe made by Quebecers in the early 1960s."
+        "fr": "Bien que les olives aient une place importante dans nos habitudes culinaires, elles n’ont que récemment été introduites à notre table. Ainsi, l’arrivée des olives noires coïncide avec les voyages de Québécois en Europe au début des années 1960. ",
+        "en": "Although olives have held a major place in the culinary history, they were only recently introduced to our tables. In fact, the arrival of black olives coincided with trips to Europe made by Quebecers in the early 1960s."
       },
       "now": 1.99,
       "then": 0.24,
@@ -78,7 +78,7 @@
       "en": "Yogurt",
       "notAvailable": {
         "fr": "Vous avez dit yogourt? Cet aliment à base de lait caillé est assez surprenant! En 1920, pas question d’offrir cette mixture à la clientèle de Val-Jalbert. Au Québec, la consommation de yogourt ne s’amorce réellement que dans les années 1970. ",
-        "en": "Did you say yogurt? This curdled-milk product is rather surprising! In 1920, it was not possible to offer this food to consumers in Val-Jalbert. In Quebec, the consumption of yogurt only became common in the 1970s."
+        "en": "Did you say yogurt? This curdled-milk product is rather surprising! In 1920, it was not possible to offer this food to consumers in Val-Jalbert. In Québec, the consumption of yogurt only became common in the 1970s."
       },
       "now": 3.99,
       "then": 0.33,
@@ -92,7 +92,7 @@
       "en": "Ice cream",
       "notAvailable": {
         "fr": "Envie d’un rafraîchissement sous un chaud soleil d’été? Vous devrez plutôt opter pour une baignade en nature, car, au Québec, c’est seulement dans les années 1950 que la crème glacée fait son apparition. ",
-        "en": "Need something refreshing under the hot summer sun? Until not so long ago, you would have had to be happy with a dip outside, since in Quebec it was only in the 1950s that ice cream made its appearance. "
+        "en": "Need something refreshing under the hot summer sun? Until not so long ago, you would have had to be happy with a dip outside, since in Québec it was only in the 1950s that ice cream made its appearance. "
       },
       "now": 5.99,
       "then": 0.4,
@@ -105,8 +105,8 @@
       "fr": "Fromage brie",
       "en": "Brie cheese",
       "notAvailable": {
-        "fr": "Le fromage, à Val-Jalbert, dans les années 1920, c’est un luxe! On le conserve pour les grandes occasions… Et soyez bien avertis : il n’y a pas de brie ici, mais plutôt le Cheddar Perron de Saint-Prime et le fromage Oka de la communauté trappiste de Deux Montagnes, qui dominent alors le paysage « fromager » québécois. ",
-        "en": "Cheese in Val-Jalbert in the 1920s was a real luxury! It was saved for special occasions... And be advised: we did not have Brie here, but rather Cheddar Perron from Saint-Prime, or Oka cheese from the Trappist monks of Deux Montagnes, who dominated the \"cheese landscape\" of Quebec in those days."
+        "fr": "Le fromage, à Val-Jalbert, dans les années 1920, c’est un luxe! On le conserve pour les grandes occasions… Et soyez bien avertis : il n’y a pas de brie ici, mais plutôt le Cheddar Perron de Saint-Prime et le fromage Oka de la communauté trappiste de Deux-Montagnes, qui dominent alors le paysage « fromager » québécois. ",
+        "en": "Cheese in Val-Jalbert in the 1920s was a real luxury! It was saved for special occasions... And be advised: we did not have Brie here, but rather Cheddar Perron from Saint-Prime, or Oka cheese from the Trappist monks of Deux-Montagnes, who dominated the \"cheese landscape\" of Québec in those days."
       },
       "now": 8.99,
       "then": 0.58,
@@ -133,7 +133,6 @@
       "sold": false,
       "img": "VJ_Jeu1_B2_lait-moderne.png",
       "img_1920": "VJ_Jeu1_B2_lait.png",
-
       "order": 2
     },
     {
@@ -152,7 +151,7 @@
       "en": "Block of tofu",
       "notAvailable": {
         "fr": "Ne <i>« t’offusque »</i> pas de ne pas dénicher de tofu à la boucherie! C’est tout à fait normal. Le tofu intègre les pratiques alimentaires québécoises à partir des années 1970. ",
-        "en": "Don't be upset if you can't find tofu at the butcher's. It's quite normal. Tofu only became a part of the Quebec diet in the 1970s. "
+        "en": "Don't be upset if you can't find tofu at the butcher's. It's quite normal. Tofu only became a part of the Québec diet in the 1970s. "
       },
       "now": 3.99,
       "then": 0.29,
@@ -166,7 +165,7 @@
       "en": "Package of tempeh",
       "notAvailable": {
         "fr": "Ça ne vous coûtera pas cher de tempeh à la boucherie ou au magasin général! On n’a jamais vu ça sur nos tablettes. Cette pâte de soja fermentée est popularisée au Québec au début des années 2000. ",
-        "en": "It wouldn't cost you very much, tempeh, at the butcher shop or the general store! We never had it on our shelves. This fermented soybean paste was popularized in Quebec only in the early 2000s. "
+        "en": "It wouldn't cost you very much tempeh at the butcher shop or the general store! We never had it on our shelves. This fermented soybean paste was popularized in Québec only in the early 2000s. "
       },
       "now": 6.49,
       "then": 0.32,
@@ -179,8 +178,8 @@
       "fr": "Plat de houmous",
       "en": "Dish of hummus",
       "notAvailable": {
-        "fr": "Plus de « houmous…tiques » que de houmous en plein été, au village! Le houmous est une purée de pois chiches servie depuis des millénaires dans la cuisine du Moyen-Orient, mais introuvable à Val-Jalbert en 1920.",
-        "en": "Hummus is a chick pea purée popular for thousands of years in the Middle East, but unattainable in Val-Jalbert in 1920."
+        "fr": "Plus de <i>« houmous…tiques »</i> que de houmous en plein été, au village! Le houmous est une purée de pois chiches servie depuis des millénaires dans la cuisine du Moyen-Orient, mais introuvable à Val-Jalbert en 1920.",
+        "en": "Hummus is a chickpea purée popular for thousands of years in the Middle East, but unattainable in Val-Jalbert in 1920."
       },
       "now": 5.29,
       "then": 0.38,
@@ -224,7 +223,7 @@
       "en": "Roast ostrich",
       "notAvailable": {
         "fr": "Ne vous mettez pas la tête dans le sable : vous ne trouverez pas de viande d’autruche au village de Val Jalbert! Les premiers élevages de ce très grand oiseau d’Afrique et du Proche-Orient apparaissent au Québec en 1994. ",
-        "en": "Don't put your head in the sand: you won't find ostrich meat in Val Jalbert!  The first farms of this large bird that is native to Africa and the Near East only appeared in Quebec in 1994. "
+        "en": "Don't put your head in the sand: you won't find ostrich meat in Val Jalbert!  The first farms of this large bird that is native to Africa and the Near East only appeared in Québec in 1994. "
       },
       "now": 16.29,
       "then": 0.58,
@@ -238,7 +237,7 @@
       "en": "Slices of pepperoni",
       "notAvailable": {
         "fr": "Si le pepperoni est inventé dans les années 1920 aux États-Unis par un chef immigrant d’origine italienne, sa consommation n’est, à l’époque, pas encore très répandue dans les maisonnées québécoises. Aujourd’hui, cette charcuterie détient le titre de reine de la garniture à pizza nord-américaine.",
-        "en": "Although pepperoni was invented in the United States in the 1920s by an immigrant chef of Italian origin, its consumption had not yet caught on in Quebec households. Today though, this meat holds the title of queen of all the pizza toppings in North America."
+        "en": "Although pepperoni was invented in the United States in the 1920s by an immigrant chef of Italian origin, its consumption had not yet caught on in Québec households. Today though, this meat holds the title of queen of all the pizza toppings in North America."
       },
       "now": 6.49,
       "then": 0.38,
@@ -291,7 +290,7 @@
       "fr": "Sac de couscous de blé dur",
       "en": "Bag of couscous of durum wheat",
       "notAvailable": {
-        "fr": "Cous que tu dis? Le couscous fait maintenant partie intégrante de notre paysage culinaire, mais il ne nous est connu que depuis les années 1960. ",
+        "fr": "<i>« Cous que tu dis? »</i>  Le couscous fait maintenant partie intégrante de notre paysage culinaire, mais il ne nous est connu que depuis les années 1960. ",
         "en": "Although couscous is now an integral part of our culinary landscape, it has only been known to us since the 1960s. "
       },
       "now": 6.99,
@@ -305,8 +304,8 @@
       "fr": "Tortilla",
       "en": "Tortilla",
       "notAvailable": {
-        "fr": "Pas de wrap sur le pouce ni de taco dans la boîte à lunch des ouvriers du village! Il faut attendre l’arrivée des immigrants d’origine latino-américaine avant de pouvoir déguster à notre tour la fameuse tortilla. ",
-        "en": "No take-out wraps, nor tacos in the village workers' lunch boxes! The tortilla only became popular in Quebec with the arrival of immigrants from Latin America. "
+        "fr": "Pas de <i>wrap</i> sur le pouce ni de taco dans la boîte à lunch des ouvriers du village! Il faut attendre l’arrivée des immigrants d’origine latino-américaine avant de pouvoir déguster à notre tour la fameuse tortilla. ",
+        "en": "No take-out wraps, nor tacos in the village workers' lunch boxes! The tortilla only became popular in Québec with the arrival of immigrants from Latin America. "
       },
       "now": 3.99,
       "then": 0.42,
@@ -354,7 +353,6 @@
       "img": "VJ_Jeu1_0028_pain.png",
       "order": 4
     },
-
     {
       "type": "poisson",
       "fr": "Filet de mahi-mahi",

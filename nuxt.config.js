@@ -19,7 +19,8 @@ module.exports = {
     script: [
       {
         src:
-          (process.env.NODE_ENV === 'dev' ? '' : '') + '/js/howler.core.min.js',
+          (process.env.NODE_ENV === 'dev' ? '/vj' : '') +
+          '/js/howler.core.min.js',
       },
     ],
   },
@@ -34,7 +35,7 @@ module.exports = {
   modules: ['@nuxtjs/axios'],
   buildModules: ['@nuxtjs/style-resources'],
   router: {
-    base: process.env.NODE_ENV === 'dev' ? '' : '',
+    base: process.env.NODE_ENV === 'dev' ? '/vj/' : '',
   },
   components: [
     {

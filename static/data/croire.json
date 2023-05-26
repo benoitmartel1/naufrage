@@ -3,11 +3,18 @@
     {
       "question": {
         "fr": "Au début du 20e siècle, au Saguenay–Lac-Saint-Jean, on raffole du sang de mouton.",
-        "en": "In Saguenay-Lac-Saint-Jean in the early 20th century, we were crazy about sheep's blood."
+        "en": "In Saguenay-Lac-Saint-Jean, in the early 20th century, we were crazy about sheep's blood."
       },
       "answers": [
-        { "fr": "Certainement!", "en": "True!", "good": true },
-        { "fr": "Complètement faux!", "en": "Completely false!" }
+        {
+          "fr": "Certainement!",
+          "en": "True!",
+          "good": true
+        },
+        {
+          "fr": "Complètement faux!",
+          "en": "Completely false!"
+        }
       ],
       "resolve": {
         "fr": "À l’époque, les bouchers vendaient du sang de mouton à leur clientèle saguenéenne et jeannoise, qui l’affectionnait particulièrement lorsque cuisiné en sauce.",
@@ -20,8 +27,15 @@
         "en": "Head cheese is a small cheese made with raw milk having the shape of a pig's head."
       },
       "answers": [
-        { "fr": "C’est vrai!", "en": "That's true!" },
-        { "fr": "C’est impossible!", "en": "Not possible!", "good": true }
+        {
+          "fr": "C’est vrai!",
+          "en": "That's true!"
+        },
+        {
+          "fr": "C’est impossible!",
+          "en": "Not possible!",
+          "good": true
+        }
       ],
       "resolve": {
         "fr": "Il s’agit plutôt d’une charcuterie constituée de la viande de différentes parties de la tête de porc. Comme dit le dicton : « Tout est bon dans le cochon! »",
@@ -34,8 +48,15 @@
         "en": "The word \"bacon\" is a linguistic loan to the English language."
       },
       "answers": [
-        { "fr": "Tout à fait!", "en": "True!" },
-        { "fr": "Bien sûr que non!", "en": "Of course not!", "good": true }
+        {
+          "fr": "Tout à fait!",
+          "en": "True!"
+        },
+        {
+          "fr": "Bien sûr que non!",
+          "en": "Of course not!",
+          "good": true
+        }
       ],
       "resolve": {
         "fr": "Ce sont les Anglais qui ont emprunté le mot « bacon » à une ancienne appellation française. Le terme « bacon » faisait initialement référence à la chair de porc que les Français découpaient en filets salés.",
@@ -48,7 +69,10 @@
         "en": "Pork rinds, a traditional Québécois grilled treat, are prepared with pig's ears."
       },
       "answers": [
-        { "fr": "Voilà une évidence!", "en": "That is true!" },
+        {
+          "fr": "Voilà une évidence!",
+          "en": "That is true!"
+        },
         {
           "fr": "Voilà une tromperie!",
           "en": "Completely false!",
@@ -66,7 +90,10 @@
         "en": "A picoune was a kind of butcher's knife much in use in the Saguenay–Lac-Saint-Jean region in 1920."
       },
       "answers": [
-        { "fr": "Absolument!", "en": "Absolutely!" },
+        {
+          "fr": "Absolument!",
+          "en": "Absolutely!"
+        },
         {
           "fr": "Non, non et encore non!",
           "en": "No, no and no!",
@@ -84,7 +111,10 @@
         "en": "In 1920, \"chauffer une truie\" (\"to heat up a sow\") signified harnessing a pig to a sled to bring in the firewood to the house or shed."
       },
       "answers": [
-        { "fr": "Surprenant, mais vrai!", "en": "Surprising but true!" },
+        {
+          "fr": "Surprenant, mais vrai!",
+          "en": "Surprising but true!"
+        },
         {
           "fr": "Quelle fausseté! ",
           "en": "What a falsehood!",
@@ -102,8 +132,15 @@
         "en": "\"Sauce à la poche\" (\"sauce in a bag\"), very popular in the logging camps, was called this because it could easily be transported in large canvas bags."
       },
       "answers": [
-        { "fr": "Sans aucun doute!", "en": "Without a doubt!", "good": true },
-        { "fr": "Pas du tout!", "en": "No way!" }
+        {
+          "fr": "Sans aucun doute!",
+          "en": "Without a doubt!",
+          "good": true
+        },
+        {
+          "fr": "Pas du tout!",
+          "en": "No way!"
+        }
       ],
       "resolve": {
         "fr": "La sauce, constituée de farine, de pain et de lard salé, était gelée, puis placée dans des sacs (des poches), pour ensuite être transportée dans les chantiers.",
@@ -116,7 +153,10 @@
         "en": "There is no difference between tourtière and meat pie!"
       },
       "answers": [
-        { "fr": "La même chose!", "en": "Yes, they're the same thing!" },
+        {
+          "fr": "La même chose!",
+          "en": "Yes, they're the same thing!"
+        },
         {
           "fr": "Complètement différent!",
           "en": "No, they're completely different!",
@@ -134,8 +174,15 @@
         "en": "Strong winds can blow down an ox's horns, which is where the expression \"venter à écorner les bœufs\" (\"to blow down the horns of an ox\") comes from."
       },
       "answers": [
-        { "fr": "Assurément!", "en": "Right, sure!" },
-        { "fr": "Aucune chance!", "en": "Not a chance!", "good": true }
+        {
+          "fr": "Assurément!",
+          "en": "Right, sure!"
+        },
+        {
+          "fr": "Aucune chance!",
+          "en": "Not a chance!",
+          "good": true
+        }
       ],
       "resolve": {
         "fr": "Cette expression prendrait naissance dans la pratique des paysans qui décornaient les bœufs les jours de grands vents afin d’aider à la cicatrisation, mais également d’éloigner les mouches et de réduire les risques d’infection.",
@@ -145,11 +192,18 @@
     {
       "question": {
         "fr": "Au début du 20e siècle, la très populaire teinture « sang de bœuf » est ainsi dénommée en raison de la ressemblance de la couleur avec le sang de l’animal, et non parce que du véritable sang était utilisé dans sa fabrication.",
-        "en": "At the beginning of the 20th century, the very popular dye called ox blood took its name from its resemblance to the blood of that animal, and not because real ox blood was used in its manufacture."
+        "en": "At the beginning of the 20th century, the very popular dye called \"ox blood\" took its name from its resemblance to the blood of that animal, and not because real ox blood was used in its manufacture."
       },
       "answers": [
-        { "fr": "La vérité!", "en": "True!", "good": true },
-        { "fr": "Un mensonge!", "en": "A lie!" }
+        {
+          "fr": "La vérité!",
+          "en": "True!",
+          "good": true
+        },
+        {
+          "fr": "Un mensonge!",
+          "en": "A lie!"
+        }
       ],
       "resolve": {
         "fr": "La couleur de cette teinture était obtenue à partir de l’ocre rouge, matière minérale retrouvée au Québec.",

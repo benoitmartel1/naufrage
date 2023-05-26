@@ -22,7 +22,13 @@ export default {
   },
   computed: {
     approMode() {
-      return process.env.NODE_ENV == 'development' ? 1 : 0
+      // return true
+      return Boolean(
+        process.env.NODE_ENV == 'development' || process.env.NODE_ENV == 'dev'
+          ? 1
+          : 0
+      )
+      // return false
     },
   },
   mounted() {
@@ -87,6 +93,7 @@ body {
   }
 }
 #app {
+  position: relative;
   background: url('~/assets/img/Pattern-1.png');
   transition: transform 600ms ease-out;
   width: $width;
@@ -98,8 +105,8 @@ body {
 }
 
 .appro {
-  margin: 30px;
-  transform: scale(0.5);
+  //   margin: 30px;
+  transform: scale(0.9);
   transform-origin: 0 0;
 }
 .page-enter-active {

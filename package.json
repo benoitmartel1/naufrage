@@ -1,6 +1,6 @@
 {
   "name": "vj-boucherie",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "private": true,
   "main": "main.js",
   "build": {
@@ -30,9 +30,9 @@
     }
   },
   "scripts": {
-    "dev": "nuxt",
+    "dev": "cross-env NODE_ENV=dev nuxt",
     "start": "nuxt start",
-    "generate": "nuxt generate",
+    "generate": "cross-env NODE_ENV=dev nuxt generate",
     "electron": "cross-env NODE_ENV=dev electron .",
     "e:build": "cross-env NODE_ENV=production nuxt build && electron-builder --win"
   },

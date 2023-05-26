@@ -16,7 +16,7 @@
               votre spécialité. Je vous lève mon chapeau de boucher!</span
             >
             <span v-else
-              >Congratulations! Separating belief from reality is your
+              >Congratulations! Separating beliefs from reality is your
               specialty! I tip my butcher's hat to you!</span
             >
           </div>
@@ -26,7 +26,7 @@
               de la réalité. Je vous lève mon chapeau de boucher!</span
             >
             <span v-else
-              >Good game! You now know how to better separate belief from
+              >Good game! You now know how to better separate beliefs from
               reality. I tip my butcher's hat to you!</span
             >
           </div>

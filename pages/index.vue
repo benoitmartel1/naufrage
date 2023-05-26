@@ -9,19 +9,19 @@
         </div>
         <div class="icon"></div>
       </div>
-      <div class="btn croire" @click="$router.push('/croire')">
-        <img src="img/common/jeu_3.png" alt="" />
-        <div class="title">
-          <span v-if="lang == 'fr'">J'sais pas si<br />tu vas m'croire?</span>
-          <span v-else>I don’t know if you’ll believe me</span>
-        </div>
-        <div class="icon"></div>
-      </div>
       <div class="btn vore" @click="$router.push('/vore')">
         <img src="img/common/jeu_2.png" alt="" />
         <div class="title">
           <span v-if="lang == 'fr'">Quel type de mangeur<br />êtes-vous?</span>
           <span v-else>What kind of eater are you?</span>
+        </div>
+        <div class="icon"></div>
+      </div>
+      <div class="btn croire" @click="$router.push('/croire')">
+        <img src="img/common/jeu_3.png" alt="" />
+        <div class="title">
+          <span v-if="lang == 'fr'">J'sais pas si<br />tu vas m'croire?</span>
+          <span v-else>I don’t know if you’ll believe me</span>
         </div>
         <div class="icon"></div>
       </div>
@@ -57,21 +57,23 @@ export default {
       const { data } = qs.parse(location.search.slice(1))
       const { path } = qs.parse(location.search.slice(1))
       const { settings } = JSON.parse(data)
-      settings.videoPath = path + '\\extraResources\\video.mp4'
+      settings.videoPath = path + '\\extraResources\\' + settings.videoPath
       this.$store.commit('setSettings', settings)
     } catch (error) {
       let baseURL =
-        process.env.NODE_ENV == 'development'
-          ? 'http://localhost:3000'
-          : 'file:///opt/par/resources'
-      //   window.location.origin + process.env.NODE_ENV == 'development'
-      //     ? '/vj'
-      //     : ''
+        // process.env.NODE_ENV == 'development'
+        //   ? 'http://localhost:3000'
+        //   : 'file:///opt/par/resources'
+        window.location.origin + process.env.NODE_ENV == 'development'
+          ? '/vj'
+          : ''
       await this.$axios
         .get('extraResources/settings.json', { baseURL: baseURL })
         .then((res) => {
-          res.data.settings.videoPath = 'extraResources/video.mp4'
+          res.data.settings.videoPath =
+            'extraResources/' + res.data.settings.videoPath
           this.$store.commit('setSettings', res.data.settings)
+          console.log(this.$store.state.settings)
         })
     }
 
