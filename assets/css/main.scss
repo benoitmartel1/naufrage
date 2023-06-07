@@ -17,7 +17,12 @@
   --caramel: #b97028;
   --cubic: cubic-bezier(0.07, 0.64, 0.56, 0.9);
 }
-
+body,
+html {
+  overflow: hidden;
+  cursor: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7),
+    auto !important;
+}
 * {
   -webkit-tap-highlight-color: transparent;
   box-sizing: border-box;
@@ -137,7 +142,7 @@ h4 {
   font-weight: normal;
 }
 img {
-  user-drag: none;
+  //   user-drag: none;
   -webkit-user-drag: none;
   user-select: none;
   -moz-user-select: none;
@@ -153,12 +158,12 @@ img {
     background-color: var(--beige);
   }
 }
-.close,
-.button,
-.btn {
-  /* float: right; */
-  cursor: pointer;
-}
+// .close,
+// .button,
+// .btn {
+//   /* float: right; */
+//   //   cursor: pointer;
+// }
 a {
   text-decoration: none;
 }

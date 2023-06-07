@@ -1,7 +1,7 @@
 export default {
   data() {
     return {
-      webSocketConnected: false
+      webSocketConnected: false,
     }
   },
   methods: {
@@ -9,7 +9,6 @@ export default {
       console.log('Looking for address...')
       let addr = this.$store.state.settings.websocket_address
       if (addr) {
-
         console.log('Connecting to ws...')
         console.log(addr)
         const that = this
@@ -19,8 +18,17 @@ export default {
           that.webSocketConnected = true
         }
         ws.onmessage = function (e) {
-          const data = e.data.split('_')
-          that.onWsMessage({ type: data[0].toLowerCase(), value: data[1] })
+          //   const data = e.data.split('_')
+
+          var lastIndex = e.data.lastIndexOf('_')
+
+          that.onWsMessage({
+            type:
+              lastIndex > -1
+                ? e.data.substr(0, lastIndex).toLowerCase()
+                : e.data.toLowerCase(),
+            value: e.data.substr(lastIndex + 1),
+          })
         }
 
         ws.onclose = function (e) {
@@ -52,6 +60,6 @@ export default {
       if (!this.webSocketConnected) {
         this.connect()
       }
-    }, 5000);
+    }, 5000)
   },
 }

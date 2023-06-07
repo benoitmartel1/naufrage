@@ -7,7 +7,10 @@ export default {
   },
   computed: {
     ambientVolume() {
-      return this.$store.state.volume * 0.5
+      return this.$store.state.ambVolume * 0.5
+    },
+    filmVolume() {
+      return this.$store.state.ambVolume * 0.5
     },
     moviePlaying() {
       return this.$store.state.moviePlaying

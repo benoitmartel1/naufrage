@@ -1,3 +1,5 @@
+//Install the .bat launch file in startup folder
+//------------------------------------------------------
 const { exec } = require('child_process')
 const child = exec(
   'IF NOT EXIST "%userprofile%\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\vj-boucherie.bat" copy static\\extraResources\\vj-boucherie.bat "%userprofile%\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\vj-boucherie.bat"'
@@ -8,13 +10,7 @@ exec(
 exec(
   "powershell $s=(New-Object -COM WScript.Shell).CreateShortcut('%USERPROFILE%\\Desktop\\vj-folder.lnk');$s.TargetPath='%localappdata%\\Programs\\vj-boucherie\\resources\\extraResources';$s.Save()"
 )
-// child.stdout.on('data', (data) => {
-//   console.log(`child stdout:\n${data}`)
-// })
-
-// child.stderr.on('data', (data) => {
-//   console.error(`child stderr:\n${data}`)
-// })
+//------------------------------------------------------
 
 const http = require('http')
 const { Nuxt, Builder } = require('nuxt')
@@ -41,19 +37,29 @@ server.listen(3000)
 let win = null // Current window
 const electron = require('electron')
 const path = require('path')
+
 const fs = require('fs')
 const app = electron.app
 
-const SETTINGS_PATH = path.join(
+let SETTINGS_PATH = path.join(
   process.resourcesPath,
   'extraResources',
   'settings.json'
 )
-console.log * process.resourcesPath
+if (config.dev) {
+  SETTINGS_PATH = path.join(
+    app.getAppPath(),
+    'static/extraResources/',
+    'settings.json'
+  )
+}
+
+console.log(SETTINGS_PATH)
 //Load external settings
 const data = fs.readFileSync(SETTINGS_PATH)
 const { settings } = JSON.parse(data)
 const settingsStringified = JSON.stringify(JSON.parse(data))
+
 console.log(settings)
 
 //Define entry point with settings as args
@@ -82,46 +88,46 @@ const newWin = () => {
     icon: path.join(__dirname, 'favicon.ico'),
   })
   win.webContents.on('before-input-event', (event, input) => {
-    if (input.type == 'keyUp' && input.key == 'Escape') {
-      console.log('closing...')
-      win.close()
+    if (input.key == 'Escape' && input.shift) {
+      app.exit()
     }
   })
   win.on('closed', () => (win = null))
-  if (config.dev) {
-    console.log('is CONFIG DEV')
-    // Install vue dev tool and open chrome dev tools
-    const {
-      default: installExtension,
-      VUEJS_DEVTOOLS,
-    } = require('electron-devtools-installer')
-    installExtension(VUEJS_DEVTOOLS.id)
-      .then((name) => {
-        console.log(`Added Extension:  ${name}`)
-        win.webContents.openDevTools()
-      })
-      .catch((err) => console.log('An error occurred: ', err))
-    // Wait for nuxt to build
-    const pollServer = () => {
-      http
-        .get(_NUXT_URL_, (res) => {
-          if (res.statusCode === 200) {
-            win.loadURL(_NUXT_URL_)
-          } else {
-            setTimeout(pollServer, 300)
-          }
-        })
-        .on('error', pollServer)
-    }
-    pollServer()
-  } else {
-    console.log('is NOT CONFIG DEV')
-    return win.loadURL(_NUXT_URL_)
-  }
+  return win.loadURL(_NUXT_URL_)
+  //   if (config.dev) {
+  //     console.log('is CONFIG DEV')
+  //     // Install vue dev tool and open chrome dev tools
+  //     const {
+  //       default: installExtension,
+  //       VUEJS_DEVTOOLS,
+  //     } = require('electron-devtools-installer')
+  //     installExtension(VUEJS_DEVTOOLS.id)
+  //       .then((name) => {
+  //         console.log(`Added Extension:  ${name}`)
+  //         win.webContents.openDevTools()
+  //       })
+  //       .catch((err) => console.log('An error occurred: ', err))
+  //     // Wait for nuxt to build
+  //     const pollServer = () => {
+  //       http
+  //         .get(_NUXT_URL_, (res) => {
+  //           if (res.statusCode === 200) {
+  //             win.loadURL(_NUXT_URL_)
+  //           } else {
+  //             setTimeout(pollServer, 300)
+  //           }
+  //         })
+  //         .on('error', pollServer)
+  //     }
+  //     pollServer()
+  //   } else {
+  //     console.log('is NOT CONFIG DEV')
+  //     // return win.loadURL(_NUXT_URL_)
+  //   }
 }
 app.on('ready', newWin)
 app.on('window-all-closed', () => {
-  //   app.relaunch()
+  app.relaunch()
   app.exit()
 })
 app.on('activate', () => win === null && newWin())

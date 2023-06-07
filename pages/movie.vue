@@ -17,7 +17,7 @@ let vid
 export default {
   computed: {
     videoVolume() {
-      return this.$store.state.volume
+      return this.$store.state.filmVolume
     },
   },
   mounted() {

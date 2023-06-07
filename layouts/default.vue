@@ -1,8 +1,8 @@
 <template>
   <div :class="[{ appro: approMode }]">
-    <div id="app">
+    <div id="app" class="no-cursor">
       <Nav v-if="!this.$store.state.moviePlaying" />
-      <MovieComing v-if="timeToMovie" :timeToMovie="timeToMovie" />
+      <MovieComing v-if="timeToMovie > 0" :timeToMovie="timeToMovie" />
       <Nuxt />
     </div>
     <TestPanel v-if="approMode" />
@@ -22,7 +22,7 @@ export default {
   },
   computed: {
     approMode() {
-      // return true
+      return false
       return Boolean(
         process.env.NODE_ENV == 'development' || process.env.NODE_ENV == 'dev'
           ? 1
@@ -42,39 +42,59 @@ export default {
   mixins: [ws, sound, idle],
   methods: {
     onWsMessage(msg) {
+      console.log(msg)
       if (msg.type == 'start') {
         if (!this.timeToMovie && !this.$store.state.moviePlaying) {
-          this.timeToMovie = msg.value
+          this.timeToMovie = msg.value == 0 ? -1 : msg.value
         }
       }
       if (msg.type == 'stop') {
-        this.$router.push('/')
-        this.$store.commit('setMoviePlaying', false)
+        this.timeToMovie = 0
+        clearInterval(movieInterval)
+
+        if (this.$route.name == 'movie') {
+          this.$router.push('/')
+          this.$store.commit('setMoviePlaying', false)
+        }
       }
-      if (msg.type == 'volume') {
-        this.$store.commit('setVolume', msg.value)
+      if (msg.type == 'vol_film') {
+        this.$store.commit('setFilmVolume', msg.value / 100)
+      }
+      if (msg.type == 'vol_amb') {
+        this.$store.commit('setAmbVolume', msg.value / 100)
       }
       if (msg.type == 'shutdown') {
         window.shutdown()
+      }
+      if (msg.type == 'reboot') {
+        window.reboot()
       }
     },
   },
   watch: {
     timeToMovie(val, old) {
-      if (val && old == 0) {
-        let fadeOutStartTime = val * 0.2
-        this.fadeOutDuration = fadeOutStartTime
+      if (old == 0) {
+        if (val == -1) {
+          this.timeToMovie = 0
+          this.$store.commit('setMoviePlaying', true)
+          this.$router.push('/movie')
+        } else {
+          if (val) {
+            let fadeOutStartTime = val * 0.2
+            this.fadeOutDuration = fadeOutStartTime
 
-        movieInterval = setInterval(() => {
-          this.timeToMovie--
-          if (this.timeToMovie <= fadeOutStartTime && !this.moviePlaying) {
-            this.$store.commit('setMoviePlaying', true)
+            movieInterval = setInterval(() => {
+              this.timeToMovie--
+              if (this.timeToMovie <= fadeOutStartTime && !this.moviePlaying) {
+                this.$store.commit('setMoviePlaying', true)
+              }
+              if (this.timeToMovie <= 0) {
+                clearInterval(movieInterval)
+                this.$router.push('/movie')
+              }
+            }, 1000)
           }
-          if (this.timeToMovie <= 0) {
-            clearInterval(movieInterval)
-            this.$router.push('/movie')
-          }
-        }, 1000)
+        }
       }
     },
   },

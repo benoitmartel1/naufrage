@@ -1,6 +1,7 @@
 export const state = () => ({
   lang: 'fr',
-  volume: 1,
+  ambVolume: 1,
+  filmVolume: 1,
   idleTime: 60,
   score: 0,
   moviePlaying: false,
@@ -42,8 +43,11 @@ export const mutations = {
   checkoutList(state, p) {
     state.panier[p.list].list = p.content
   },
-  setVolume(state, v) {
-    state.volume = v
+  setAmbVolume(state, v) {
+    state.ambVolume = v
+  },
+  setFilmVolume(state, v) {
+    state.filmVolume = v
   },
   setCroireMax(state, v) {
     state.croire.max = v

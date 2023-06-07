@@ -17,7 +17,9 @@
       </svg>
     </div>
     <div v-else class="btn empty"></div>
-    <div class="game" v-if="gameName()">{{ gameName() }}</div>
+    <div class="game" v-if="gameName() && $parent.timeToMovie == 0">
+      {{ gameName() }}
+    </div>
     <div class="btn lang" @click="changeLang()">
       {{ !fr ? 'fr' : 'en' }}
     </div>
