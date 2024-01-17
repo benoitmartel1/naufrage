@@ -59,7 +59,7 @@ export default {
       }
     },
     onWsMessage(msg) {
-      if (msg.type == 'start' && !this.$store.state.settings.movieLoop) {
+      if (msg.type == 'start' && this.doLoop !== 'true') {
         this.startMovie(msg.value)
       }
 
