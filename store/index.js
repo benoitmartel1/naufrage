@@ -2,6 +2,7 @@ export const state = () => ({
   lang: 'fr',
   ambVolume: 1,
   filmVolume: 1,
+
   idleTime: 60,
   score: 0,
   moviePlaying: false,
@@ -26,6 +27,9 @@ export const mutations = {
   },
   setScore(state, s) {
     state.score = s
+  },
+  setLoop(state, s) {
+    state.settings.movieLoop = s
   },
   setSettings(state, s) {
     state.settings = s

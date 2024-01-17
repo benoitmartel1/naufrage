@@ -28,6 +28,7 @@ export default {
   align-items: center;
   justify-content: center;
   animation: moveIn 300ms ease-out;
+  z-index: 800;
 }
 .countdown {
   font-weight: 800;

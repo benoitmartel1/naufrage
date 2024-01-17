@@ -28,7 +28,9 @@ export default {
           ? 1
           : 0
       )
-      // return false
+    },
+    doLoop() {
+      return this.$store.state.settings.movieLoop
     },
   },
   mounted() {
@@ -41,27 +43,40 @@ export default {
   },
   mixins: [ws, sound, idle],
   methods: {
-    onWsMessage(msg) {
-      console.log(msg)
-      if (msg.type == 'start') {
-        if (!this.timeToMovie && !this.$store.state.moviePlaying) {
-          this.timeToMovie = msg.value == 0 ? -1 : msg.value
-        }
+    startMovie(secondsBeforePlayback) {
+      if (!this.timeToMovie && !this.$store.state.moviePlaying) {
+        this.timeToMovie =
+          secondsBeforePlayback == 0 ? -1 : secondsBeforePlayback
       }
-      if (msg.type == 'stop') {
-        this.timeToMovie = 0
-        clearInterval(movieInterval)
+    },
+    stopMovie() {
+      this.timeToMovie = 0
+      clearInterval(movieInterval)
 
-        if (this.$route.name == 'movie') {
-          this.$router.push('/')
-          this.$store.commit('setMoviePlaying', false)
-        }
+      if (this.$route.name == 'movie') {
+        this.$router.push('/')
+        this.$store.commit('setMoviePlaying', false)
+      }
+    },
+    onWsMessage(msg) {
+      if (msg.type == 'start' && !this.$store.state.settings.movieLoop) {
+        this.startMovie(msg.value)
+      }
+
+      if (msg.type == 'stop' && this.doLoop !== 'true') {
+        this.stopMovie()
       }
       if (msg.type == 'vol_film') {
         this.$store.commit('setFilmVolume', msg.value / 100)
       }
       if (msg.type == 'vol_amb') {
         this.$store.commit('setAmbVolume', msg.value / 100)
+      }
+      if (msg.type == 'loop') {
+        this.$store.commit('setLoop', msg.value)
+        if (msg.value == 'true' && !this.$store.state.moviePlaying) {
+          this.startMovie(0)
+        }
       }
       if (msg.type == 'shutdown') {
         window.shutdown()

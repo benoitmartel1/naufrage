@@ -2,6 +2,7 @@
   <div>
     <div class="main">
       <video
+        id="player"
         :src="
           this.$store.state.settings.videoPath || '/extraResources/video.mp4'
         "
@@ -19,6 +20,12 @@ export default {
     videoVolume() {
       return this.$store.state.filmVolume
     },
+    doLoop() {
+      return this.$store.state.settings.movieLoop
+    },
+    status() {
+      return this.$store.state.moviePlaying
+    },
   },
   mounted() {
     console.log('playing movie ' + this.$store.state.settings.videoPath)
@@ -33,8 +40,12 @@ export default {
 
   methods: {
     onMovieEnd() {
-      this.$store.commit('setMoviePlaying', false)
-      this.$router.push('/')
+      if (this.doLoop == 'true') {
+        document.getElementById('player').play()
+      } else {
+        this.$store.commit('setMoviePlaying', false)
+        this.$router.push('/')
+      }
     },
   },
 }
