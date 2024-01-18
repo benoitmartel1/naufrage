@@ -15,11 +15,12 @@ export default {
         var ws = new WebSocket(addr)
         ws.onopen = function (e) {
           console.log('opened')
+          ws.send('loaded')
           that.webSocketConnected = true
         }
         ws.onmessage = function (e) {
           //   const data = e.data.split('_')
-
+          console.log(e.data)
           var lastIndex = e.data.lastIndexOf('_')
 
           that.onWsMessage({
