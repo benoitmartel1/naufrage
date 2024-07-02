@@ -1,0 +1,65 @@
+{
+  "name": "naufrages",
+  "version": "6.2.0",
+  "private": true,
+  "main": "main.js",
+  "build": {
+    "appId": "com.benoitmartel.boucherie",
+    "extraResources": [
+      {
+        "from": "./static/extraResources/",
+        "to": "extraResources",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "win": {
+      "target": {
+        "target": "NSIS"
+      },
+      "icon": "static/icon.png"
+    },
+    "nsis": {
+      "include": "build/installer.nsh",
+      "createDesktopShortcut": true,
+      "runAfterFinish": true
+    },
+    "directories": {
+      "output": "app"
+    }
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=dev nuxt",
+    "start": "nuxt start",
+    "generate": "cross-env NODE_ENV=dev nuxt generate",
+    "electron": "cross-env NODE_ENV=dev electron .",
+    "e:build": "cross-env NODE_ENV=production nuxt build && electron-builder --win"
+  },
+  "dependencies": {
+    "@electron/remote": "^2.0.9",
+    "@nuxtjs/axios": "^5.13.6",
+    "axios": "^1.4.0",
+    "body-parser": "^1.20.1",
+    "core-js": "^3.19.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "howler": "^2.2.3",
+    "nuxt": "^2.15.8",
+    "qs": "^6.11.2",
+    "vue": "^2.6.14",
+    "vue-server-renderer": "^2.6.14",
+    "vue-template-compiler": "^2.6.14",
+    "webpack": "^4.46.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.1.4",
+    "electron": "^13.1.2",
+    "electron-builder": "^22.10.5",
+    "electron-devtools-installer": "^2.2.3",
+    "prettier": "^2.5.1",
+    "sass": "^1.62.0",
+    "sass-loader": "^10"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}

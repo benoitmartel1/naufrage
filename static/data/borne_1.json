@@ -1,0 +1,364 @@
+{
+  "naufrages": [
+    {
+      "name": "Argenteuil",
+      "slug": "argenteuil",
+      "order": 1,
+      "slides": [
+        {
+          "type": "intro",
+          "text": {
+            "fr": "Le 16 mai 1962, le caboteur en acier ARGENTEUIL, avec un équipage de Tadoussac, transporte déjà à son bord de la farine, du bois et des marchandises diverses lorsqu’il accepte un chargement de sacs de ciment de dernière minute avant de quitter le port de Québec. Les sacs de ciment se seraient déplacés et auraient fait chavirer le bateau dans les eaux du fleuve Saint-Laurent près de Lauzon, en moins de deux minutes. Le naufrage a été principalement attribué à une cargaison mal équilibrée et mal arrimée. \n\nConstatant l’inclinaison anormale du bateau, le mécanicien Paul-Henri Nicolas a réussi à s’échapper de justesse. Louisette Lapointe, épouse du capitaine, a également survécu en sautant par-dessus bord. La goélette LOUIS G a secouru les survivants et assisté impuissante à la perte du marin Georges Ouellet, lorsqu’il a été aspiré sous l’eau par un remous en tentant de quitter le bateau. Les corps des trois membres de l’équipage ont été retrouvés plus tard. L'épave du bateau d’une longueur de 28 mètres (91,86 pieds) repose toujours à quelque 18 mètres (60 pieds) de profondeur, ne gênant pas la navigation.",
+            "en": "On May 16, 1962, the steel coaster ARGENTEUIL, with a crew from Tadoussac, was already carrying flour, wood, and general cargo when it accepted a last-minute load of cement bags before leaving the Quebec City port. The cement bags on deck were reported to have shifted and capsized the boat in the waters of the St. Lawrence River near Lauzon, in less than two minutes. The sinking was mainly attributed to an improperly balanced and secured cargo.\n\nNoticing the boat's abnormal list, mechanic Paul-Henri Nicolas narrowly escaped. Louisette Lapointe, wife of the captain, also survived by jumping overboard. The motor schooner LOUIS G rescued the survivors, but watched helplessly as sailor Georges Ouellet was sucked underwater by an eddy as he tried to escape the boat. The bodies of the three missing crew members were later recovered. The wreck of the 28-metre (91.86-foot) boat still lies some 18 metres (60 feet) below the surface, undisturbed by navigation."
+          }
+        },
+        {
+          "type": "tiles",
+          "group": 1
+        },
+        {
+          "type": "tiles",
+          "group": 2
+        },
+        {
+          "type": "tiles",
+          "group": 3
+        },
+        {
+          "type": "tiles",
+          "group": 4
+        }
+      ]
+    },
+    {
+      "name": "Baie St-Paul",
+      "slug": "baie-st-paul",
+      "order": 2,
+      "slides": [
+        {
+          "type": "intro",
+          "text": {
+            "fr": "En 1927, le 24 juin vers 23 h, au large de Tadoussac, la goélette BAIE ST-PAUL a été coupée en deux par le cargo CANADIAN TRAPPER. Une mauvaise manœuvre serait à l’origine de l’abordage. La goélette STE-RITA a porté secours au capitaine Alfred Lavoie et à son second Théodore Morin, tous deux de Baie-Saint-Paul. Le propriétaire de la goélette a tout perdu dans cet accident dont sa maison qui avait été hypothéquée pour financer l’achat de la goélette.",
+            "en": "On June 24, 1927, at around 11 p.m., off the coast of Tadoussac, the sailing schooner BAIE ST-PAUL was cut in two by a collision with the steamer CANADIAN TRAPPER. The collision is believed to have been caused by a poor manoeuvre. The schooner STE-RITA rescued Captain Alfred Lavoie and his mate Théodore Morin, both from Baie-Saint-Paul. The schooner's owner lost everything in the accident, including his house, which had been mortgaged to finance the schooner's purchase."
+          }
+        },
+        {
+          "type": "tiles",
+          "group": 1
+        },
+        {
+          "type": "video",
+          "path": "baie-st-paul.mp4"
+        }
+      ]
+    },
+    {
+      "name": "Coopérative transport",
+      "slug": "cooperative",
+      "order": 3,
+      "slides": [
+        {
+          "type": "intro",
+          "text": {
+            "fr": "La goélette COOPÉRATIVE TRANSPORT quitte Québec le 6 novembre 1959 après son dernier voyage de la saison pour revenir vers l’Isle-aux-Coudres. Avec à son bord le capitaine Georges Harvey, son fils Rosaire et le jeune matelot Blaise Dufour, elle est chargée de marchandises et de matériaux de construction. Sur la route du retour, des vents violents de 40 nœuds et des vagues énormes malmènent la petite goélette. Le capitaine d’un autre navire à proximité croit l’avoir vue tenter de rejoindre le quai de Petite-Rivière-Saint-François, mais que s’est-il réellement passé? Sans radio, la goélette est demeurée silencieuse. Le lendemain, c’est abandonnée et échouée près de Cap Maillard que la COOPÉRATIVE TRANSPORT a été repérée par des chasseurs. Les corps du capitaine et du matelot furent retrouvés sur le rivage… et, sur une autre plage, une chaloupe de sauvetage vide. Le corps de Rosaire Harvey fut récupéré sur la rive de Saint-Irénée, le dimanche. Les circonstances exactes de l'accident restent floues, mais des facteurs tels que les conditions météorologiques et la surcharge possible du bateau sont évoqués. Le capitaine Laurent Tremblay a relaté cette tragédie dans le film Les goélettes de René Bonnière et Pierre Perrault.",
+            "en": "The motor schooner COOPÉRATIVE TRANSPORT left Quebec City on November 6, 1959, for her last voyage of the season, bound for Isle-aux-Coudres. With Captain Georges Harvey, his son Rosaire and young deckhand Blaise Dufour on board, the vessel was loaded with merchandise and building materials. Once downstream of the Petite-Rivière St Francois, the little schooner encountered difficult sea conditions and was buffeted by violent 40-knot winds and huge waves. The captain of another nearby vessel thought he saw her trying to reach the Petite-Rivière-Saint-François wharf. What really happened? We will never know. Without a radio, the schooner remained silent. The next day, the COOPÉRATIVE TRANSPORT was spotted abandoned and stranded near Cap Maillard by hunters. The bodies of the captain and deckhand were found on shore... and, on another beach, an empty lifeboat. Rosaire Harvey's body was recovered from the shore at Saint-Irénée a day later. The exact circumstances of the accident remain unclear, but factors such as weather conditions and the possible overloading of the boat are mentioned. Captain Laurent Tremblay recounted the tragedy in René Bonnière and Pierre Perrault's film Les goélettes."
+          }
+        },
+        {
+          "type": "tiles",
+          "group": 1
+        },
+        {
+          "type": "video",
+          "path": "cooperative.mp4"
+        }
+      ]
+    },
+    {
+      "name": "Coudres de l'ile",
+      "slug": "coudres",
+      "order": 4,
+      "slides": [
+        {
+          "type": "intro",
+          "text": {
+            "fr": "Le 15 juin 1988, à 12 milles à l’est de Les Escoumins, il fait jour depuis une heure mais le fleuve Saint-Laurent est recouvert d’un épais brouillard. Les radars des navires en transit scrutent l’horizon à la recherche de potentiels dangers. Tout semble tranquille et pourtant c’est la collision entre l'ALGOWEST, un laquier de 222,5 mètres (730 pieds) transportant du grain, et le COUDRES DE L’ILE, un caboteur chargé de carcasses d'automobiles propriété des frères Joachin et Fernand Harvey de l’Isle-aux-Coudres. Pour le COUDRES DE L’ILE, presque quatre fois plus petit, le décompte est enclenché. Instantanément il prend une gîte et se couche sur le côté bâbord. Dans la salle des machines, le mécanicien réussit à s’enfuir de justesse. Le radeau de sauvetage est gonflé et les marins nagent en sa direction. Quatre-vingt-dix secondes se sont écoulées depuis l’abordage quand le caboteur disparaît sous l’eau. Des dix membres de l’équipage, seule Françoise Villeneuve, la jeune cuisinière, aspirée par le bateau qui a coulé à pic, ne sera jamais retrouvée.\n\nCet accident souligne encore aujourd’hui les risques liés à la navigation, malgré la technologie et les mesures de sécurité en place, et rappelle la vulnérabilité des marins en haute mer.",
+            "en": "On June 15, 1988, 12 miles east of Les Escoumins, it had been daylight for an hour, but the St. Lawrence River was blanketed in thick fog. The radars of passing ships scanned the horizon for potential hazards. All seemed quiet, but then came the collision between the ALGOWEST, a 222.5-meter (730-foot) laker carrying grain, and the COUDRES DE L'ILE, a coaster loaded with car wrecks owned by brothers Joachin and Fernand Harvey of Isle-aux-Coudres. For the COUDRES DE L'ILE, almost four times smaller, the countdown began at contact. She heeled over instantly and fell on her port side. In the engine room, the engineer barely escaped. The life raft was inflated, and sailors swam towards it. Ninety seconds had elapsed since the collision when the coaster disappeared under water. Of the 10 crew members, only Françoise Villeneuve, the young cook, who was sucked under by the sinking ship, was never found. \n\nEven today, this accident highlights the risks associated with navigation, despite the technology and safety measures in place, and reminds us of the vulnerability of sailors on the high seas."
+          }
+        },
+        {
+          "type": "tiles",
+          "group": 1
+        },
+        {
+          "type": "video",
+          "path": "coudres.mp4"
+        }
+      ]
+    },
+    {
+      "name": "Crane Island",
+      "slug": "crane",
+      "order": 5,
+      "slides": [
+        {
+          "type": "intro",
+          "text": {
+            "fr": "Le 21 juillet 1939, la goélette CRANE ISLAND quitte Québec en direction de Montréal avec une cargaison de bois de construction. Le temps est clair, la visibilité est bonne et la goélette est munie des feux règlementaires à l’avant comme à l’arrière pour être facilement repérable dans la nuit. Or, à 3 h du matin, à proximité de Batiscan, la CRANE ISLAND est heurtée par l’arrière. Le KIRISIMA MARU, un cargo japonais de grande taille, poursuit sa route sans s’arrêter. Le choc fait chavirer la goélette qui se rompt en deux, entraînant la mort de quatre personnes à bord, dont le second Rosario Bernier, sa femme et leur fils âgé d’un an et demi. Seuls le capitaine Léo Bernier et Maurice Roy survivent après avoir atteint à la nage le rivage de Saint-Jean-Deschaillons. Les corps des parents sont récupérés quelques jours plus tard, mais celui de l’enfant ne sera jamais retrouvé. \n\nMalgré les conclusions de l'enquête tenant le KIRISIMA MARU responsable de l’accident, aucune sanction n'est imposée puisque le navire n’est pas canadien. Le brevet du pilote québécois sera quant à lui suspendu pour une durée de deux mois.",
+            "en": "On July 21, 1939, the schooner CRANE ISLAND left Quebec City bound for Montreal with a cargo of lumber. The weather was clear, visibility good, and the schooner was fitted with navigation lights both fore and aft, making it easy to spot in the dark. At 3 a.m., near Batiscan, the CRANE ISLAND was struck from astern. The KIRISIMA MARU, a large Japanese freighter, continued on without stopping. The impact capsized the schooner, which broke in two, killing four people on board, including mate Rosario Bernier, his wife, and their one-and-a-half-year-old son. Only Captain Léo Bernier and Maurice Roy survived after swimming to shore at Saint-Jean-Deschaillons. The parents' bodies were recovered a few days later, but the child's body was never found.\n\nDespite the conclusions of the investigation holding the KIRISIMA MARU responsible for the accident, no penalties were imposed, given that the vessel was not Canadian. The Quebec pilot's licence, however, would be suspended for two months."
+          }
+        },
+        {
+          "type": "tiles",
+          "group": 1
+        },
+        {
+          "type": "tiles",
+          "group": 2
+        },
+        {
+          "type": "tiles",
+          "group": 3
+        },
+        {
+          "type": "tiles",
+          "group": 4
+        }
+      ]
+    },
+    {
+      "name": "Donnacona no 1",
+      "slug": "donnacona",
+      "order": 6,
+      "slides": [
+        {
+          "type": "intro",
+          "text": {
+            "fr": "En 1929, la compagnie Donnacona Pulp and Paper fait construire deux barges, la DONNACONA NO 1 et la DONNACONA NO 2, pour transporter du bois de pulpe de la Côte-Nord vers son usine à papier de Donnacona. \n\nDans la nuit du 26 au 27 octobre 1942, alors que le temps est mauvais, la DONNACONA NO 1, qui a quitté Sault-au-Mouton avec une cargaison de 250 cordes de bois et six marins à bord, suit son itinéraire en remontant la Traverse Saint-Roch où elle disparaît subitement. \n\nC’est l’équipage de sa jumelle, la NO 2, qui donne l’alerte s’apercevant qu’il n’a jamais croisé la NO 1. Les recherches restent infructueuses jusqu'à ce que deux corps soient repêchés par des résidents de l'Isle-Verte trois jours plus tard. Le 13 novembre, des chasseurs localisent les corps de trois autres marins sur les berges de l’Ile aux Lièvres, à près de 100 kilomètres du lieu du naufrage. Un dernier marin ne sera jamais retrouvé. Selon l’hypothèse la plus plausible, le navire aurait été submergé par les fortes vagues de la Traverse Saint-Roch.\n\nLe 5 juillet 2021, des plongeurs confirment officiellement l'identification de l'épave près de Saint-Roch-des-Aulnaies, au sud de l’Isle-aux-Coudres, mettant ainsi fin à un mystère vieux de 65 ans.",
+            "en": "In 1929, Donnacona Pulp and Paper built two barges, DONNACONA NO 1 and DONNACONA NO 2, to transport pulpwood from the North Shore to its Donnacona paper mill. \n\nOn the night of October 26 to 27, 1942, in bad weather, the DONNACONA NO 1, which had left Sault-au-Mouton with a cargo of 250 cords of wood and six sailors on board, made her way up the Traverse Saint-Roch, then vanished. \n\nIt was the crew of her sister ship, NO 2, who raised the alarm, realizing that they had never come across NO 1. The search was fruitless until two bodies were recovered by Isle-Verte residents three days later. On November 13, hunters located the bodies of three more sailors on the shores of Ile aux Lièvres, nearly 100 kilometres from the wreck site. One last sailor was never found. The most plausible hypothesis is that the ship was submerged by the strong waves of the Traverse Saint-Roch.\n\nOn July 5, 2021, divers officially confirmed the identification of the wreck near Saint-Roch-des-Aulnaies, south of Isle-aux-Coudres, putting an end to a 65-year-old mystery."
+          }
+        },
+        {
+          "type": "tiles",
+          "group": 1
+        },
+        {
+          "type": "tiles",
+          "group": 2
+        },
+        {
+          "type": "tiles",
+          "group": 3
+        },
+        {
+          "type": "tiles",
+          "group": 4
+        }
+      ]
+    },
+    {
+      "name": "La Joshuée",
+      "slug": "joshuee",
+      "order": 7,
+      "slides": [
+        {
+          "type": "intro",
+          "text": {
+            "fr": "La goélette LA JOSUHÉE, appartenant au capitaine Joseph Desgagnés de Saint-Joseph-de-la-Rive, s'échoue le 31 octobre 1939 près de la Pointe Ouest de l’Ile Verte. L'équipage, dirigé par le fils du propriétaire, Jean-Paul Desgagnés, se compose de Richard Bouchard et Roland Dufour. \n\nManquant d'expérience, la décision de quitter Trois-Pistoles avec une cargaison de bois de construction aurait été prise dans des conditions météorologiques peu favorables, avec une tempête de neige qui débutait et un fort courant du baissant, laissant peu de marge de manœuvre. \n\nAprès l'échouement, l'équipage débarque en sécurité, aidé par les insulaires et le gardien du phare. Quelques heures plus tard, au matin, LA JOSUHÉE est complètement détruite. À marée basse, une équipe s’affaire à sauver une partie de la cargaison et à démanteler le moteur et les gréements* pour les ramener sur la rive avec un traîneau. On retrouve aussi quelques effets personnels rejetés par la mer dont la petite statuette de plâtre de Saint-Joseph intacte qui avait été placée dans la timonerie* pour protéger le bateau et ses marins. \n\n*Gréements : Ensemble des mâts, des vergues, des voiles et des manœuvres nécessaires à la propulsion d'un navire à voile.\n\n*Timonerie : Cabine de pilotage d’où on dirige un navire.",
+            "en": "The motor schooner LA JOSUHÉE, owned by Captain Joseph Desgagnés of Saint-Joseph-de-la-Rive, ran aground on October 31, 1939, near the West Point of Ile Verte. The crew, led by the owner's son Jean-Paul Desgagnés, included Richard Bouchard and Roland Dufour. \n\nLacking experience, the crew’s decision to leave Trois-Pistoles with a cargo of lumber was made under unfavourable weather conditions, an incoming snowstorm and a strong downdraft, leaving little room for manoeuvre. \n\nAfter the grounding, the crew disembarked safely, aided by the islanders and the lighthouse keeper. By morning, the schooner had been completely demolished. The LA JOSUHÉE no longer existed! At low tide, a team went to work to salvage some of the cargo, dismantling the engine and rigging* and bringing it ashore on a sledge. A few personal effects were also found washed up on the shoreline, including the small, intact plaster statuette of St. Joseph that had been placed in the wheelhouse* to protect the schooner and her crew. \n\n*Rigging: All the masts, yardarms, sails and equipment needed to propel a sailing vessel.\n\n*Wheelhouse: The cockpit from which a ship is steered."
+          }
+        },
+        {
+          "type": "tiles",
+          "group": 1
+        },
+        {
+          "type": "tiles",
+          "group": 2
+        },
+        {
+          "type": "tiles",
+          "group": 3
+        }
+      ]
+    },
+    {
+      "name": "Leecliffe Hall",
+      "slug": "leecliffe",
+      "order": 8,
+      "slides": [
+        {
+          "type": "intro",
+          "text": {
+            "fr": "Le 5 septembre 1964 vers 17 h 15, le LEECLIFFE HALL, un vraquier des Grands Lacs, et le cargo grec APOLLONIA entrent en collision dans un épais brouillard près de Saint-Joseph-de-la-Rive. \n\nL’équipage du LEECLIFFE HALL, qui transporte 24 504 tonnes de minerai de fer, évacue sain et sauf, mais le navire a subi des dommages importants et commence à s'enfoncer. Or, la marée baissante, combinée à l’arrivée d’un remorqueur, redonne espoir au commandant qui croit pouvoir sauver le navire et sa cargaison en l’échouant sur une plage voisine. Alors que des volontaires s’activent et retournent à bord pour participer à la manœuvre, le LEECLIFFE HALL disparaît soudainement dans les eaux froides du fleuve à 22 h 30, emportant avec lui neuf marins. Seuls six survivants sont repêchés, laissant dans le deuil les familles de Jean-Louis Desjardins, timonier, de Michael Modrak, chef cuisinier, et de Guy Descheneaux, officier mécanicien. Au printemps suivant, l'épave est dynamitée en partie pour des raisons de sécurité maritime. En 2016, la cloche et la plaque du vraquier sont récupérées par des membres du groupe de Plongeurs d'épaves techniques du Québec (PETQ) de la région de Montréal. On peut maintenant les voir ici exposées au Musée maritime de Charlevoix.",
+            "en": "At around 5:15 p.m. on September 5, 1964, the Great Lakes bulk carrier LEECLIFFE HALL and the Greek freighter APOLLONIA collided in dense fog near Saint-Joseph-de-la-Rive. \n\nThe crew of the LEECLIFFE HALL, carrying 24,504 tonnes of iron ore from Sept-Iles, evacuated unharmed, but the vessel had sustained extensive damage and was beginning to sink. However, the falling tide, combined with the arrival of a tug, gave hope to the ship master, who believed he could save the ship and her cargo by grounding her on a nearby beach. While some crew members were busy returning to the ship to take part in the salvage, the LEECLIFFE HALL suddenly slid under the surface of the cold waters of the river at 10:30 p.m., taking nine sailors with her. Only six survivors were recovered, leaving the families of helmsman Jean-Louis Desjardins, chef Michael Modrak and engineer Guy Descheneaux in mourning. The following spring, the wreck was partially dynamited for maritime safety reasons. In 2016, the bulk carrier's bell and builder’s plate were recovered by members of the Montreal-area group Plongeurs d'épaves techniques du Québec (PETQ). The artefacts can be seen here on display at the Musée maritime de Charlevoix."
+          }
+        },
+        {
+          "type": "tiles",
+          "group": 1
+        }
+      ]
+    },
+    {
+      "name": "Méchins",
+      "slug": "mechins",
+      "order": 9,
+      "slides": [
+        {
+          "type": "intro",
+          "text": {
+            "fr": "Le vendredi 10 octobre 1958, la goélette à moteur MÉCHINS quitte Les Escoumins à destination de Forestville dans des conditions météorologiques initialement bonnes. Toutefois, peu de temps après l’appareillage, le vent se lève brusquement et souffle avec une rare violence, si bien qu’on ne revit plus jamais la goélette. \n\nLe lendemain, le corps du matelot Adrien Boucher est repéré près de Les Escoumins, portant un gilet de sauvetage. Les recherches se poursuivent pendant une dizaine de jours pour retrouver les trois corps manquants. La dépouille du capitaine Gilbert Mansour est repêchée à Pointe-à-Boisvert, tandis que les corps du second Horace Dufour et de l'ingénieur Henri-Paul Fortin ne referont jamais surface. Bien que les circonstances exactes de l'accident restent inconnues, certains navigateurs supposent qu'au plus fort de la tempête, le capitaine et deux de ses hommes auraient été emportés par les vagues alors qu'ils étaient sur le pont. Seul le matelot Boucher serait resté à bord ayant le temps d’enfiler sa veste de flottaison avant la perte complète du bâtiment.\n\nNote : La MÉCHINS hivernait régulièrement aux Chantiers maritimes de Charlevoix ltée de Saint-Joseph-de-la-Rive.",
+            "en": "On Friday, October 10, 1958, the motorized schooner MÉCHINS left Les Escoumins bound for Forestville in initially good weather conditions. However, shortly after setting sail, the wind suddenly picked up and became so violent that the schooner was never seen again. \n\nThe next day, the body of seaman Adrien Boucher was spotted near Les Escoumins, wearing a lifejacket. The search for the other three bodies continued for ten days. Captain Gilbert Mansour's remains were recovered at Pointe-à-Boisvert, while the bodies of mate Horace Dufour and engineer Henri-Paul Fortin were never found. Although the exact circumstances of the accident remain unknown, some sailors speculate that, at the height of the storm, the captain and two of his men were swept away by the waves washing over the deck. Only Seaman Boucher had time to don his life belt before the vessel was completely lost.\n\nNote: The MÉCHINS regularly wintered at the Chantiers maritimes de Charlevoix ltée in Saint-Joseph-de-la-Rive. "
+          }
+        },
+        {
+          "type": "tiles",
+          "group": 1
+        },
+        {
+          "type": "tiles",
+          "group": 2
+        },
+        {
+          "type": "video",
+          "path": "mechins.mp4"
+        }
+      ]
+    },
+    {
+      "name": "Minerva",
+      "slug": "minerva",
+      "order": 10,
+      "slides": [
+        {
+          "type": "intro",
+          "text": {
+            "fr": "Voilier de type brick (deux mâts) construit en Écosse en 1813, le MINERVA navigue entre le Royaume-Uni et les colonies britanniques jusqu’au jour de son naufrage, le 13 mai 1820. Arrivant de Liverpool, le MINERVA heurte alors des récifs près de la Traverse (au large de Saint-Jean-Port-Joli), à environ 54 milles nautiques de Québec, après que ses ancres aient lâché prise. Voyant que le bateau s’apprête à couler, le capitaine Morgan et son équipage abandonnent le vaisseau. C’est en ramant, à bord des chaloupes du navire, qu’ils parviendront au port de Québec le lendemain.\n\nEn 2007, près de l’Isle-aux-Coudres, un bateau sondeur repère une épave remarquable qui pourrait être celle du MINERVA. Il faudra toutefois attendre en juillet 2020 pour que des plongeurs l’explorent et y découvrent certains indices, comme la structure en bois et des artéfacts datant du milieu du XIXe siècle, qui pourraient corroborer cette hypothèse. L'épave est exceptionnellement bien conservée en raison des conditions quasi anoxiques* et de l'eau peu salée. L'identification n'est pas formelle mais est considérée comme plausible. Le ministère de la Culture et des Communications du Québec devra décider si l'épave est classée patrimoniale. La profondeur et les conditions de plongée complexes rendent les fouilles difficiles. \n\n*Anoxique : Insuffisance d'apport en oxygène.",
+            "en": "The MINERVA, a two-masted brig built in Scotland in 1813, sailed between the United Kingdom and the British colonies until her sinking on May 13, 1820. Arriving from Liverpool, the MINERVA struck reefs near La Traverse (off Saint-Jean-Port-Joli), some 54 nautical miles from Quebec City, after her anchors gave way. Seeing that the vessel was about to sink, Captain Morgan and his crew abandoned ship. Rowing in the ship's longboats, they reached the port of Québec the following day.\n\nIn 2007, near Isle-aux-Coudres, a sonar boat spotted a remarkable wreck that could be that of the MINERVA. It wasn't until 2020, however, that divers explored the wreck and found certain clues, such as the wooden structure and artifacts dating from the mid-19th century, which could corroborate this hypothesis. The wreck is exceptionally well preserved, thanks to the almost anoxic* conditions and the low salinity of the water. The identification is not definitive but is considered plausible. The Ministère de la Culture et des Communications du Québec will have to decide whether the wreck is classified as heritage. The depth and complex diving conditions made excavation difficult.\n\n*Anoxic: Low oxygen environment."
+          }
+        },
+        {
+          "type": "tiles",
+          "group": 1
+        }
+      ]
+    },
+    {
+      "name": "C.G.S. Montmagny",
+      "slug": "montmagny",
+      "order": 11,
+      "slides": [
+        {
+          "type": "intro",
+          "text": {
+            "fr": "Au matin du 17 septembre 1914, le C.G.S. MONTMAGNY, un baliseur ravitailleur de phare, quitte le quai du Roi pour une mission de réapprovisionnement. À son bord se trouve un équipage régulier de 46 hommes, deux passagers et deux familles de gardiens de phare. Au cours de la nuit qui suit, il croise le LINGAN qui effectue une fausse manœuvre et heurte violemment le baliseur. Sur le C.G.S. MONTMAGNY, la voie d’eau inonde rapidement la salle des machines et l’équipage se rue sur le pont des embarcations. L’étrave* du LINGAN a pénétré la section occupée par les deux familles. Selon le témoignage de certains, quatre enfants ont pu sortir des décombres des cabines, tandis que deux sont demeurés seuls dans des couloirs plongés dans la noirceur. On évalue que le C.G.S. MONTMAGNY a coulé en moins de cinq minutes. La plupart des survivants ont sauté directement à bord du LINGAN. D’autres se sont retrouvés à l’eau avant d’être secourus. Au total, 14 personnes dont 11 enfants ont perdu la vie dans cette tragédie maritime.\n\nEn novembre 2010, l'équipe du bateau sondeur GUILLEMOT localise l'épave du C.G.S. MONTMAGNY près de l'Île-aux-Grues, à seulement 12,19 mètres (40 pieds) de profondeur. Cette découverte survient près d'un siècle après le naufrage du navire.\n\n*Étrave : Pièce saillante qui forme la proue (l’avant) d'un navire.",
+            "en": "On the morning of September 17, 1914, the C.G.S. MONTMAGNY, a lighthouse supply buoy vessel, left the Quai du Roi for a resupply mission. On board was a regular crew of 46 men, two passengers and two families of lighthouse keepers. During the following night, she crossed paths with the steamer LINGAN, which made a wrong turn and collided violently with the buoy tender. On the C.G.S. MONTMAGNY, water quickly flooded the engine room and the crew rushed to the deck. The bow* of the LINGAN penetrated the section occupied by the two families. According to eyewitness accounts, four children emerged from the rubble of the cabins, while two were left alone in the darkened corridors. It is estimated that the C.G.S. MONTMAGNY sank in less than five minutes. Most of the survivors jumped straight aboard the LINGAN. Others found themselves in the water before being rescued. A total of 14 people, including 11 children and the vessel’s second mate, lost their lives in this maritime tragedy.\n\nIn November 2010, the GUILLEMOT sounder team located the wreck of the C.G.S. MONTMAGNY near Île-aux-Grues, at a depth of just 12.19 metres (40 feet). This discovery came almost a century after the ship's sinking.\n\n*Bow: Protruding part that forms the prow of a ship."
+          }
+        },
+        {
+          "type": "tiles",
+          "group": 1
+        },
+        {
+          "type": "tiles",
+          "group": 2
+        },
+        {
+          "type": "tiles",
+          "group": 3
+        },
+        {
+          "type": "tiles",
+          "group": 4
+        },
+        {
+          "type": "tiles",
+          "group": 5
+        }
+      ]
+    },
+    {
+      "name": "St-Roi David",
+      "slug": "st-roi-david",
+      "order": 12,
+      "slides": [
+        {
+          "type": "intro",
+          "text": {
+            "fr": "Le 28 octobre 1934, la goélette ST-ROI DAVID, affrétée par la Clarke Steamship Lines, transporte des marchandises générales et de la dynamite de Québec vers Natashquan. En raison d’une tempête de neige, le capitaine Joseph Albini Brie décide de trouver refuge, d’abord près de l’île aux Œufs puis à Sept-Iles. Sans nouvelle de la goélette, des marins inquiets amorcent les recherches pour finalement, ne retrouver que des débris de la coque du ST-ROI DAVID, une partie de la cargaison et le journal de bord près de Pointe à la Chasse. La tragédie fait six disparus, incluant le capitaine Brie, bien connu en Charlevoix, dont le corps n'a jamais été repêché. Seul la dépouille du second, J. Deschênes, a été récupérée sur le rivage de l'Île de la Boule six mois plus tard, le 23 avril 1935, près de Sept-Îles.",
+            "en": "On October 28, 1934, the motor schooner ST-ROI DAVID, chartered by Clarke Steamship Lines, was carrying general cargo and dynamite from Quebec City to Natashquan. Assailed by a snowstorm, Captain Joseph Albini Brie decided to seek refuge, first near Île aux Œufs and then in Sept-Iles. With no news of the schooner, worried sailors began searching, eventually finding only the wreckage of the ST-ROI DAVID's hull, part of the cargo and the logbook near Pointe à la Chasse. The tragedy claimed six lives, including that of Captain Brie, well known in Charlevoix; his body was never recovered. Only the body of the mate, J. Deschênes, was recovered from the shore of Île de la Boule six months later, on April 23, 1935, near Sept-Îles."
+          }
+        },
+        {
+          "type": "tiles",
+          "group": 1
+        },
+        {
+          "type": "tiles",
+          "group": 2
+        },
+        {
+          "type": "tiles",
+          "group": 3
+        }
+      ]
+    },
+    {
+      "name": "St-Thimothée",
+      "slug": "st-thimothee",
+      "order": 13,
+      "slides": [
+        {
+          "type": "intro",
+          "text": {
+            "fr": "Le 8 juillet 1959, la goélette ST-TIMOTHÉE, chargée de bois de pulpe, est sectionnée en deux dans une collision avec le cargo italien ANGELA FASSIO. L’accident s’est produit de nuit sur le fleuve Saint-Laurent à proximité de Saint-Irénée. Ayant brisé son arbre d’hélice, la goélette était à l’ancre et deux marins avaient pris la chaloupe pour aller à terre demander l’aide d’un remorqueur. Pendant ce temps, le capitaine Nérée Harvey de l’Isle-aux-Coudres avec un autre marin attendaient à bord. Malgré leurs signaux de sifflet pour alerter le cargo et signaler leur présence, l’ANGELA FASSIO a poursuivi sa route et coupé en deux la ST-TIMOTHÉE sans s’arrêter. Les deux hommes se sont sauvés de justesse et ont été rescapés par la goélette T.B.E. qui arrivait à la rescousse. Après l’accident, les deux sections de la goélette flottaient en raison de la cargaison de bois de pulpe et le T.B.E. a remorqué la partie avant vers le quai de l’Isle-aux-Coudres. ",
+            "en": "On July 8, 1959, the motor schooner ST-TIMOTHÉE, loaded with pulpwood, was split in two in a collision with the Italian freighter ANGELA FASSIO. The accident occurred at night on the St. Lawrence River near Saint-Irénée. Having broken her propeller shaft, the schooner was anchored, and two sailors took the lifeboat ashore to request assistance from a tug. Meanwhile, Captain Nérée Harvey of Isle-aux-Coudres and another sailor were waiting on board. Despite whistle signals, the freighter continued on her way, cutting the ST-TIMOTHÉE in two without stopping. The two men onboard narrowly escaped and were rescued by the motor schooner T.B.E., which arrived to tow them in. Both sections of the schooner were floating due to the cargo of pulpwood, and the T.B.E. towed the forward section to the Isle-aux-Coudres wharf."
+          }
+        },
+        {
+          "type": "tiles",
+          "group": 1
+        },
+        {
+          "type": "tiles",
+          "group": 2
+        },
+        {
+          "type": "tiles",
+          "group": 3
+        }
+      ]
+    },
+    {
+      "name": "Tritonica",
+      "slug": "tritonica",
+      "order": 14,
+      "slides": [
+        {
+          "type": "intro",
+          "text": {
+            "fr": "Il est environ 2 h du matin, le samedi 20 juillet 1963. Au large de Petite-Rivière-Saint-François, il y a abordage dans la brume entre le minéralier TRITONICA, qui transporte du minerai de titane de Havre-Saint-Pierre à Sorel, et le cargo ROONAGH HEAD, venant de Trois-Rivières. En quelques minutes, le TRITONICA sombre entraînant dans la mort 33 marins. \n\nLa vitesse excessive par mauvaise visibilité, une défaillance du radar et le non-respect des règles de navigation sont en cause. On attribue le grand nombre de pertes de vie à la rapidité du naufrage. Il faut dire que les écoutilles et les portes étanches du TRITONICA étaient demeurées ouvertes depuis son départ de Havre-Saint-Pierre ce qui l’a fait sombrer comme une pierre. De plus, la confusion régnant à bord dans les secondes suivant l’abordage et l’impossibilité de mettre rapidement les chaloupes de sauvetage à l’eau en raison de la forte gîte et du courant ont contribué à ce lourd bilan. \n\nQuelques mois après la tragédie, il a été décidé de laisser l’épave sur place. Les superstructures ont été coupées et la coque a été enfouie dans le lit du fleuve pour ne pas nuire à la navigation. \n\nDeux commissions d’enquête ont suivi et des mesures d'amélioration de la navigation ont été adoptées, notamment la création du premier centre de gestion du trafic maritime au monde permettant une meilleure communication fluviale. \n\nDes tombes anonymes au cimetière Mount Hermon à Sillery rappellent sobrement le drame.",
+            "en": "It was approximately 2:00 a.m. on Saturday, July 20, 1963, when off Petite-Rivière-Saint-François, the ore carrier TRITONICA, carrying titanium ore from Havre-Saint-Pierre to Sorel, collided in the fog with the freighter ROONAGH HEAD, coming from Trois-Rivières. Within minutes, the TRITONICA sank, taking the lives of 33 sailors. \n\nThe cause was determined as excessive speed in poor visibility, radar failure, and failure to observe navigation rules. The high death toll was attributed to the rapid sinking of the vessel. The TRITONICA's hatches and watertight doors had been left open since leaving Havre-Saint-Pierre, causing it to sink like a stone. In addition, the confusion on board in the seconds following the collision and the inability of quickly launching the lifeboats due to the heavy list and current contributed to the tragic toll. \n\nA few months after the event, it was decided to leave the wreckage in place. The superstructures were cut away, and the hull buried in the riverbed to avoid hindering navigation. \n\nTwo commissions of inquiry followed, and measures to improve navigation safety were adopted, including the creation of the world's first marine traffic management centre to improve river communications. \n\nAnonymous graves in Sillery's Mount Hermon cemetery are a sober reminder of the tragedy."
+          }
+        },
+        {
+          "type": "tiles",
+          "group": 1
+        },
+        {
+          "type": "tiles",
+          "group": 2
+        },
+        {
+          "type": "tiles",
+          "group": 3
+        },
+        {
+          "type": "tiles",
+          "group": 4
+        }
+      ]
+    }
+  ]
+}

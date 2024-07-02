@@ -1,0 +1,15 @@
+lftp -f "
+open ftp.cluster051.hosting.ovh.net
+user benoitx jmGqn2dRDuS6
+mirror -Rne --verbose --use-cache $ExcludeParams --parallel=10 --use-cache dist/ /www/dev/naufrage
+bye
+"
+
+lftp -f "
+open ftp.cluster051.hosting.ovh.net
+user benoitx jmGqn2dRDuS6
+mirror -Rne --verbose --use-cache $ExcludeParams --parallel=10 --use-cache "app/vj-boucherie Setup 1.0.0.exe" /www/dev/vj/app/app.exe
+bye
+"
+
+lftp -c "open -u benoitx,jmGqn2dRDuS6 ftp.cluster051.hosting.ovh.net; put -O /www/app/ 'app/vj_setup.exe'" 
