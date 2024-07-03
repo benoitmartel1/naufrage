@@ -2,7 +2,8 @@
   <div class="intro-wrapper">
     <Header :text="header" />
     <div class="intro">{{ text }}</div>
-    <div class="arrow-down" @click="$parent.changeSlide(1)"><Arrow /></div>
+    <div class="spacer"></div>
+    <!-- <div class="arrow-down" @click="$parent.changeSlide(1)"><Arrow /></div> -->
   </div>
 </template>
 
@@ -37,18 +38,22 @@ export default {
 }
 
 .intro {
+  font-weight: 400;
+
   //   height: 100%;
   //   flex-basis: 1;
   white-space: pre-wrap;
   font-size: 28px;
-  line-height: 1em;
+  line-height: 1.2em;
   text-align: center;
+  width: 80%;
+  margin: auto;
 }
 .arrow-down {
   width: 100%;
   display: flex;
   justify-content: center;
   margin-top: 30px;
-  transform: rotate(-90deg);
+  transform: scale(-1);
 }
 </style>

@@ -10,8 +10,11 @@ export default {
   },
   computed: {
     timerDuration() {
+      return 20
       //   return this.$store.state.idleTime || 3
-      return 4
+    },
+    borneIndex() {
+      return this.$store.state.borne
     },
   },
   watch: {
@@ -33,11 +36,11 @@ export default {
       //Every second, if idle timer is active, decrement timeLeft
       if (this.idleTimerActive == true) {
         timeLeft--
-        // console.log(this.currentItem)
+        console.log(timeLeft)
         //If no time left, go to default page
         if (timeLeft <= 0) {
           console.log('timed_out')
-          //   location.reload()
+          this.$router.push('/langue')
           this.$store.commit('setLang', 'fr')
           this.resetIdleTimer()
         }
@@ -56,6 +59,7 @@ export default {
   },
   methods: {
     resetIdleTimer() {
+      console.log('reset to ' + this.timerDuration)
       timeLeft = this.timerDuration
     },
   },

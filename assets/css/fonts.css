@@ -4,6 +4,24 @@
   font-weight: 800;
 }
 @font-face {
+  font-family: 'Montserrat';
+  src: url('@/assets/fonts/Montserrat/static/Montserrat-ExtraBold.ttf')
+    format('truetype');
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('@/assets/fonts/Montserrat/static/Montserrat-SemiBold.ttf')
+    format('truetype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('@/assets/fonts/Montserrat/static/Montserrat-Regular.ttf')
+    format('truetype');
+  font-weight: 400;
+}
+@font-face {
   font-family: 'Neulis';
   src: url('@/assets/fonts/Neulis/NeulisAlt-SemiBold.woff') format('woff');
   font-weight: 700;

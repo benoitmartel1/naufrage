@@ -1,6 +1,7 @@
 <template>
   <div :class="[{ appro: approMode }]">
     <div id="app" class="no-cursor">
+      <div class="secret" @click="clickSecret()"></div>
       <Nuxt />
     </div>
   </div>
@@ -9,6 +10,8 @@
 <script>
 import idle from '~/mixins/idle.js'
 let movieInterval
+let secretTimeout
+let secretCounter = 0
 export default {
   data() {
     return {
@@ -31,6 +34,24 @@ export default {
       }
     })
   },
+  methods: {
+    clickSecret() {
+      clearTimeout(secretTimeout)
+      secretCounter++
+      console.log(secretCounter)
+      if (secretCounter >= 4) {
+        this.resetSecret()
+        this.$router.push('/')
+      } else {
+        secretTimeout = setTimeout(() => {
+          this.resetSecret()
+        }, 300)
+      }
+    },
+    resetSecret() {
+      secretCounter = 0
+    },
+  },
   mixins: [idle],
 }
 </script>
@@ -45,13 +66,21 @@ body {
 #app {
   position: relative;
   background: url('~/assets/img/back_blur.jpg');
-
+  //   filter: brightness(0);
   transition: transform 600ms ease-out;
   width: 1920px;
   height: 1080px;
   overflow: hidden;
 }
-
+.secret {
+  width: 100px;
+  height: 100px;
+  //   background-color: white;
+  //   opacity: 0.2;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 .appro {
   //   margin: 30px;
   transform: scale(0.9);

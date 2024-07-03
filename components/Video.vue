@@ -2,16 +2,7 @@
   <div>
     <Header :text="header" />
     <div v-show="showVideo" class="video-wrapper" @click="toggleVideo($event)">
-      <video
-        disableRemotePlayback
-        id="video"
-        :src="videoPath()"
-        @load="
-          {
-            alert('load')
-          }
-        "
-      ></video>
+      <video disableRemotePlayback id="video" :src="videoPath()"></video>
     </div>
   </div>
 </template>
@@ -33,13 +24,18 @@ export default {
   mounted() {
     var myVid = document.getElementById('video')
     myVid.onloadeddata = this.showVideo = true
+    myVid.onended = function () {
+      console.log('done')
+      myVid.currentTime = 0
+      myVid.pause()
+    }
   },
 }
 </script>
 
 <style lang="scss" scoped>
 .video-wrapper {
-  animation: fadeVideoInOpacity 800ms;
+  animation: fadeVideoInOpacity 800ms both;
 }
 @keyframes fadeVideoInOpacity {
   0% {
@@ -55,6 +51,7 @@ export default {
 video {
   width: 1400px;
   border-radius: 20px;
+  //   opacity: 0;
 }
 .arrow-down {
   width: 100%;

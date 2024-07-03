@@ -1,27 +1,19 @@
 export const state = () => ({
   lang: 'fr',
-
+  borne: 0,
   idleTime: 60,
 
-  moviePlaying: false,
   settings: {},
 })
 
 export const mutations = {
-  resetGameData(state) {
-    state.panier.now.list = []
-    state.panier.then.list = []
-    state.score = 0
-  },
   setLang(state, l) {
     state.lang = l
   },
-  setScore(state, s) {
-    state.score = s
+  setBorne(state, nb) {
+    state.borne = nb
   },
-  setLoop(state, s) {
-    state.settings.movieLoop = s
-  },
+
   setSettings(state, s) {
     state.settings = s
 

@@ -1,0 +1,91 @@
+{
+  "items": [
+    {
+      "name": "Jean Richard",
+      "slug": "journaux",
+      "order": 0,
+      "slides": [
+        {
+          "type": "intro",
+          "text": {
+            "fr": "La dernière goélette construite au Québec est lancée au printemps 1959 à Petite-Rivière-Saint-François en Charlevoix. Baptisée JEAN RICHARD, pour honorer Richard Carré, le fils du capitaine, elle connaîtra une existence courte et tumultueuse. D’abord son premier capitaine, Paul-Émile Carré, décède prématurément après quatre ans, puis son fils Richard, étudiant à l’Institut maritime du Québec pour devenir lui aussi capitaine, perd tragiquement la vie en mer à l’âge de 20 ans. Malgré divers changements de propriétaires et sa transformation en bateau d'excursion, son sort est scellé après une série de crises maritimes et un abandon. Celle qui a été rebaptisée VILLE DE VANIER connaît une fin abrupte, se retrouvant à demi-submergée dans la rivière des Outaouais, avant d’être incendiée vers 1983.",
+            "en": "The last motor schooner built in Quebec was launched in the spring of 1959 at Petite-Rivière-Saint-François in Charlevoix. Named JEAN RICHARD to honour Richard Carré, the captain's son, it had a short and tumultuous existence. Its first captain, Paul-Émile Carré, died prematurely after four years, and his son Richard, who was studying to become a ship master at the Quebec Maritime Institute, tragically lost his life at sea at the age of 20. Despite various changes of ownership and its transformation into a tour boat, the vessel’s fate was sealed after a series of maritime crises and abandonment. What was renamed VILLE DE VANIER ended abruptly, half-submerged in the Ottawa River, before being set on fire around 1983."
+          }
+        }
+      ]
+    },
+    {
+      "name": { "fr": "Journaux", "en": "Newspapers" },
+      "slug": "journaux",
+      "order": 1,
+      "slides": [
+        {
+          "type": "tiles",
+          "group": 1
+        }
+      ]
+    },
+    {
+      "name": { "fr": "Photos", "en": "Pictures" },
+      "slug": "photos",
+      "order": 2,
+      "slides": [
+        {
+          "type": "tiles",
+          "group": 1
+        },
+        {
+          "type": "tiles",
+          "group": 2
+        },
+        {
+          "type": "tiles",
+          "group": 3
+        },
+        {
+          "type": "tiles",
+          "group": 4
+        },
+        {
+          "type": "tiles",
+          "group": 5
+        },
+        {
+          "type": "tiles",
+          "group": 6
+        }
+      ]
+    },
+    {
+      "name": { "fr": "Videos", "en": "Videos" },
+      "slug": "jean-richard",
+      "order": 3,
+      "slides": [
+        {
+          "type": "tiles",
+          "group": 1
+        },
+        {
+          "type": "tiles",
+          "group": 2
+        },
+        {
+          "type": "tiles",
+          "group": 3
+        },
+        {
+          "type": "tiles",
+          "group": 4
+        },
+        {
+          "type": "tiles",
+          "group": 5
+        },
+        {
+          "type": "tiles",
+          "group": 6
+        }
+      ]
+    }
+  ]
+}

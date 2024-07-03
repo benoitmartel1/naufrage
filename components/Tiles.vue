@@ -43,7 +43,7 @@ export default {
     transform: scale(0.95);
     transform-origin: center 0;
     .mover {
-      animation: moveLeft 1000ms cubic-bezier(0.16, 0.82, 0.38, 0.96);
+      //   animation: moveLeft 1000ms cubic-bezier(0.16, 0.82, 0.38, 0.96);
     }
   }
 }
@@ -64,9 +64,9 @@ export default {
   width: 50px;
   height: 290px;
   margin-right: 10px;
-  background-color: red;
+  //   background-color: red;
   border-radius: 20px;
-  border: 6px solid black;
+  border: 6px solid rgb(9, 10, 21);
   &:nth-of-type(1),
   &:nth-of-type(2) {
     margin-bottom: 10px;
@@ -94,7 +94,19 @@ export default {
   }
 
   img {
+    animation: scaleIn 900ms cubic-bezier(0.16, 0.82, 0.38, 0.96) both;
+    // animation-delay: 200ms;
     width: 100%;
+  }
+  @keyframes scaleIn {
+    from {
+      // opacity: 0;
+      transform: scale(1.3) translate3d(0px, 0px, 0px);
+    }
+    to {
+      // opacity: 1;
+      transform: scale(1) translate3d(0px, 0px, 0px);
+    }
   }
 }
 </style>

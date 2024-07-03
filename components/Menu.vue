@@ -23,7 +23,7 @@
             />
           </svg>
         </div>
-        <div class="name title" @click="onClick(item)">
+        <div class="name title" @pointerdown="onClick(item)">
           {{ item.name.toUpperCase() }}
         </div>
       </div>

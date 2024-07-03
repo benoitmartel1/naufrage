@@ -1,0 +1,34 @@
+{
+  "bornes": [
+    {
+      "fr": {
+        "title": "Tous les naufrages",
+        "sub": "Version française"
+      },
+      "en": {
+        "title": "All shipwrecks",
+        "sub": "Original version with subtitles"
+      }
+    },
+    {
+      "fr": {
+        "title": "Jean Richard",
+        "sub": "Version française"
+      },
+      "en": {
+        "title": "Jean Richard",
+        "sub": "Original version with subtitles"
+      }
+    },
+    {
+      "fr": {
+        "title": "Aigle d'océan",
+        "sub": "Version française"
+      },
+      "en": {
+        "title": "Aigle d'océan",
+        "sub": "Original version with subtitles"
+      }
+    }
+  ]
+}

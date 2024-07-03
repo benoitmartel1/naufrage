@@ -47,23 +47,27 @@
       </div>
     </div>
     <div class="wrapper">
-      <Menu v-if="!currentType" :items="naufrages" />
+      <Pastilles
+        v-if="!currentType"
+        :items="filteredItems"
+        :header="'Jean-Richard'"
+      />
       <div class="column-wrapper">
         <Intro
           v-if="currentType == 'intro'"
           :text="currentSlide?.text[lang]"
-          :header="currentItem.name"
+          :header="'Jean-Richard'"
         />
         <Video
           v-if="currentType == 'video'"
           :path="currentSlide?.path"
-          :header="currentItem.name"
+          :header="'Jean-Richard'"
         />
         <Tiles
           v-if="currentType == 'tiles'"
           :imagesPath="imagesPath"
           :tiles="currentSlide?.tiles"
-          :header="currentItem.name"
+          :header="'Jean-Richard'"
           :key="slideIndex"
         />
       </div>
@@ -72,20 +76,21 @@
 </template>
 
 <script>
-import { naufrages } from '~/static/data/borne_1.json?nocache=123'
+import { items } from '~/static/data/borne_2.json?nocache=123'
 
 export default {
   data() {
     return {
-      naufrages: [],
+      items: [],
       currentItem: null,
       slideIndex: 0,
     }
   },
   mounted() {
-    this.naufrages = JSON.parse(
-      JSON.stringify(naufrages.sort((a, b) => a.order - b.order))
+    this.items = JSON.parse(
+      JSON.stringify(items.sort((a, b) => a.order - b.order))
     )
+    this.currentItem = this.items[0]
     // this.idleTimerActive = true
   },
 
@@ -108,6 +113,9 @@ export default {
     },
   },
   computed: {
+    filteredItems() {
+      return items.filter((i) => i.order > 0)
+    },
     lang() {
       return this.$store.state.lang
     },
@@ -121,7 +129,7 @@ export default {
       return this.currentSlide?.type || null
     },
     imagesPath() {
-      return 'borne_1/' + this.currentItem.slug + '/0' + this.slideIndex
+      return 'borne_2/' + this.currentItem.slug + '/0' + this.slideIndex
     },
   },
   watch: {
