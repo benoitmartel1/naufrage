@@ -2,9 +2,14 @@
   <div class="pastilles-wrapper">
     <Header :text="header" />
     <div class="main">
-      <div class="naufrages" v-for="(item, index) in items" :key="item + index">
+      <div
+        class="naufrages"
+        @pointerdown="onClick(item)"
+        v-for="(item, index) in items"
+        :key="item + index"
+      >
         <div>
-          <div class="name" @pointerdown="onClick(item)">
+          <div class="name">
             {{ item.name[lang].toUpperCase() }}
           </div>
         </div>
@@ -19,6 +24,7 @@ export default {
   props: ['items', 'header'],
   methods: {
     onClick(item) {
+      console.log(item)
       this.$parent.currentItem = item
     },
   },

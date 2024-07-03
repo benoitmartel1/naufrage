@@ -56,7 +56,7 @@
         />
         <Video
           v-if="currentType == 'video'"
-          :path="currentSlide?.path"
+          :path="currentSlide?.path[lang]"
           :header="currentItem.name"
         />
         <Tiles

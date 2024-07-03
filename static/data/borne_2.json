@@ -60,33 +60,54 @@
       ]
     },
     {
-      "name": { "fr": "Videos", "en": "Videos" },
+      "name": { "fr": "Vidéos", "en": "Videos" },
       "slug": "jean-richard",
       "order": 3,
       "slides": [
         {
-          "type": "tiles",
-          "group": 1
-        },
-        {
-          "type": "tiles",
-          "group": 2
-        },
-        {
-          "type": "tiles",
-          "group": 3
-        },
-        {
-          "type": "tiles",
-          "group": 4
-        },
-        {
-          "type": "tiles",
-          "group": 5
-        },
-        {
-          "type": "tiles",
-          "group": 6
+          "type": "wall",
+          "videos": [
+            {
+              "fr": {
+                "name": "La fin des goélettes de bois",
+                "path": "jean-richard/1.mp4"
+              },
+              "en": {
+                "name": "La fin des goélettes de bois",
+                "path": "jean-richard/1_en.mp4"
+              }
+            },
+            {
+              "fr": {
+                "name": "Les parties de la goélette",
+                "path": "jean-richard/2.mp4"
+              },
+              "en": {
+                "name": "Les parties de la goélette",
+                "path": "jean-richard/2_en.mp4"
+              }
+            },
+            {
+              "fr": {
+                "name": "La JEAN RICHARD :\nses dernières années et son épave",
+                "path": "jean-richard/3.mp4"
+              },
+              "en": {
+                "name": "La JEAN RICHARD :\nses dernières années et son épave",
+                "path": "jean-richard/3_en.mp4"
+              }
+            },
+            {
+              "fr": {
+                "name": "Plongée de l'épave",
+                "path": "jean-richard/4.mp4"
+              },
+              "en": {
+                "name": "Plongée de l'épave",
+                "path": "jean-richard/4_en.mp4"
+              }
+            }
+          ]
         }
       ]
     }

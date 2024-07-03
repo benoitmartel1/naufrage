@@ -1,16 +1,19 @@
 {
   "items": [
     {
-      "name": "Jean Richard",
+      "name": "Aigle d'Océan",
       "slug": "journaux",
       "order": 0,
       "slides": [
         {
           "type": "intro",
           "text": {
-            "fr": "La dernière goélette construite au Québec est lancée au printemps 1959 à Petite-Rivière-Saint-François en Charlevoix. Baptisée JEAN RICHARD, pour honorer Richard Carré, le fils du capitaine, elle connaîtra une existence courte et tumultueuse. D’abord son premier capitaine, Paul-Émile Carré, décède prématurément après quatre ans, puis son fils Richard, étudiant à l’Institut maritime du Québec pour devenir lui aussi capitaine, perd tragiquement la vie en mer à l’âge de 20 ans. Malgré divers changements de propriétaires et sa transformation en bateau d'excursion, son sort est scellé après une série de crises maritimes et un abandon. Celle qui a été rebaptisée VILLE DE VANIER connaît une fin abrupte, se retrouvant à demi-submergée dans la rivière des Outaouais, avant d’être incendiée vers 1983.",
-            "en": "The last motor schooner built in Quebec was launched in the spring of 1959 at Petite-Rivière-Saint-François in Charlevoix. Named JEAN RICHARD to honour Richard Carré, the captain's son, it had a short and tumultuous existence. Its first captain, Paul-Émile Carré, died prematurely after four years, and his son Richard, who was studying to become a ship master at the Quebec Maritime Institute, tragically lost his life at sea at the age of 20. Despite various changes of ownership and its transformation into a tour boat, the vessel’s fate was sealed after a series of maritime crises and abandonment. What was renamed VILLE DE VANIER ended abruptly, half-submerged in the Ottawa River, before being set on fire around 1983."
+            "fr": "En août 1975, l'AIGLE D’OCÉAN, un caboteur de Saint-Joseph-de-la-Rive, effectue son dernier voyage en Arctique pour ravitailler des villages inuits, avant d’être retiré du service. Le 20 août, après un déchargement à Koartak, il se dirige, avec un équipage de neuf hommes, vers la mer du Labrador lorsqu’une météo glaciale et de forts vents le contraignent à trouver refuge près du brise-glace NORMAN McLEOD ROGERS de la Garde côtière canadienne. Alors qu’il est presque arrivé, le navire éprouve des difficultés en raison d’une importante voie d'eau dans une mer agitée. Son message de détresse alarme l’équipage du brise-glace qui se mobilise pour aider le caboteur en train de chavirer. Dans un dernier mouvement, l’AIGLE D’OCÉAN coule par l’arrière. Cinq survivants et deux corps sont récupérés dans les heures qui suivent. Pendant ce temps, l’hélicoptère du brise-glace ne répond plus aux appels radio. Des recherches au sol sont entreprises, mais ce n’est que le lendemain qu’on retrouve les restes de l'hélicoptère avec les corps sans vie du pilote et du mécanicien. ",
+            "en": "In August 1975, the Saint-Joseph-de-la-Rive steel coaster AIGLE D'OCÉAN, with a crew of nine, made her last trip to the Arctic to supply Inuit villages before being withdrawn from service. \n\nOn August 20, after unloading at Koartak, she headed for the Labrador Sea when icy weather and strong winds forced her to seek shelter near the Canadian Coast Guard icebreaker NORMAN MCLEOD ROGERS. Just as she was about to arrive, the vessel encountered a large inflow of water in rough seas. Her distress message reached the icebreaker's crew, who mobilized to help the capsizing vessel and her crew of nine men. Despite a last effort, the AIGLE D'OCÉAN sank by the stern. Five survivors and two bodies were recovered in the hours that followed. Meanwhile, the icebreaker's helicopter stopped responding to radio calls, and a ground search was launched. It was not until the following morning that the wreckage of the helicopter was found; the crash had killed both the pilot and the mechanic."
           }
+        },
+        {
+          "type": null
         }
       ]
     },
@@ -22,6 +25,14 @@
         {
           "type": "tiles",
           "group": 1
+        },
+        {
+          "type": "tiles",
+          "group": 2
+        },
+        {
+          "type": "tiles",
+          "group": 3
         }
       ]
     },
@@ -49,41 +60,68 @@
         {
           "type": "tiles",
           "group": 5
-        },
-        {
-          "type": "tiles",
-          "group": 6
         }
       ]
     },
     {
-      "name": { "fr": "Videos", "en": "Videos" },
-      "slug": "jean-richard",
+      "name": { "fr": "Vidéos", "en": "Videos" },
+      "slug": "aigle",
       "order": 3,
       "slides": [
         {
-          "type": "tiles",
-          "group": 1
-        },
-        {
-          "type": "tiles",
-          "group": 2
-        },
-        {
-          "type": "tiles",
-          "group": 3
-        },
-        {
-          "type": "tiles",
-          "group": 4
-        },
-        {
-          "type": "tiles",
-          "group": 5
-        },
-        {
-          "type": "tiles",
-          "group": 6
+          "type": "wall",
+          "videos": [
+            {
+              "fr": {
+                "name": "Accident",
+                "path": "aigle/Aigle accident.mp4"
+              },
+              "en": {
+                "name": "Accident",
+                "path": "aigle/Aigle accident ang.mp4"
+              }
+            },
+            {
+              "fr": {
+                "name": "Noyade 1",
+                "path": "aigle/Aigle noyade 1.mp4"
+              },
+              "en": {
+                "name": "Noyade 1",
+                "path": "aigle/Aigle noyade 1 ang.mp4"
+              }
+            },
+            {
+              "fr": {
+                "name": "Noyade 2",
+                "path": "aigle/Aigle noyade 2.mp4"
+              },
+              "en": {
+                "name": "Noyade 2",
+                "path": "aigle/Aigle noyade 2 ang.mp4"
+              }
+            },
+            {
+              "fr": {
+                "name": "Noyade 3",
+                "path": "aigle/Aigle noyade 3.mp4"
+              },
+              "en": {
+                "name": "Noyade 3",
+                "path": "aigle/Aigle noyade 3 ang.mp4"
+              }
+            },
+            {
+              "fr": {
+                "name": "Sécurité",
+                "path": "aigle/Aigle sécurité.mp4"
+              },
+              "en": {
+                "name": "Noyade 3",
+                "path": "aigle/Aigle sécurité ang.mp4"
+              }
+            }
+          ]
         }
       ]
     }

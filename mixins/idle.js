@@ -10,7 +10,7 @@ export default {
   },
   computed: {
     timerDuration() {
-      return 20
+      return 90
       //   return this.$store.state.idleTime || 3
     },
     borneIndex() {

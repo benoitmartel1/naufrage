@@ -48,7 +48,10 @@
         },
         {
           "type": "video",
-          "path": "baie-st-paul.mp4"
+          "path": {
+            "fr": "naufrages/baie-st-paul.mp4",
+            "en": "naufrages/baie-st-paul_en.mp4"
+          }
         }
       ]
     },
@@ -70,7 +73,10 @@
         },
         {
           "type": "video",
-          "path": "cooperative.mp4"
+          "path": {
+            "fr": "naufrages/cooperative.mp4",
+            "en": "naufrages/cooperative_en.mp4"
+          }
         }
       ]
     },
@@ -92,7 +98,10 @@
         },
         {
           "type": "video",
-          "path": "coudres.mp4"
+          "path": {
+            "fr": "naufrages/coudres.mp4",
+            "en": "naufrages/coudres_en.mp4"
+          }
         }
       ]
     },
@@ -222,7 +231,10 @@
         },
         {
           "type": "video",
-          "path": "mechins.mp4"
+          "path": {
+            "fr": "naufrages/mechins.mp4",
+            "en": "naufrages/mechins_en.mp4"
+          }
         }
       ]
     },

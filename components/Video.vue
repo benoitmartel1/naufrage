@@ -1,7 +1,12 @@
 <template>
-  <div>
+  <div class="video-wrapper">
+    <div v-if="closeButton" class="close" @pointerdown="closeVideo()">X</div>
     <Header :text="header" />
-    <div v-show="showVideo" class="video-wrapper" @click="toggleVideo($event)">
+    <div
+      v-show="showVideo"
+      class="video-container"
+      @pointerdown="toggleVideo($event)"
+    >
       <video disableRemotePlayback id="video" :src="videoPath()"></video>
     </div>
   </div>
@@ -9,7 +14,7 @@
 
 <script>
 export default {
-  props: ['path', 'header'],
+  props: ['path', 'header', 'closeButton'],
   data() {
     return { showVideo: false }
   },
@@ -20,14 +25,19 @@ export default {
     toggleVideo(e) {
       e.target.paused ? e.target.play() : e.target.pause()
     },
+    closeVideo() {
+      this.$parent.currentVideo = null
+    },
   },
   mounted() {
     var myVid = document.getElementById('video')
     myVid.onloadeddata = this.showVideo = true
-    myVid.onended = function () {
-      console.log('done')
+    myVid.onended = () => {
       myVid.currentTime = 0
       myVid.pause()
+      if (this.closeButton) {
+        this.$parent.currentVideo = null
+      }
     }
   },
 }
@@ -35,6 +45,10 @@ export default {
 
 <style lang="scss" scoped>
 .video-wrapper {
+  width: 1600px;
+  text-align: center;
+}
+.video-container {
   animation: fadeVideoInOpacity 800ms both;
 }
 @keyframes fadeVideoInOpacity {
@@ -47,7 +61,17 @@ export default {
     transform: scale(1);
   }
 }
-
+.close {
+  right: 0;
+  border-radius: 100%;
+  border: 2px solid white;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 video {
   width: 1400px;
   border-radius: 20px;

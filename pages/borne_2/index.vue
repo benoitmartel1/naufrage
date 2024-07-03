@@ -46,28 +46,34 @@
         </div>
       </div>
     </div>
-    <div class="wrapper">
+    <div v-if="items[0]" class="wrapper">
       <Pastilles
         v-if="!currentType"
         :items="filteredItems"
-        :header="'Jean-Richard'"
+        :header="items[0]?.name"
       />
       <div class="column-wrapper">
         <Intro
           v-if="currentType == 'intro'"
           :text="currentSlide?.text[lang]"
-          :header="'Jean-Richard'"
+          :header="items[0]?.name"
         />
         <Video
           v-if="currentType == 'video'"
           :path="currentSlide?.path"
-          :header="'Jean-Richard'"
+          :header="items[0]?.name"
         />
         <Tiles
           v-if="currentType == 'tiles'"
           :imagesPath="imagesPath"
           :tiles="currentSlide?.tiles"
-          :header="'Jean-Richard'"
+          :header="items[0]?.name"
+          :key="slideIndex"
+        />
+        <Wall
+          v-if="currentType == 'wall'"
+          :videos="currentSlide?.videos"
+          :header="items[0]?.name"
           :key="slideIndex"
         />
       </div>
@@ -76,8 +82,6 @@
 </template>
 
 <script>
-import { items } from '~/static/data/borne_2.json?nocache=123'
-
 export default {
   data() {
     return {
@@ -87,11 +91,16 @@ export default {
     }
   },
   mounted() {
+    const items = require(`~/static/data/borne_${
+      this.borneIndex + 1
+    }.json?nocache=123`).items
+
+    // const { items } from '~/static/data/borne_2.json?nocache=123'
     this.items = JSON.parse(
       JSON.stringify(items.sort((a, b) => a.order - b.order))
     )
     this.currentItem = this.items[0]
-    // this.idleTimerActive = true
+    console.log(this.items)
   },
 
   methods: {
@@ -114,7 +123,7 @@ export default {
   },
   computed: {
     filteredItems() {
-      return items.filter((i) => i.order > 0)
+      return this.items.filter((i) => i.order > 0)
     },
     lang() {
       return this.$store.state.lang
@@ -129,12 +138,29 @@ export default {
       return this.currentSlide?.type || null
     },
     imagesPath() {
-      return 'borne_2/' + this.currentItem.slug + '/0' + this.slideIndex
+      return (
+        'borne_' +
+        (this.borneIndex + 1) +
+        '/' +
+        this.currentItem.slug +
+        '/0' +
+        (this.slideIndex + 1)
+      )
+    },
+    borneIndex() {
+      return this.$store.state.borne
     },
   },
   watch: {
-    timeLeft: function (o, n) {
-      console.log(o)
+    currentType: {
+      handler: function (newVal, oldVal) {
+        console.log(newVal)
+        if (newVal == null) {
+          this.slideIndex = 0
+          this.currentItem = null
+          console.log(this.slideIndex)
+        }
+      },
     },
   },
 }

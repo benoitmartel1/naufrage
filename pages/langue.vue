@@ -29,7 +29,7 @@ export default {
     },
     onPointer(lang) {
       this.changeLang(lang)
-      this.$router.push('/borne_' + (this.borneIndex + 1))
+      this.$router.push('/borne_' + (this.borneIndex == 0 ? 1 : 2))
     },
   },
   computed: {
