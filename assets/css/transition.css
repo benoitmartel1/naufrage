@@ -7,6 +7,16 @@
   }
 }
 
+.fadeInVideo-enter-active,
+.fadeInVideo-leave-active {
+  transition: all 600ms;
+}
+.fadeInVideo-enter,
+.fadeInVideo-leave-active {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 200ms;

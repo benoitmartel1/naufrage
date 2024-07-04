@@ -13,5 +13,6 @@ export default {
   text-align: center;
   margin-bottom: 30px;
   min-height: 50px;
+  font-size: 120%;
 }
 </style>

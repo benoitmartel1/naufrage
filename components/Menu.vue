@@ -49,14 +49,14 @@ export default {
 
   .naufrages {
     animation: fadeInOpacity 600ms;
-    font-size: 36px;
+    font-size: 80%;
     margin-bottom: 30px;
   }
 }
 
 .anchor {
   float: left;
-  width: 36px;
+  width: 52px;
   margin-right: 30px;
 }
 </style>

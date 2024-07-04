@@ -1,7 +1,7 @@
 <template>
   <div class="intro-wrapper">
     <Header :text="header" />
-    <div class="intro">{{ text }}</div>
+    <div class="intro" v-html="text"></div>
     <div class="spacer"></div>
     <!-- <div class="arrow-down" @click="$parent.changeSlide(1)"><Arrow /></div> -->
   </div>
@@ -42,11 +42,12 @@ export default {
 
   //   height: 100%;
   //   flex-basis: 1;
-  white-space: pre-wrap;
-  font-size: 28px;
-  line-height: 1.2em;
+  //   white-space: pre-wrap;
+  //   font-family: serif;
+  font-size: 65%;
+  line-height: 1.1em;
   text-align: center;
-  width: 80%;
+  width: 100%;
   margin: auto;
 }
 .arrow-down {

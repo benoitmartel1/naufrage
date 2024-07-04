@@ -1,13 +1,15 @@
 <template>
   <div class="pastilles-wrapper">
-    <Video
-      v-if="currentVideo"
-      :path="currentVideo"
-      :header="''"
-      :closeButton="true"
-    />
+    <Transition name="fade">
+      <Video
+        v-if="currentVideo"
+        :path="currentVideo"
+        :header="''"
+        :closeButton="true"
+      />
+    </Transition>
     <Header :text="header" />
-    <div class="main">
+    <div class="main" :style="numberOfColumns(videos.length)">
       <div
         class="wall-item"
         v-for="(video, index) in videos"
@@ -15,8 +17,8 @@
         @pointerdown="onClick(video)"
       >
         <div>
-          <div class="number">{{ index + 1 }}</div>
-          <div class="name">{{ video[lang].name }}</div>
+          <div class="number"></div>
+          <div class="name">{{ index + 1 + '.  ' + video[lang].name }}</div>
           <div class="cercle"><Arrow /></div>
         </div>
       </div>
@@ -35,6 +37,11 @@ export default {
     onClick(item) {
       this.currentVideo = item[this.lang].path
     },
+    numberOfColumns(nb) {
+      console.log(nb)
+      let style = `grid-template-columns: repeat(${nb == 4 ? 2 : 3}, 1fr);`
+      return style
+    },
   },
   computed: {
     lang() {
@@ -48,56 +55,71 @@ export default {
 .video-wrapper {
   position: absolute;
   z-index: 10;
-  left: 160px;
+  left: 0;
+  width: 100%;
+  //   border: 2px red solid;
   //   border: 2px solid green;
 }
 .pastilles-wrapper {
+  //   border: 2px red solid;
   //   animation: moveUp ease-out 500ms;
   display: flex;
 
   flex-direction: column;
   justify-content: space-between;
-  //   width: 80%;
+  width: 100%;
   height: 100%;
   //   border: 2px solid red;
   //   border: 2px blue solid;
 }
 .main {
-  width: 70%;
+  width: 70vw;
   margin: auto;
   //   border: 2px solid blue;
   text-align: center;
-  //   column-count: 2;
-  //   display: flex;
-  //   justify-content: space-between;
+
+  display: grid;
+  //   grid-template-columns: repeat(3, 1fr);
+  // .wrapper {
+  //   display: grid;
+  //   grid-template-columns: repeat(6, 1fr);
+  //   gap: 5px;
+  //   border: 1px solid;
+  //   padding: 10px;
+  //   margin: 10px;
+  // }
+  // .element {
+  //   grid-column: span 2;
+  //   height: 20px;
+  //   background: red;
+  // }
+  // /* the case with 4 elements */
+  // .element:first-child:nth-last-child(4),
+  // .element:first-child:nth-last-child(4) ~ *{
+  //   grid-column: span 3;
+  // }
 
   .wall-item {
     color: white;
     animation: fadeInOpacity 600ms;
-    font-size: 36px;
+    font-size: 80%;
 
-    margin-bottom: 40px;
-    width: 340px;
+    margin-bottom: 60px;
+    // width: 50%;
     // border: 2px solid yellow;
-    display: inline-block;
+    // display: inline-block;
     text-align: center;
-
-    // display: flex;
-    // height: 300px;
-    // display: flex;
-    // justify-content: flex-start;
-    // align-items: flex-start;
     .name {
       margin-bottom: 20px;
       white-space: pre-wrap;
       text-align: center;
-      //   max-width: 400px;
+      min-height: 110px;
       display: flex;
       align-items: flex-start;
       justify-content: center;
       height: 60px;
-      font-size: 28px;
-      line-height: 1.2em;
+      //   font-size: 28px;
+      line-height: 1.05em;
       //   border: 2px solid blue;
     }
     .cercle {

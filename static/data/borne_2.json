@@ -73,7 +73,7 @@
                 "path": "jean-richard/1.mp4"
               },
               "en": {
-                "name": "La fin des goélettes de bois",
+                "name": "The end of wooden schooners",
                 "path": "jean-richard/1_en.mp4"
               }
             },
@@ -83,17 +83,17 @@
                 "path": "jean-richard/2.mp4"
               },
               "en": {
-                "name": "Les parties de la goélette",
+                "name": "The schooner’s parts",
                 "path": "jean-richard/2_en.mp4"
               }
             },
             {
               "fr": {
-                "name": "La JEAN RICHARD :\nses dernières années et son épave",
+                "name": "Ses dernières années et son épave",
                 "path": "jean-richard/3.mp4"
               },
               "en": {
-                "name": "La JEAN RICHARD :\nses dernières années et son épave",
+                "name": "The schooner’s final years and its wreck",
                 "path": "jean-richard/3_en.mp4"
               }
             },
@@ -103,7 +103,7 @@
                 "path": "jean-richard/4.mp4"
               },
               "en": {
-                "name": "Plongée de l'épave",
+                "name": "Underwater images",
                 "path": "jean-richard/4_en.mp4"
               }
             }

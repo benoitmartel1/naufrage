@@ -1,15 +1,15 @@
 //Install the .bat launch file in startup folder
 //------------------------------------------------------
 const { exec } = require('child_process')
-const child = exec(
-  'IF NOT EXIST "%userprofile%\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\vj-boucherie.bat" copy static\\extraResources\\vj-boucherie.bat "%userprofile%\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\vj-boucherie.bat"'
-)
-exec(
-  "powershell $s=(New-Object -COM WScript.Shell).CreateShortcut('%USERPROFILE%\\Desktop\\vj-settings.lnk');$s.TargetPath='%localappdata%\\Programs\\vj-boucherie\\resources\\extraResources\\settings.json';$s.Save()"
-)
-exec(
-  "powershell $s=(New-Object -COM WScript.Shell).CreateShortcut('%USERPROFILE%\\Desktop\\vj-folder.lnk');$s.TargetPath='%localappdata%\\Programs\\vj-boucherie\\resources\\extraResources';$s.Save()"
-)
+// const child = exec(
+//   'IF NOT EXIST "%userprofile%\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\vj-boucherie.bat" copy static\\extraResources\\vj-boucherie.bat "%userprofile%\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\vj-boucherie.bat"'
+// )
+// exec(
+//   "powershell $s=(New-Object -COM WScript.Shell).CreateShortcut('%USERPROFILE%\\Desktop\\vj-settings.lnk');$s.TargetPath='%localappdata%\\Programs\\vj-boucherie\\resources\\extraResources\\settings.json';$s.Save()"
+// )
+// exec(
+//   "powershell $s=(New-Object -COM WScript.Shell).CreateShortcut('%USERPROFILE%\\Desktop\\vj-folder.lnk');$s.TargetPath='%localappdata%\\Programs\\vj-boucherie\\resources\\extraResources';$s.Save()"
+// )
 //------------------------------------------------------
 
 const http = require('http')
@@ -95,39 +95,9 @@ const newWin = () => {
       app.exit()
     }
   })
-  win.setContentSize(3840, 1080)
+  win.setContentSize(1920, 1080)
   win.on('closed', () => (win = null))
   return win.loadURL(_NUXT_URL_)
-  //   if (config.dev) {
-  //     console.log('is CONFIG DEV')
-  //     // Install vue dev tool and open chrome dev tools
-  //     const {
-  //       default: installExtension,
-  //       VUEJS_DEVTOOLS,
-  //     } = require('electron-devtools-installer')
-  //     installExtension(VUEJS_DEVTOOLS.id)
-  //       .then((name) => {
-  //         console.log(`Added Extension:  ${name}`)
-  //         win.webContents.openDevTools()
-  //       })
-  //       .catch((err) => console.log('An error occurred: ', err))
-  //     // Wait for nuxt to build
-  //     const pollServer = () => {
-  //       http
-  //         .get(_NUXT_URL_, (res) => {
-  //           if (res.statusCode === 200) {
-  //             win.loadURL(_NUXT_URL_)
-  //           } else {
-  //             setTimeout(pollServer, 300)
-  //           }
-  //         })
-  //         .on('error', pollServer)
-  //     }
-  //     pollServer()
-  //   } else {
-  //     console.log('is NOT CONFIG DEV')
-  //     // return win.loadURL(_NUXT_URL_)
-  //   }
 }
 app.on('ready', newWin)
 app.on('window-all-closed', () => {

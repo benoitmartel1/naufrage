@@ -26,7 +26,7 @@
         Menu
       </div>
       <div class="lang-button" @click="changeLang()">
-        {{ lang == 'fr' ? 'EN' : 'FR' }}
+        {{ lang == 'fr' ? 'En' : 'Fr' }}
       </div>
       <div v-show="currentType" class="buttons">
         <div
@@ -53,6 +53,7 @@
           v-if="currentType == 'intro'"
           :text="currentSlide?.text[lang]"
           :header="currentItem.name"
+          :key="slideIndex"
         />
         <Video
           v-if="currentType == 'video'"
@@ -86,7 +87,6 @@ export default {
     this.naufrages = JSON.parse(
       JSON.stringify(naufrages.sort((a, b) => a.order - b.order))
     )
-    // this.idleTimerActive = true
   },
 
   methods: {
@@ -163,11 +163,11 @@ export default {
     bottom: 40px;
   }
   .lang-button {
-    font-size: 30px;
+    font-size: 60%;
     left: 90px;
   }
   .menu-button {
-    font-size: 28px;
+    font-size: 80%;
     z-index: 999;
 
     right: 90px;

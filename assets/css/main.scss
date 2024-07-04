@@ -1,5 +1,5 @@
 :root {
-  --font-size: 16px;
+  --font-size: 24px;
   --app-width: 1920px;
   --app-height: 1080px;
   --show_red_outline: 0px;
@@ -40,11 +40,10 @@ html.a-fullscreen body {
   overflow: auto;
 }
 body {
-  /* cursor: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7),
-    auto !important; */
+  //   cursor: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7), auto !important;
   margin: 0;
   font-size: var(--font-size);
-  font-family: 'Montserrat';
+  font-family: 'Gotham';
 
   font-weight: 800;
   line-height: 1.1em;
@@ -58,6 +57,19 @@ body {
   text-shadow: #1d1d1d 2px 2px;
 }
 
+.close {
+  font-family: 'Montserrat';
+  right: 150px;
+  border-radius: 100%;
+  border: 2px solid white;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 80%;
+}
 #main {
   margin: 50px;
 }

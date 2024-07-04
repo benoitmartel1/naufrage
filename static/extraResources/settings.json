@@ -1,10 +1,8 @@
 {
   "settings": {
-    "idletime": 60,
-    "websocket_address": "ws://tknlpicontrol:1881/boucherie",
-    "panier_2020_max": 60,
-    "panier_1920_max": 4,
-    "videoPath": "video.mp4",
-    "movieLoop": false
+    "idleTime": 90,
+    "borne": 2,
+    "videoPath": "file:///D:/WEB/naufrages/static/video/"
+    // "videoPath": "/static/video/"
   }
 }

@@ -9,38 +9,22 @@
 
 <script>
 import idle from '~/mixins/idle.js'
-let movieInterval
+
 let secretTimeout
 let secretCounter = 0
+
 export default {
   data() {
-    return {
-      timeToMovie: 0,
-    }
+    return { approMode: 1 }
   },
-  computed: {
-    approMode() {
-      return false
-      return Boolean(
-        process.env.NODE_ENV == 'development' || process.env.NODE_ENV == 'dev'
-          ? 1
-          : 0
-      )
-    },
-  },
-  mounted() {
-    document.addEventListener('keydown', (e) => {
-      if (e.key == 'v') {
-      }
-    })
-  },
+  mixins: [idle],
   methods: {
     clickSecret() {
       clearTimeout(secretTimeout)
       secretCounter++
-      console.log(secretCounter)
       if (secretCounter >= 4) {
         this.resetSecret()
+        this.$store.commit('setBorne', null)
         this.$router.push('/')
       } else {
         secretTimeout = setTimeout(() => {
@@ -52,13 +36,12 @@ export default {
       secretCounter = 0
     },
   },
-  mixins: [idle],
 }
 </script>
 
 <style lang="scss">
 body {
-  font-size: 48px;
+  font-size: 66px;
   margin: 0;
   background-color: #333;
 }
@@ -83,7 +66,7 @@ body {
 }
 .appro {
   //   margin: 30px;
-  transform: scale(0.9);
+  transform: scale(0.7);
   transform-origin: 0 0;
 }
 .page-enter-active {

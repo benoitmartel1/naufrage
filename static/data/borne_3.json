@@ -8,8 +8,8 @@
         {
           "type": "intro",
           "text": {
-            "fr": "En août 1975, l'AIGLE D’OCÉAN, un caboteur de Saint-Joseph-de-la-Rive, effectue son dernier voyage en Arctique pour ravitailler des villages inuits, avant d’être retiré du service. Le 20 août, après un déchargement à Koartak, il se dirige, avec un équipage de neuf hommes, vers la mer du Labrador lorsqu’une météo glaciale et de forts vents le contraignent à trouver refuge près du brise-glace NORMAN McLEOD ROGERS de la Garde côtière canadienne. Alors qu’il est presque arrivé, le navire éprouve des difficultés en raison d’une importante voie d'eau dans une mer agitée. Son message de détresse alarme l’équipage du brise-glace qui se mobilise pour aider le caboteur en train de chavirer. Dans un dernier mouvement, l’AIGLE D’OCÉAN coule par l’arrière. Cinq survivants et deux corps sont récupérés dans les heures qui suivent. Pendant ce temps, l’hélicoptère du brise-glace ne répond plus aux appels radio. Des recherches au sol sont entreprises, mais ce n’est que le lendemain qu’on retrouve les restes de l'hélicoptère avec les corps sans vie du pilote et du mécanicien. ",
-            "en": "In August 1975, the Saint-Joseph-de-la-Rive steel coaster AIGLE D'OCÉAN, with a crew of nine, made her last trip to the Arctic to supply Inuit villages before being withdrawn from service. \n\nOn August 20, after unloading at Koartak, she headed for the Labrador Sea when icy weather and strong winds forced her to seek shelter near the Canadian Coast Guard icebreaker NORMAN MCLEOD ROGERS. Just as she was about to arrive, the vessel encountered a large inflow of water in rough seas. Her distress message reached the icebreaker's crew, who mobilized to help the capsizing vessel and her crew of nine men. Despite a last effort, the AIGLE D'OCÉAN sank by the stern. Five survivors and two bodies were recovered in the hours that followed. Meanwhile, the icebreaker's helicopter stopped responding to radio calls, and a ground search was launched. It was not until the following morning that the wreckage of the helicopter was found; the crash had killed both the pilot and the mechanic."
+            "fr": "En août 1975, l'AIGLE D’OCÉAN, un caboteur de Saint-Joseph-de-la-Rive, effectue son dernier voyage en Arctique pour ravitailler des villages inuits, avant d’être retiré du service. Le 20 août, après un déchargement à Koartak, il se dirige, avec un équipage de neuf hommes, vers la mer du Labrador lorsqu’une météo glaciale et de forts vents le contraignent à trouver refuge près du brise-glace NORMAN McLEOD ROGERS de la Garde côtière canadienne. Alors qu’il est presque arrivé, le navire éprouve des difficultés en raison d’une importante voie d'eau dans une mer agitée. Son message de détresse alarme l’équipage du brise-glace qui se mobilise pour aider le caboteur en train de chavirer. Dans un dernier mouvement, l’AIGLE D’OCÉAN coule par l’arrière. Cinq survivants et deux corps sont récupérés dans les heures qui suivent tandis que deux marins resteront à jamais manquants. Pendant ce temps, l’hélicoptère du brise-glace ne répond plus aux appels radio. Des recherches au sol sont entreprises, mais ce n’est que le lendemain qu’on retrouve les restes de l'hélicoptère avec les corps sans vie du pilote et du mécanicien. ",
+            "en": "In August 1975, the Saint-Joseph-de-la-Rive steel coaster AIGLE D'OCÉAN, with a crew of nine, made her last trip to the Arctic to supply Inuit villages before being withdrawn from service. \n\nOn August 20, after unloading at Koartak, she headed for the Labrador Sea when icy weather and strong winds forced her to seek shelter near the Canadian Coast Guard icebreaker NORMAN MCLEOD ROGERS. Just as she was about to arrive, the vessel encountered a large inflow of water in rough seas. Her distress message reached the icebreaker's crew, who mobilized to help the capsizing vessel and her crew of nine men. Despite a last effort, the AIGLE D'OCÉAN sank by the stern. Five survivors and two bodies were recovered in the hours that followed, while two sailors were lost forever. Meanwhile, the icebreaker's helicopter stopped responding to radio calls, and a ground search was launched. It was not until the following morning that the wreckage of the helicopter was found; the crash had killed both the pilot and the mechanic."
           }
         },
         {
@@ -83,31 +83,31 @@
             },
             {
               "fr": {
-                "name": "Noyade 1",
+                "name": "Extrait 1",
                 "path": "aigle/Aigle noyade 1.mp4"
               },
               "en": {
-                "name": "Noyade 1",
+                "name": "Clip 1",
                 "path": "aigle/Aigle noyade 1 ang.mp4"
               }
             },
             {
               "fr": {
-                "name": "Noyade 2",
+                "name": "Extrait 2",
                 "path": "aigle/Aigle noyade 2.mp4"
               },
               "en": {
-                "name": "Noyade 2",
+                "name": "Clip 2",
                 "path": "aigle/Aigle noyade 2 ang.mp4"
               }
             },
             {
               "fr": {
-                "name": "Noyade 3",
+                "name": "Extrait 3",
                 "path": "aigle/Aigle noyade 3.mp4"
               },
               "en": {
-                "name": "Noyade 3",
+                "name": "Clip 3",
                 "path": "aigle/Aigle noyade 3 ang.mp4"
               }
             },
@@ -117,7 +117,7 @@
                 "path": "aigle/Aigle sécurité.mp4"
               },
               "en": {
-                "name": "Noyade 3",
+                "name": "Safety",
                 "path": "aigle/Aigle sécurité ang.mp4"
               }
             }

@@ -1,6 +1,9 @@
 <template>
   <div>
     <div class="image-wrapper">
+      <Transition name="fade">
+        <Zoom v-if="currentImage" :image="currentImage" />
+      </Transition>
       <Header :text="header" />
       <div class="body">
         <div class="mover">
@@ -11,7 +14,12 @@
               :key="i"
               class="image-container"
             >
-              <img :src="backgroundUrl(i)" alt="" @load="imagesLoaded++" />
+              <img
+                :src="backgroundUrl(i)"
+                alt=""
+                @pointerdown="showImage(backgroundUrl(i))"
+                @load="imagesLoaded++"
+              />
             </div>
           </TransitionGroup>
         </div>
@@ -26,11 +34,15 @@ export default {
   data() {
     return {
       imagesLoaded: 0,
+      currentImage: null,
     }
   },
   methods: {
     backgroundUrl(i) {
       return 'img/' + this.imagesPath + '/0' + i + '.jpg'
+    },
+    showImage(url) {
+      this.currentImage = url
     },
   },
 }
@@ -59,14 +71,13 @@ export default {
 }
 .image-container {
   overflow: hidden;
+  border-radius: 20px;
+  border: 6px solid rgb(9, 10, 21);
   display: inline-block;
-  color: blue;
   width: 50px;
   height: 290px;
   margin-right: 10px;
-  //   background-color: red;
-  border-radius: 20px;
-  border: 6px solid rgb(9, 10, 21);
+
   &:nth-of-type(1),
   &:nth-of-type(2) {
     margin-bottom: 10px;
@@ -77,8 +88,9 @@ export default {
     width: 945px;
   }
   &:nth-of-type(2) {
+    margin-left: 4px;
     transition-delay: 100ms;
-    width: 630px;
+    width: 620px;
   }
   &:nth-of-type(3) {
     transition-delay: 200ms;
@@ -94,6 +106,7 @@ export default {
   }
 
   img {
+    will-change: transform;
     animation: scaleIn 900ms cubic-bezier(0.16, 0.82, 0.38, 0.96) both;
     // animation-delay: 200ms;
     width: 100%;
@@ -101,11 +114,11 @@ export default {
   @keyframes scaleIn {
     from {
       // opacity: 0;
-      transform: scale(1.3) translate3d(0px, 0px, 0px);
+      transform: scale(1.1);
     }
     to {
       // opacity: 1;
-      transform: scale(1) translate3d(0px, 0px, 0px);
+      transform: scale(1.2);
     }
   }
 }

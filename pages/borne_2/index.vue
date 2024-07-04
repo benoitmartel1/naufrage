@@ -26,7 +26,7 @@
         Menu
       </div>
       <div class="lang-button" @click="changeLang()">
-        {{ lang == 'fr' ? 'EN' : 'FR' }}
+        {{ lang == 'fr' ? 'En' : 'Fr' }}
       </div>
       <div v-show="currentType" class="buttons">
         <div
@@ -148,7 +148,7 @@ export default {
       )
     },
     borneIndex() {
-      return this.$store.state.borne
+      return this.$store.state.borne - 1
     },
   },
   watch: {
@@ -197,11 +197,11 @@ export default {
     bottom: 40px;
   }
   .lang-button {
-    font-size: 30px;
+    font-size: 60%;
     left: 90px;
   }
   .menu-button {
-    font-size: 28px;
+    font-size: 80%;
     z-index: 999;
 
     right: 90px;

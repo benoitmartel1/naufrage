@@ -36,7 +36,7 @@ export default {
       //Every second, if idle timer is active, decrement timeLeft
       if (this.idleTimerActive == true) {
         timeLeft--
-        console.log(timeLeft)
+        // console.log(timeLeft)
         //If no time left, go to default page
         if (timeLeft <= 0) {
           console.log('timed_out')

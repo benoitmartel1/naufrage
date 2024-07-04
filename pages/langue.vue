@@ -34,7 +34,7 @@ export default {
   },
   computed: {
     borneIndex() {
-      return this.$store.state.borne
+      return this.$store.state.borne - 1
     },
     borne() {
       return this.bornes[this.borneIndex]
@@ -56,15 +56,24 @@ export default {
   justify-content: center;
 
   .btn {
+    display: flex;
+    flex-direction: column;
     margin-top: 80px;
     text-align: center;
     &:first-of-type {
-      transform: scale(1.3);
+      //   font-size: 140%;
+      transform: scale(1.5);
     }
     &:last-of-type {
-      transform: scale(0.8);
+      //   transform: scale(0.8);
+    }
+    .title {
+      //   font-size: 150%;
+      text-transform: uppercase;
     }
     .sub {
+      margin-top: -20px;
+      font-size: 60%;
       font-weight: 400;
     }
   }

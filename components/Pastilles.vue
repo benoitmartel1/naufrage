@@ -12,6 +12,9 @@
           <div class="name">
             {{ item.name[lang].toUpperCase() }}
           </div>
+          <div class="arrow-container">
+            <Arrow />
+          </div>
         </div>
       </div>
     </div>
@@ -37,6 +40,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  //   align-items: flex-end;
+  //   transform-origin: 0 0;
+  transform: scale(0.5) rotate(-90deg);
+  margin-right: -10px;
+  //   border: 2px solid yellow;
+}
 .pastilles-wrapper {
   //   animation: moveUp ease-out 500ms;
   display: flex;
@@ -56,13 +68,14 @@ export default {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     animation: fadeInOpacity 600ms;
-    font-size: 36px;
+    // font-size: 36px;
     margin-bottom: 30px;
     width: 300px;
     height: 300px;
+    padding-bottom: 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     border-radius: 100%;
     border: 6px var(--yellow) solid;
   }
