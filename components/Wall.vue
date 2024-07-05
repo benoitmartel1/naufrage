@@ -6,6 +6,7 @@
         :path="currentVideo"
         :header="''"
         :closeButton="true"
+        :showHeadphones="showHeadphones"
       />
     </Transition>
     <Header :text="header" />
@@ -29,7 +30,7 @@
 
 <script>
 export default {
-  props: ['videos', 'header'],
+  props: ['videos', 'header', 'showHeadphones'],
   data() {
     return { currentVideo: null }
   },

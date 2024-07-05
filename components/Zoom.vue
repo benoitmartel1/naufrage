@@ -1,8 +1,8 @@
 <template>
   <div class="zoom-wrapper" @pointerdown="closeZoom()">
+    <div class="close" @pointerdown="closeZoom()">X</div>
     <div class="image-container">
-      <img :src="image" alt="" />
-      <div class="close" @pointerdown="closeZoom()">X</div>
+      <img :src="image" alt="" @pointerdown.stop="" />
     </div>
   </div>
 </template>
@@ -20,49 +20,38 @@ export default {
 
 <style lang="scss" scoped>
 .zoom-wrapper {
-  .image-container {
-    // display: flex;
-    // justify-content: center;
-    // align-items: flex-start;
-    // transform: scale(1.3);
-    // position: relative;
-    // display: flex;
-    // width: 100%;
-    // border: 2px solid green;
-    // display: block;
-  }
-  .close {
-    // transform: scale(0.7);
-    position: absolute;
-    // z-index: 900;
-    top: 60px;
-    // right: unset;
-    right: 60px;
-
-    // position: unset;
-    // margin-left: 30px;
-  }
-  //   border: 2px solid red;
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 888;
   width: 100vw;
   height: 100vh;
   left: 0;
   top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
+  .close {
+    position: absolute;
+    top: 60px;
+    right: 70px;
+  }
+  .image-container {
+    position: absolute;
+    // border: 2px red solid;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    max-width: 1400px;
+    width: auto;
+    max-height: 90vh;
+  }
 
   img {
-    // display: block;
-    width: 140%;
-    max-width: 1600px;
-    // max-height: 300px;
-    margin-left: -20%;
-    overflow: hidden;
-    border-radius: 20px;
-    // border: 6px solid rgb(9, 10, 21);
+    display: block;
+    width: 100%;
+    // max-width: 100%;
+    // min-width: 120%;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.7);
   }
 }
 </style>

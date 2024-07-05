@@ -15,7 +15,7 @@ let secretCounter = 0
 
 export default {
   data() {
-    return { approMode: 1 }
+    return { approMode: 0 }
   },
   mixins: [idle],
   methods: {

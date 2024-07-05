@@ -59,6 +59,7 @@
           v-if="currentType == 'video'"
           :path="currentSlide?.path[lang]"
           :header="currentItem.name"
+          :showHeadphones="showHeadphones"
         />
         <Tiles
           v-if="currentType == 'tiles'"
@@ -81,6 +82,7 @@ export default {
       naufrages: [],
       currentItem: null,
       slideIndex: 0,
+      showHeadphones: true,
     }
   },
   mounted() {

@@ -17,7 +17,7 @@
               <img
                 :src="backgroundUrl(i)"
                 alt=""
-                @pointerdown="showImage(backgroundUrl(i))"
+                @pointerdown="showImage(zoomUrl(i))"
                 @load="imagesLoaded++"
               />
             </div>
@@ -40,6 +40,9 @@ export default {
   methods: {
     backgroundUrl(i) {
       return 'img/' + this.imagesPath + '/0' + i + '.jpg'
+    },
+    zoomUrl(i) {
+      return 'full/' + this.imagesPath + '/0' + i + '.jpg'
     },
     showImage(url) {
       this.currentImage = url
@@ -118,7 +121,7 @@ export default {
     }
     to {
       // opacity: 1;
-      transform: scale(1.2);
+      transform: scale(1);
     }
   }
 }

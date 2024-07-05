@@ -62,6 +62,7 @@
           v-if="currentType == 'video'"
           :path="currentSlide?.path"
           :header="items[0]?.name"
+          :showHeadphones="showHeadphones"
         />
         <Tiles
           v-if="currentType == 'tiles'"
@@ -75,6 +76,7 @@
           :videos="currentSlide?.videos"
           :header="items[0]?.name"
           :key="slideIndex"
+          :showHeadphones="showHeadphones"
         />
       </div>
     </div>
@@ -88,6 +90,7 @@ export default {
       items: [],
       currentItem: null,
       slideIndex: 0,
+      showHeadphones: true,
     }
   },
   mounted() {

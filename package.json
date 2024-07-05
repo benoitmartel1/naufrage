@@ -4,7 +4,7 @@
   "private": true,
   "main": "main.js",
   "build": {
-    "files": "!static/video",
+    "files": "!static/video/*",
     "appId": "com.benoitmartel.naufrage",
     "extraResources": [
       {
