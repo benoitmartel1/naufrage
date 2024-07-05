@@ -46,7 +46,8 @@ export default {
 .main {
   width: 80%;
   column-count: 2;
-
+  margin-top: 10%;
+  column-gap: 180px;
   .naufrages {
     animation: fadeInOpacity 600ms;
     font-size: 80%;

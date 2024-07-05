@@ -1,6 +1,6 @@
 export const state = () => ({
   lang: 'fr',
-  borne: 2,
+  borne: null,
   idleTime: 60,
   videoPath: 'video/',
 })
