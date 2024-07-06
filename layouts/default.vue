@@ -1,7 +1,7 @@
 <template>
   <div :class="[{ appro: approMode }]">
     <div id="app" class="no-cursor">
-      <div class="secret" @click="clickSecret()"></div>
+      <!-- <div class="secret" @click="clickSecret()"></div> -->
       <Nuxt />
     </div>
   </div>

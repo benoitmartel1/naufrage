@@ -40,6 +40,7 @@ const path = require('path')
 
 const fs = require('fs')
 const app = electron.app
+const globalShortcut = electron.globalShortcut
 
 let SETTINGS_PATH = path.join(
   process.resourcesPath,
@@ -77,29 +78,36 @@ const newWin = () => {
     frame: false,
     autoHideMenuBar: true,
     alwaysOnTop: true,
-    // fullscreen: true,
-    // kiosk: true,
+    fullscreen: true,
+    kiosk: true,
     webPreferences: {
       webSecurity: false,
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: false,
       contextIsolation: false,
       enableRemoteModule: true,
-      devTools: true,
+      devTools: false,
     },
 
     icon: path.join(__dirname, 'favicon.ico'),
   })
+
   win.webContents.on('before-input-event', (event, input) => {
     if (input.key == 'Escape' && input.shift) {
       app.exit()
     }
   })
   win.setContentSize(1920, 1080)
+  //   win.setVisibleOnAllWorkspaces(true, { visibleOnFullScreen: true })
+  win.setAlwaysOnTop(true, 'screen-saver', 1)
+  //   win.setFullScreenable(false)
+  // Below statement completes the flow
+
   win.on('closed', () => (win = null))
   return win.loadURL(_NUXT_URL_)
 }
 app.on('ready', newWin)
+
 app.on('window-all-closed', () => {
   app.relaunch()
   app.exit()
