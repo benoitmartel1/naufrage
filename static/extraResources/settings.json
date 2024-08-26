@@ -1,7 +1,7 @@
 {
   "settings": {
     "idleTime": 90,
-    "borne": 3,
+    "borne": 2,
     "videoPath": "file:///D:/WEB/naufrages/static/video/"
   }
 }

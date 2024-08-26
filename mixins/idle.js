@@ -9,9 +9,12 @@ export default {
     }
   },
   computed: {
+    videoIsPlaying() {
+      return this.$store.state.videoIsPlaying
+    },
     timerDuration() {
-      return 90
-      //   return this.$store.state.idleTime || 3
+      //   return 10
+      return this.$store.state.idleTime || 90
     },
     borneIndex() {
       return this.$store.state.borne
@@ -35,14 +38,18 @@ export default {
     timerInterval = setInterval(() => {
       //Every second, if idle timer is active, decrement timeLeft
       if (this.idleTimerActive == true) {
-        timeLeft--
-        // console.log(timeLeft)
-        //If no time left, go to default page
-        if (timeLeft <= 0) {
-          console.log('timed_out')
-          this.$router.push('/langue')
-          this.$store.commit('setLang', 'fr')
-          this.resetIdleTimer()
+        if (!this.videoIsPlaying) {
+          timeLeft--
+
+          //If no time left, go to default page
+          if (timeLeft <= 0) {
+            this.$router.push('/langue')
+            this.$store.commit('setLang', 'fr')
+
+            this.resetIdleTimer()
+          }
+        } else {
+          timeLeft == this.timerDuration
         }
       }
     }, 1000)

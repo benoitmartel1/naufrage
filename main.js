@@ -86,7 +86,7 @@ const newWin = () => {
       nodeIntegration: false,
       contextIsolation: false,
       enableRemoteModule: true,
-      devTools: false,
+      devTools: true,
     },
 
     icon: path.join(__dirname, 'favicon.ico'),

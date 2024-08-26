@@ -1,11 +1,15 @@
 export const state = () => ({
   lang: 'fr',
   borne: null,
-  idleTime: 60,
+  idleTime: 90,
   videoPath: 'video/',
+  videoIsPlaying: false,
 })
 
 export const mutations = {
+  setVideoIsPlaying(state, v) {
+    state.videoIsPlaying = v
+  },
   setLang(state, l) {
     state.lang = l
   },

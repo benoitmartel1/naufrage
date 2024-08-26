@@ -66,32 +66,40 @@ export default {
   methods: {
     videoPath() {
       let videoPath = this.$store.state.videoPath
-      // console.log(videoPath)
-      //   return 'video/' + this.path
+      //For local test only
+      //   videoPath = 'D:/JOB/Lisette/Naufrages/Videos/'
+
       return videoPath + this.path
     },
     toggleVideo(e) {
-      if (!this.showingHeadphones) {
-        if (!e.target.paused) {
-          e.target.pause()
+      var myVid = document.getElementById('video')
+      if (!this.showingHeadphones && myVid) {
+        if (!myVid.paused) {
+          this.$store.commit('setVideoIsPlaying', false)
+          myVid.pause()
         } else {
-          if (e.target.currentTime == 0 && this.showHeadphones) {
+          if (myVid.currentTime == 0 && this.showHeadphones) {
             this.showingHeadphones = true
             setTimeout(() => {
               this.showingHeadphones = false
               this.$parent.showHeadphones = false
               setTimeout(() => {
-                e.target.play()
+                this.playVideo(myVid)
               }, 200)
             }, 3000)
           } else {
-            e.target.play()
+            this.playVideo(myVid)
           }
         }
       }
     },
+    playVideo(myVid) {
+      this.$store.commit('setVideoIsPlaying', true)
+      myVid.play()
+    },
     closeVideo() {
       if (!this.showingHeadphones) {
+        this.$store.commit('setVideoIsPlaying', false)
         this.$parent.currentVideo = null
       }
     },
@@ -100,10 +108,13 @@ export default {
     var myVid = document.getElementById('video')
     myVid.oncanplaythrough = this.showVideo = true
     myVid.onended = () => {
-      myVid.currentTime = 0
+      //   myVid.currentTime = 0
       myVid.pause()
       if (this.closeButton) {
-        this.$parent.currentVideo = null
+        this.closeVideo()
+      } else {
+        this.$store.commit('setVideoIsPlaying', false)
+        myVid.currentTime = 0
       }
     }
   },
